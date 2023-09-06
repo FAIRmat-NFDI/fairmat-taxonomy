@@ -1,0 +1,331 @@
+{
+  "Property": {
+    "CorrosionProperty": {
+      "reduced_entries": [
+        "AnodicPartialCurrent",
+        "CathodicPartialCurrent",
+        "CorrosionCurrent",
+        "CorrosionPotential",
+        "CorrosionRate",
+        "FreeCorrosionCurrent",
+        "FreeCorrosionPotential",
+        "PassivationPotential",
+        "PassivationCurrent",
+        "PittingInitiationPotential",
+        "RedoxPotential",
+        "ReactivationPotential",
+        "PoralizedPotential",
+        "StandardElectrodePotential",
+        "TransPassivationPotential"
+      ]
+    },
+    "ElectricalProperty": {
+      "BandGap": {
+        "reduced_entries": [
+          "Type"
+        ]
+      },
+      "DensityOfStates": {
+        "reduced_entries": [
+          "dos_type",
+          "DOSFile"
+        ]
+      },
+      "reduced_entries": [
+        "BowingParameter",
+        "CarrierConcentration",
+        "CarrierDiffusionLength",
+        "CarrierLifetime",
+        "ElectricCurieTemperature",
+        "DielectricConstant",
+        "DielectricStrength",
+        "ElectricSusceptibility",
+        "ElectricalConductivity",
+        "ElectronEffectiveMass",
+        "ElectronMobility",
+        "ExcitonBindingEnergy",
+        "FermiLevel",
+        "HallCoefficient",
+        "HallVoltage",
+        "HoleEffectiveMass",
+        "HoleMobility",
+        "IonicConductivity",
+        "IonicMobility",
+        "Permittivity",
+        "Resistivity",
+        "SpinHallAngle",
+        "SpinOrbitSplittingEnergy",
+        "TemperatureCoefficientOfResistance",
+        "SOC"
+      ]
+    },
+    "MagneticProperty": {
+      "reduced_entries": [
+        "CoersiveField",
+        "CurieTemperature",
+        "MagneticAnisotropyConstant",
+        "MagneticAnisotropyField",
+        "MagneticHysteresis",
+        "MaximumEnergyProduct",
+        "Permeability",
+        "RemanentMagnetization",
+        "SaturationMagentization",
+        "Squareness",
+        "Susceptibility"
+      ]
+    },
+    "MechanicalProperty": {
+      "CompressiveProperty": {
+        "reduced_entries": [
+          "YieldStengthCompressive",
+          "MaxCompressiveStrength"
+        ]
+      },
+      "CreepProperty": {
+        "reduced_entries": [
+          "InstantaneousStrain",
+          "TimeTertiaryCreep",
+          "MinimumCreepRate",
+          "RuptureTime",
+          "CreepRuptureStrength",
+          "CreepRuptureStrain",
+          "ReductionArea"
+        ]
+      },
+      "ElasticProperty": {
+        "reduced_entries": [
+          "YoungsModulus",
+          "shearModulus",
+          "BulkModulus",
+          "Compressibility",
+          "PoissonRatio",
+          "ResilienceModulus"
+        ]
+      },
+      "FatigueProperty": {
+        "reduced_entries": [
+          "FatiguePropertyType",
+          "FatigueLife",
+          "FatigueLimit",
+          "FatigueCrackGrowthRate",
+          "StressIntensityFactor",
+          "StressIntensityFactorRange",
+          "FatigueCrackGrowthThreshold"
+        ]
+      },
+      "TensileProperty": {
+        "reduced_entries": [
+          "YieldStrength",
+          "TensileStrength",
+          "UniformElongation",
+          "TotalElongation",
+          "StrainHardeningExponent",
+          "ReductionArea",
+          "PlasticStrainRatio",
+          "CriticalResolvedShearStress"
+        ]
+      },
+      "FractureToughness": {
+        "reduced_entries": [
+          "StressIntensityFactor",
+          "KIC",
+          "JIC",
+          "crack tip opening displacement"
+        ]
+      },
+      "ImpactToughness": {
+        "reduced_entries": [
+          "CharpyImpactEnergy",
+          "UpperShelfEnergy",
+          "LowerShelfEnergy",
+          "DBTransTemp"
+        ]
+      },
+      "reduced_entries": [
+        "Hardness",
+        "Toughness"
+      ]
+    },
+    "OpticalProperty": {
+      "Photoluminescence": {
+        "reduced_entries": [
+          "Lifetime",
+          "QuantumEfficiency"
+        ]
+      },
+      "reduced_entries": [
+        "AbsorptionCoefficient",
+        "OpticalBandGap",
+        "Reflectance",
+        "Transmittance",
+        "Color",
+        "RefractiveIndex"
+      ]
+    },
+    "RheologicalProperty": {
+      "VariableViscosity": {
+        "reduced_entries": [
+          "storage modulus",
+          "loss modulus",
+          "axial force"
+        ]
+      },
+      "reduced_entries": [
+        "Viscosity"
+      ]
+    },
+    "StructuralProperty": {
+      "Defect": {
+        "ZeroDDefect": {
+          "reduced_entries": [
+            "FormationEnergy",
+            "Density",
+            "ElectricCharge"
+          ]
+        },
+        "OneDDefect": {
+          "reduced_entries": [
+            "BurgersVector",
+            "Density",
+            "Velocity"
+          ]
+        },
+        "TwoDDefect": {
+          "StackingFaultEnergy": {
+            "reduced_entries": [
+              "Type"
+            ]
+          },
+          "reduced_entries": [
+            "InterfacialEnergy",
+            "Misorientation",
+            "** antiphase domain boundary energy ?? interfacial energy에 merge될 수 있음. type 0"
+          ]
+        },
+        "reduced_entries": [
+          "Impurity"
+        ]
+      },
+      "Grain": {
+        "reduced_entries": [
+          "GrainSize",
+          "GrainAspectRatio"
+        ]
+      },
+      "Morphology": {
+        "Particle": {
+          "Size": {
+            "reduced_entries": [
+              "Diameter",
+              "Length",
+              "Width",
+              "Height"
+            ]
+          },
+          "reduced_entries": [
+            "Shape",
+            "Facet"
+          ]
+        }
+      },
+      "Phase_(n)": {
+        "reduced_entries": [
+          "name",
+          "PhaseCrystalStructure",
+          "Composition",
+          "Fraction"
+        ]
+      },
+      "SurfaceArea": {
+        "reduced_entries": [
+          "BETSurfaceArea",
+          "LangmuirSurfaceArea",
+          "ECSA"
+        ]
+      },
+      "reduced_entries": [
+        "Density",
+        "TotalPoreVolume",
+        "Porosity",
+        "PoreDiameter",
+        "PoreLimitingDiameter",
+        "Area",
+        "InitialVolume",
+        "EffectiveVolume",
+        "RealVolume",
+        "LayerThickness"
+      ]
+    },
+    "ThermophysicalProperty": {
+      "ChemicalPotential": {
+        "reduced_entries": [
+          "StandardState",
+          "StandardStateTemperature",
+          "StandardStatePressure"
+        ]
+      },
+      "EnthalpyOfFormation": {
+        "reduced_entries": [
+          "StandardState",
+          "StandardStateTemperature",
+          "StandardStatePressure"
+        ]
+      },
+      "Fugacity": {
+        "reduced_entries": [
+          "StandardState",
+          "StandardStateTemperature",
+          "StandardStatePressure"
+        ]
+      },
+      "GibbsFreeEnergy": {
+        "reduced_entries": [
+          "StandardState",
+          "StandardStateTemperature",
+          "StandardStatePressure"
+        ]
+      },
+      "reduced_entries": [
+        "Activity",
+        "CryoscopicConstant",
+        "Diffusivity",
+        "DebyeTemperature",
+        "HeatCapacity",
+        "heatOfFusion",
+        "MeltingTemperature",
+        "MeltingRange",
+        "SpecificHeat",
+        "ThermalConductivity",
+        "ThermalDiffusivity",
+        "ThermalExpansionCoefficient"
+      ]
+    },
+    "ElectrochemicalProperty": {
+      "ElectrochemPhaseStability": {
+        "reduced_entries": [
+          "OxidationPotential",
+          "ReductionPotential"
+        ]
+      }
+    },
+    "PiezoelectricProperty": {
+      "reduced_entries": [
+        "PiezoelectricStrainCoefficient",
+        "PiezoelectricVoltageCoefficient",
+        "PiezoelectricChargeCoefficient",
+        "ElectromechanicalCouplingFactor",
+        "MechanicalQualityFactor"
+      ]
+    },
+    "FerroelectricProperty": {
+      "reduced_entries": [
+        "SaturationPolarization",
+        "CoerciveElectricField",
+        "RemanentPolarization"
+      ]
+    }
+  },
+  "reduced_entries": [
+    "name"
+  ]
+}
