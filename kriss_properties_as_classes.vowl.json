@@ -1,0 +1,4234 @@
+{
+  "_comment" : "Created with OWL2VOWL (version 0.3.7), http://vowl.visualdataweb.org",
+  "header" : {
+    "languages" : [ "en" ],
+    "baseIris" : [ "http://fairmat-nfdi.eu/taxonomy", "http://www.w3.org/1999/02/22-rdf-syntax-ns", "http://www.w3.org/2002/07/owl", "http://www.w3.org/2000/01/rdf-schema" ],
+    "prefixList" : {
+      "owl" : "http://www.w3.org/2002/07/owl#",
+      "rdf" : "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+      "xsd" : "http://www.w3.org/2001/XMLSchema#",
+      "" : "http://fairmat-nfdi.eu/taxonomy/",
+      "xml" : "http://www.w3.org/XML/1998/namespace",
+      "rdfs" : "http://www.w3.org/2000/01/rdf-schema#"
+    },
+    "iri" : "http://fairmat-nfdi.eu/taxonomy"
+  },
+  "namespace" : [ ],
+  "class" : [ {
+    "id" : "18",
+    "type" : "owl:Class"
+  }, {
+    "id" : "20",
+    "type" : "owl:Class"
+  }, {
+    "id" : "7",
+    "type" : "owl:Class"
+  }, {
+    "id" : "26",
+    "type" : "owl:Class"
+  }, {
+    "id" : "44",
+    "type" : "owl:Class"
+  }, {
+    "id" : "46",
+    "type" : "owl:Class"
+  }, {
+    "id" : "55",
+    "type" : "owl:Class"
+  }, {
+    "id" : "58",
+    "type" : "owl:Class"
+  }, {
+    "id" : "59",
+    "type" : "owl:Class"
+  }, {
+    "id" : "60",
+    "type" : "owl:Class"
+  }, {
+    "id" : "63",
+    "type" : "owl:Class"
+  }, {
+    "id" : "64",
+    "type" : "owl:Class"
+  }, {
+    "id" : "65",
+    "type" : "owl:Class"
+  }, {
+    "id" : "67",
+    "type" : "owl:Class"
+  }, {
+    "id" : "68",
+    "type" : "owl:Class"
+  }, {
+    "id" : "69",
+    "type" : "owl:Class"
+  }, {
+    "id" : "70",
+    "type" : "owl:Class"
+  }, {
+    "id" : "71",
+    "type" : "owl:Class"
+  }, {
+    "id" : "72",
+    "type" : "owl:Class"
+  }, {
+    "id" : "52",
+    "type" : "owl:Class"
+  }, {
+    "id" : "73",
+    "type" : "owl:Class"
+  }, {
+    "id" : "74",
+    "type" : "owl:Class"
+  }, {
+    "id" : "75",
+    "type" : "owl:Class"
+  }, {
+    "id" : "48",
+    "type" : "owl:Class"
+  }, {
+    "id" : "103",
+    "type" : "owl:Class"
+  }, {
+    "id" : "104",
+    "type" : "owl:Class"
+  }, {
+    "id" : "105",
+    "type" : "owl:Class"
+  }, {
+    "id" : "106",
+    "type" : "owl:Class"
+  }, {
+    "id" : "107",
+    "type" : "owl:Class"
+  }, {
+    "id" : "45",
+    "type" : "owl:Class"
+  }, {
+    "id" : "117",
+    "type" : "owl:Class"
+  }, {
+    "id" : "118",
+    "type" : "owl:Class"
+  }, {
+    "id" : "119",
+    "type" : "owl:Class"
+  }, {
+    "id" : "54",
+    "type" : "owl:Class"
+  }, {
+    "id" : "123",
+    "type" : "owl:Class"
+  }, {
+    "id" : "94",
+    "type" : "owl:Class"
+  }, {
+    "id" : "141",
+    "type" : "owl:Class"
+  }, {
+    "id" : "142",
+    "type" : "owl:Class"
+  }, {
+    "id" : "143",
+    "type" : "owl:Class"
+  }, {
+    "id" : "144",
+    "type" : "owl:Class"
+  }, {
+    "id" : "145",
+    "type" : "owl:Class"
+  }, {
+    "id" : "112",
+    "type" : "owl:Class"
+  }, {
+    "id" : "147",
+    "type" : "owl:Class"
+  }, {
+    "id" : "149",
+    "type" : "owl:Class"
+  }, {
+    "id" : "158",
+    "type" : "owl:Class"
+  }, {
+    "id" : "169",
+    "type" : "owl:Class"
+  }, {
+    "id" : "170",
+    "type" : "owl:Class"
+  }, {
+    "id" : "171",
+    "type" : "owl:Class"
+  }, {
+    "id" : "173",
+    "type" : "owl:Class"
+  }, {
+    "id" : "174",
+    "type" : "owl:Class"
+  }, {
+    "id" : "176",
+    "type" : "owl:Class"
+  }, {
+    "id" : "140",
+    "type" : "owl:Class"
+  }, {
+    "id" : "181",
+    "type" : "owl:Class"
+  }, {
+    "id" : "182",
+    "type" : "owl:Class"
+  }, {
+    "id" : "183",
+    "type" : "owl:Class"
+  }, {
+    "id" : "184",
+    "type" : "owl:Class"
+  }, {
+    "id" : "1",
+    "type" : "owl:Class"
+  }, {
+    "id" : "92",
+    "type" : "owl:Class"
+  }, {
+    "id" : "196",
+    "type" : "owl:Class"
+  }, {
+    "id" : "200",
+    "type" : "owl:Class"
+  }, {
+    "id" : "209",
+    "type" : "owl:Class"
+  }, {
+    "id" : "2",
+    "type" : "owl:Class"
+  }, {
+    "id" : "116",
+    "type" : "owl:Class"
+  }, {
+    "id" : "218",
+    "type" : "owl:Class"
+  }, {
+    "id" : "5",
+    "type" : "owl:Class"
+  }, {
+    "id" : "4",
+    "type" : "owl:Class"
+  }, {
+    "id" : "228",
+    "type" : "owl:Class"
+  }, {
+    "id" : "229",
+    "type" : "owl:Class"
+  }, {
+    "id" : "191",
+    "type" : "owl:Class"
+  }, {
+    "id" : "240",
+    "type" : "owl:Class"
+  }, {
+    "id" : "241",
+    "type" : "owl:Class"
+  }, {
+    "id" : "243",
+    "type" : "owl:Class"
+  }, {
+    "id" : "246",
+    "type" : "owl:Class"
+  }, {
+    "id" : "247",
+    "type" : "owl:Class"
+  }, {
+    "id" : "248",
+    "type" : "owl:Class"
+  }, {
+    "id" : "249",
+    "type" : "owl:Class"
+  }, {
+    "id" : "35",
+    "type" : "owl:Class"
+  }, {
+    "id" : "252",
+    "type" : "owl:Class"
+  }, {
+    "id" : "251",
+    "type" : "owl:Class"
+  }, {
+    "id" : "41",
+    "type" : "owl:Class"
+  }, {
+    "id" : "114",
+    "type" : "owl:Class"
+  }, {
+    "id" : "233",
+    "type" : "owl:Class"
+  }, {
+    "id" : "274",
+    "type" : "owl:Class"
+  }, {
+    "id" : "39",
+    "type" : "owl:Class"
+  }, {
+    "id" : "160",
+    "type" : "owl:Class"
+  }, {
+    "id" : "43",
+    "type" : "owl:Class"
+  }, {
+    "id" : "111",
+    "type" : "owl:Class"
+  }, {
+    "id" : "17",
+    "type" : "owl:Class"
+  }, {
+    "id" : "146",
+    "type" : "owl:Class"
+  }, {
+    "id" : "11",
+    "type" : "owl:Class"
+  }, {
+    "id" : "136",
+    "type" : "owl:Class"
+  }, {
+    "id" : "108",
+    "type" : "owl:Class"
+  }, {
+    "id" : "22",
+    "type" : "owl:Class"
+  }, {
+    "id" : "321",
+    "type" : "owl:Class"
+  }, {
+    "id" : "239",
+    "type" : "owl:Class"
+  }, {
+    "id" : "98",
+    "type" : "owl:Class"
+  }, {
+    "id" : "314",
+    "type" : "owl:Class"
+  }, {
+    "id" : "113",
+    "type" : "owl:Class"
+  }, {
+    "id" : "269",
+    "type" : "owl:Class"
+  }, {
+    "id" : "277",
+    "type" : "owl:Class"
+  }, {
+    "id" : "194",
+    "type" : "owl:Class"
+  }, {
+    "id" : "294",
+    "type" : "owl:Class"
+  }, {
+    "id" : "115",
+    "type" : "owl:Class"
+  }, {
+    "id" : "33",
+    "type" : "owl:Class"
+  }, {
+    "id" : "332",
+    "type" : "owl:Class"
+  }, {
+    "id" : "83",
+    "type" : "owl:Class"
+  }, {
+    "id" : "178",
+    "type" : "owl:Class"
+  }, {
+    "id" : "287",
+    "type" : "owl:Class"
+  }, {
+    "id" : "291",
+    "type" : "owl:Class"
+  }, {
+    "id" : "138",
+    "type" : "owl:Class"
+  }, {
+    "id" : "15",
+    "type" : "owl:Class"
+  }, {
+    "id" : "349",
+    "type" : "owl:Class"
+  }, {
+    "id" : "309",
+    "type" : "owl:Class"
+  }, {
+    "id" : "90",
+    "type" : "owl:Class"
+  }, {
+    "id" : "110",
+    "type" : "owl:Class"
+  }, {
+    "id" : "292",
+    "type" : "owl:Class"
+  }, {
+    "id" : "19",
+    "type" : "owl:Class"
+  }, {
+    "id" : "299",
+    "type" : "owl:Class"
+  }, {
+    "id" : "328",
+    "type" : "owl:Class"
+  }, {
+    "id" : "57",
+    "type" : "owl:Class"
+  }, {
+    "id" : "125",
+    "type" : "owl:Class"
+  }, {
+    "id" : "168",
+    "type" : "owl:Class"
+  }, {
+    "id" : "227",
+    "type" : "owl:Class"
+  }, {
+    "id" : "66",
+    "type" : "owl:Class"
+  }, {
+    "id" : "86",
+    "type" : "owl:Class"
+  }, {
+    "id" : "289",
+    "type" : "owl:Class"
+  }, {
+    "id" : "157",
+    "type" : "owl:Class"
+  }, {
+    "id" : "13",
+    "type" : "owl:Class"
+  }, {
+    "id" : "37",
+    "type" : "owl:Class"
+  }, {
+    "id" : "180",
+    "type" : "owl:Class"
+  }, {
+    "id" : "263",
+    "type" : "owl:Class"
+  }, {
+    "id" : "23",
+    "type" : "owl:Class"
+  }, {
+    "id" : "131",
+    "type" : "owl:Class"
+  }, {
+    "id" : "50",
+    "type" : "owl:Class"
+  }, {
+    "id" : "129",
+    "type" : "owl:Class"
+  }, {
+    "id" : "28",
+    "type" : "owl:Class"
+  }, {
+    "id" : "215",
+    "type" : "owl:Class"
+  }, {
+    "id" : "193",
+    "type" : "owl:Class"
+  }, {
+    "id" : "186",
+    "type" : "owl:Class"
+  }, {
+    "id" : "260",
+    "type" : "owl:Class"
+  }, {
+    "id" : "265",
+    "type" : "owl:Class"
+  }, {
+    "id" : "330",
+    "type" : "owl:Class"
+  }, {
+    "id" : "302",
+    "type" : "owl:Class"
+  }, {
+    "id" : "258",
+    "type" : "owl:Class"
+  }, {
+    "id" : "267",
+    "type" : "owl:Class"
+  }, {
+    "id" : "272",
+    "type" : "owl:Class"
+  }, {
+    "id" : "236",
+    "type" : "owl:Class"
+  }, {
+    "id" : "102",
+    "type" : "owl:Class"
+  }, {
+    "id" : "9",
+    "type" : "owl:Class"
+  }, {
+    "id" : "222",
+    "type" : "owl:Class"
+  }, {
+    "id" : "79",
+    "type" : "owl:Class"
+  }, {
+    "id" : "203",
+    "type" : "owl:Class"
+  }, {
+    "id" : "81",
+    "type" : "owl:Class"
+  }, {
+    "id" : "286",
+    "type" : "owl:Class"
+  }, {
+    "id" : "189",
+    "type" : "owl:Class"
+  }, {
+    "id" : "162",
+    "type" : "owl:Class"
+  }, {
+    "id" : "338",
+    "type" : "owl:Class"
+  }, {
+    "id" : "301",
+    "type" : "owl:Class"
+  }, {
+    "id" : "339",
+    "type" : "owl:Class"
+  }, {
+    "id" : "303",
+    "type" : "owl:Class"
+  }, {
+    "id" : "208",
+    "type" : "owl:Class"
+  }, {
+    "id" : "205",
+    "type" : "owl:Class"
+  }, {
+    "id" : "164",
+    "type" : "owl:Class"
+  }, {
+    "id" : "344",
+    "type" : "owl:Class"
+  }, {
+    "id" : "21",
+    "type" : "owl:Class"
+  }, {
+    "id" : "293",
+    "type" : "owl:Class"
+  }, {
+    "id" : "296",
+    "type" : "owl:Class"
+  }, {
+    "id" : "220",
+    "type" : "owl:Class"
+  }, {
+    "id" : "121",
+    "type" : "owl:Class"
+  }, {
+    "id" : "300",
+    "type" : "owl:Class"
+  }, {
+    "id" : "337",
+    "type" : "owl:Class"
+  }, {
+    "id" : "225",
+    "type" : "owl:Class"
+  }, {
+    "id" : "311",
+    "type" : "owl:Class"
+  }, {
+    "id" : "324",
+    "type" : "owl:Class"
+  }, {
+    "id" : "88",
+    "type" : "owl:Class"
+  }, {
+    "id" : "305",
+    "type" : "owl:Class"
+  }, {
+    "id" : "290",
+    "type" : "owl:Class"
+  }, {
+    "id" : "153",
+    "type" : "owl:Class"
+  }, {
+    "id" : "25",
+    "type" : "owl:Class"
+  }, {
+    "id" : "295",
+    "type" : "owl:Class"
+  }, {
+    "id" : "255",
+    "type" : "owl:Class"
+  }, {
+    "id" : "148",
+    "type" : "owl:Class"
+  }, {
+    "id" : "297",
+    "type" : "owl:Class"
+  }, {
+    "id" : "298",
+    "type" : "owl:Class"
+  }, {
+    "id" : "109",
+    "type" : "owl:Class"
+  }, {
+    "id" : "24",
+    "type" : "owl:Class"
+  }, {
+    "id" : "166",
+    "type" : "owl:Class"
+  }, {
+    "id" : "127",
+    "type" : "owl:Class"
+  }, {
+    "id" : "211",
+    "type" : "owl:Class"
+  }, {
+    "id" : "96",
+    "type" : "owl:Class"
+  }, {
+    "id" : "100",
+    "type" : "owl:Class"
+  }, {
+    "id" : "30",
+    "type" : "owl:Thing"
+  }, {
+    "id" : "353",
+    "type" : "owl:Class"
+  }, {
+    "id" : "198",
+    "type" : "owl:Class"
+  }, {
+    "id" : "288",
+    "type" : "owl:Class"
+  }, {
+    "id" : "62",
+    "type" : "owl:Class"
+  }, {
+    "id" : "27",
+    "type" : "owl:Class"
+  }, {
+    "id" : "217",
+    "type" : "owl:Class"
+  }, {
+    "id" : "133",
+    "type" : "owl:Class"
+  } ],
+  "classAttribute" : [ {
+    "iri" : "http://fairmat-nfdi.eu/taxonomy/InitialVolume",
+    "baseIri" : "http://fairmat-nfdi.eu/taxonomy",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "InitialVolume"
+    },
+    "attributes" : [ "external" ],
+    "id" : "18",
+    "superClasses" : [ "19" ]
+  }, {
+    "iri" : "http://fairmat-nfdi.eu/taxonomy/Particle",
+    "baseIri" : "http://fairmat-nfdi.eu/taxonomy",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Particle"
+    },
+    "subClasses" : [ "21", "22", "23", "24", "25", "26", "27" ],
+    "attributes" : [ "external" ],
+    "id" : "20",
+    "superClasses" : [ "19" ]
+  }, {
+    "iri" : "http://fairmat-nfdi.eu/taxonomy/ElectrochemicalProperty",
+    "baseIri" : "http://fairmat-nfdi.eu/taxonomy",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "ElectrochemicalProperty"
+    },
+    "subClasses" : [ "28" ],
+    "attributes" : [ "external" ],
+    "id" : "7",
+    "superClasses" : [ "5" ]
+  }, {
+    "iri" : "http://fairmat-nfdi.eu/taxonomy/Size",
+    "baseIri" : "http://fairmat-nfdi.eu/taxonomy",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Size"
+    },
+    "attributes" : [ "external" ],
+    "id" : "26",
+    "superClasses" : [ "20" ]
+  }, {
+    "iri" : "http://fairmat-nfdi.eu/taxonomy/SaturationMagentization",
+    "baseIri" : "http://fairmat-nfdi.eu/taxonomy",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "SaturationMagentization"
+    },
+    "attributes" : [ "external" ],
+    "id" : "44",
+    "superClasses" : [ "45" ]
+  }, {
+    "iri" : "http://fairmat-nfdi.eu/taxonomy/HallVoltage",
+    "baseIri" : "http://fairmat-nfdi.eu/taxonomy",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "HallVoltage"
+    },
+    "attributes" : [ "external" ],
+    "id" : "46",
+    "superClasses" : [ "15" ]
+  }, {
+    "iri" : "http://fairmat-nfdi.eu/taxonomy/HeatCapacity",
+    "baseIri" : "http://fairmat-nfdi.eu/taxonomy",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "HeatCapacity"
+    },
+    "attributes" : [ "external" ],
+    "id" : "55",
+    "superClasses" : [ "13" ]
+  }, {
+    "iri" : "http://fairmat-nfdi.eu/taxonomy/TensileStrength",
+    "baseIri" : "http://fairmat-nfdi.eu/taxonomy",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "TensileStrength"
+    },
+    "attributes" : [ "external" ],
+    "id" : "58",
+    "superClasses" : [ "17" ]
+  }, {
+    "iri" : "http://fairmat-nfdi.eu/taxonomy/CreepRuptureStrength",
+    "baseIri" : "http://fairmat-nfdi.eu/taxonomy",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "CreepRuptureStrength"
+    },
+    "attributes" : [ "external" ],
+    "id" : "59",
+    "superClasses" : [ "17" ]
+  }, {
+    "iri" : "http://fairmat-nfdi.eu/taxonomy/PittingInitiationPotential",
+    "baseIri" : "http://fairmat-nfdi.eu/taxonomy",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "PittingInitiationPotential"
+    },
+    "attributes" : [ "external" ],
+    "id" : "60",
+    "superClasses" : [ "4" ]
+  }, {
+    "iri" : "http://fairmat-nfdi.eu/taxonomy/EffectiveVolume",
+    "baseIri" : "http://fairmat-nfdi.eu/taxonomy",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "EffectiveVolume"
+    },
+    "attributes" : [ "external" ],
+    "id" : "63",
+    "superClasses" : [ "19" ]
+  }, {
+    "iri" : "http://fairmat-nfdi.eu/taxonomy/Phase_(n)",
+    "baseIri" : "http://fairmat-nfdi.eu/taxonomy",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Phase_(n)"
+    },
+    "attributes" : [ "external" ],
+    "id" : "64",
+    "superClasses" : [ "19" ]
+  }, {
+    "iri" : "http://fairmat-nfdi.eu/taxonomy/LossModulus",
+    "baseIri" : "http://fairmat-nfdi.eu/taxonomy",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "LossModulus"
+    },
+    "attributes" : [ "external" ],
+    "id" : "65",
+    "superClasses" : [ "66" ]
+  }, {
+    "iri" : "http://fairmat-nfdi.eu/taxonomy/BowingParameter",
+    "baseIri" : "http://fairmat-nfdi.eu/taxonomy",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "BowingParameter"
+    },
+    "attributes" : [ "external" ],
+    "id" : "67",
+    "superClasses" : [ "15" ]
+  }, {
+    "iri" : "http://fairmat-nfdi.eu/taxonomy/InstantaneousStrain",
+    "baseIri" : "http://fairmat-nfdi.eu/taxonomy",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "InstantaneousStrain"
+    },
+    "attributes" : [ "external" ],
+    "id" : "68",
+    "superClasses" : [ "17" ]
+  }, {
+    "iri" : "http://fairmat-nfdi.eu/taxonomy/TensileProperty",
+    "baseIri" : "http://fairmat-nfdi.eu/taxonomy",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "TensileProperty"
+    },
+    "attributes" : [ "external" ],
+    "id" : "69",
+    "superClasses" : [ "17" ]
+  }, {
+    "iri" : "http://fairmat-nfdi.eu/taxonomy/CriticalResolvedShearStress",
+    "baseIri" : "http://fairmat-nfdi.eu/taxonomy",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "CriticalResolvedShearStress"
+    },
+    "attributes" : [ "external" ],
+    "id" : "70",
+    "superClasses" : [ "17" ]
+  }, {
+    "iri" : "http://fairmat-nfdi.eu/taxonomy/Material",
+    "baseIri" : "http://fairmat-nfdi.eu/taxonomy",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Material"
+    },
+    "attributes" : [ "external" ],
+    "id" : "71"
+  }, {
+    "iri" : "http://fairmat-nfdi.eu/taxonomy/Composition",
+    "baseIri" : "http://fairmat-nfdi.eu/taxonomy",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Composition"
+    },
+    "attributes" : [ "external" ],
+    "id" : "72",
+    "superClasses" : [ "19" ]
+  }, {
+    "iri" : "http://fairmat-nfdi.eu/taxonomy/Transmittance",
+    "baseIri" : "http://fairmat-nfdi.eu/taxonomy",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Transmittance"
+    },
+    "attributes" : [ "external" ],
+    "id" : "52",
+    "superClasses" : [ "9" ]
+  }, {
+    "iri" : "http://fairmat-nfdi.eu/taxonomy/FatigueLife",
+    "baseIri" : "http://fairmat-nfdi.eu/taxonomy",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "FatigueLife"
+    },
+    "attributes" : [ "external" ],
+    "id" : "73",
+    "superClasses" : [ "17" ]
+  }, {
+    "iri" : "http://fairmat-nfdi.eu/taxonomy/StandardState",
+    "baseIri" : "http://fairmat-nfdi.eu/taxonomy",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "StandardState"
+    },
+    "attributes" : [ "external" ],
+    "id" : "74",
+    "superClasses" : [ "13" ]
+  }, {
+    "iri" : "http://fairmat-nfdi.eu/taxonomy/PoreLimitingDiameter",
+    "baseIri" : "http://fairmat-nfdi.eu/taxonomy",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "PoreLimitingDiameter"
+    },
+    "attributes" : [ "external" ],
+    "id" : "75",
+    "superClasses" : [ "19" ]
+  }, {
+    "iri" : "http://fairmat-nfdi.eu/taxonomy/RefractiveIndex",
+    "baseIri" : "http://fairmat-nfdi.eu/taxonomy",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "RefractiveIndex"
+    },
+    "attributes" : [ "external" ],
+    "id" : "48",
+    "superClasses" : [ "9" ]
+  }, {
+    "iri" : "http://fairmat-nfdi.eu/taxonomy/UniformElongation",
+    "baseIri" : "http://fairmat-nfdi.eu/taxonomy",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "UniformElongation"
+    },
+    "attributes" : [ "external" ],
+    "id" : "103",
+    "superClasses" : [ "17" ]
+  }, {
+    "iri" : "http://fairmat-nfdi.eu/taxonomy/MeltingRange",
+    "baseIri" : "http://fairmat-nfdi.eu/taxonomy",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "MeltingRange"
+    },
+    "attributes" : [ "external" ],
+    "id" : "104",
+    "superClasses" : [ "13" ]
+  }, {
+    "iri" : "http://fairmat-nfdi.eu/taxonomy/PoralizedPotential",
+    "baseIri" : "http://fairmat-nfdi.eu/taxonomy",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "PoralizedPotential"
+    },
+    "attributes" : [ "external" ],
+    "id" : "105",
+    "superClasses" : [ "4" ]
+  }, {
+    "iri" : "http://fairmat-nfdi.eu/taxonomy/CorrosionPotential",
+    "baseIri" : "http://fairmat-nfdi.eu/taxonomy",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "CorrosionPotential"
+    },
+    "attributes" : [ "external" ],
+    "id" : "106",
+    "superClasses" : [ "4" ]
+  }, {
+    "iri" : "http://fairmat-nfdi.eu/taxonomy/ElectronMobility",
+    "baseIri" : "http://fairmat-nfdi.eu/taxonomy",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "ElectronMobility"
+    },
+    "attributes" : [ "external" ],
+    "id" : "107",
+    "superClasses" : [ "15" ]
+  }, {
+    "iri" : "http://fairmat-nfdi.eu/taxonomy/MagneticProperty",
+    "baseIri" : "http://fairmat-nfdi.eu/taxonomy",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "MagneticProperty"
+    },
+    "subClasses" : [ "108", "109", "44", "110", "111", "112", "113", "114", "115", "116", "62" ],
+    "attributes" : [ "external" ],
+    "id" : "45",
+    "superClasses" : [ "5" ]
+  }, {
+    "iri" : "http://fairmat-nfdi.eu/taxonomy/LowerShelfEnergy",
+    "baseIri" : "http://fairmat-nfdi.eu/taxonomy",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "LowerShelfEnergy"
+    },
+    "attributes" : [ "external" ],
+    "id" : "117",
+    "superClasses" : [ "17" ]
+  }, {
+    "iri" : "http://fairmat-nfdi.eu/taxonomy/Ecsa",
+    "baseIri" : "http://fairmat-nfdi.eu/taxonomy",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Ecsa"
+    },
+    "attributes" : [ "external" ],
+    "id" : "118",
+    "superClasses" : [ "19" ]
+  }, {
+    "iri" : "http://fairmat-nfdi.eu/taxonomy/TransPassivationPotential",
+    "baseIri" : "http://fairmat-nfdi.eu/taxonomy",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "TransPassivationPotential"
+    },
+    "attributes" : [ "external" ],
+    "id" : "119",
+    "superClasses" : [ "4" ]
+  }, {
+    "iri" : "http://fairmat-nfdi.eu/taxonomy/Color",
+    "baseIri" : "http://fairmat-nfdi.eu/taxonomy",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Color"
+    },
+    "attributes" : [ "external" ],
+    "id" : "54",
+    "superClasses" : [ "9" ]
+  }, {
+    "iri" : "http://fairmat-nfdi.eu/taxonomy/StrainHardeningExponent",
+    "baseIri" : "http://fairmat-nfdi.eu/taxonomy",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "StrainHardeningExponent"
+    },
+    "attributes" : [ "external" ],
+    "id" : "123",
+    "superClasses" : [ "17" ]
+  }, {
+    "iri" : "http://fairmat-nfdi.eu/taxonomy/YoungsModulus",
+    "baseIri" : "http://fairmat-nfdi.eu/taxonomy",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "YoungsModulus"
+    },
+    "attributes" : [ "external" ],
+    "id" : "94",
+    "superClasses" : [ "17" ]
+  }, {
+    "iri" : "http://fairmat-nfdi.eu/taxonomy/DebyeTemperature",
+    "baseIri" : "http://fairmat-nfdi.eu/taxonomy",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "DebyeTemperature"
+    },
+    "attributes" : [ "external" ],
+    "id" : "141",
+    "superClasses" : [ "13" ]
+  }, {
+    "iri" : "http://fairmat-nfdi.eu/taxonomy/ExcitonBindingEnergy",
+    "baseIri" : "http://fairmat-nfdi.eu/taxonomy",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "ExcitonBindingEnergy"
+    },
+    "attributes" : [ "external" ],
+    "id" : "142",
+    "superClasses" : [ "15" ]
+  }, {
+    "iri" : "http://fairmat-nfdi.eu/taxonomy/Defect",
+    "baseIri" : "http://fairmat-nfdi.eu/taxonomy",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Defect"
+    },
+    "attributes" : [ "external" ],
+    "id" : "143",
+    "superClasses" : [ "19" ]
+  }, {
+    "iri" : "http://fairmat-nfdi.eu/taxonomy/HoleMobility",
+    "baseIri" : "http://fairmat-nfdi.eu/taxonomy",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "HoleMobility"
+    },
+    "attributes" : [ "external" ],
+    "id" : "144",
+    "superClasses" : [ "15" ]
+  }, {
+    "iri" : "http://fairmat-nfdi.eu/taxonomy/Type",
+    "baseIri" : "http://fairmat-nfdi.eu/taxonomy",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Type"
+    },
+    "attributes" : [ "external" ],
+    "id" : "145",
+    "superClasses" : [ "146" ]
+  }, {
+    "iri" : "http://fairmat-nfdi.eu/taxonomy/MagneticAnisotropyField",
+    "baseIri" : "http://fairmat-nfdi.eu/taxonomy",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "MagneticAnisotropyField"
+    },
+    "attributes" : [ "external" ],
+    "id" : "112",
+    "superClasses" : [ "45" ]
+  }, {
+    "iri" : "http://fairmat-nfdi.eu/taxonomy/ElectromechanicalCouplingFactor",
+    "baseIri" : "http://fairmat-nfdi.eu/taxonomy",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "ElectromechanicalCouplingFactor"
+    },
+    "attributes" : [ "external" ],
+    "id" : "147",
+    "superClasses" : [ "148" ]
+  }, {
+    "iri" : "http://fairmat-nfdi.eu/taxonomy/Morphology",
+    "baseIri" : "http://fairmat-nfdi.eu/taxonomy",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Morphology"
+    },
+    "attributes" : [ "external" ],
+    "id" : "149",
+    "superClasses" : [ "19" ]
+  }, {
+    "iri" : "http://fairmat-nfdi.eu/taxonomy/Crack_tip_opening_displacement",
+    "baseIri" : "http://fairmat-nfdi.eu/taxonomy",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Crack_tip_opening_displacement"
+    },
+    "attributes" : [ "external" ],
+    "id" : "158",
+    "superClasses" : [ "17" ]
+  }, {
+    "iri" : "http://fairmat-nfdi.eu/taxonomy/ResilienceModulus",
+    "baseIri" : "http://fairmat-nfdi.eu/taxonomy",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "ResilienceModulus"
+    },
+    "attributes" : [ "external" ],
+    "id" : "169",
+    "superClasses" : [ "17" ]
+  }, {
+    "iri" : "http://fairmat-nfdi.eu/taxonomy/SpinOrbitSplittingEnergy",
+    "baseIri" : "http://fairmat-nfdi.eu/taxonomy",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "SpinOrbitSplittingEnergy"
+    },
+    "attributes" : [ "external" ],
+    "id" : "170",
+    "superClasses" : [ "15" ]
+  }, {
+    "iri" : "http://fairmat-nfdi.eu/taxonomy/DielectricStrength",
+    "baseIri" : "http://fairmat-nfdi.eu/taxonomy",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "DielectricStrength"
+    },
+    "attributes" : [ "external" ],
+    "id" : "171",
+    "superClasses" : [ "15" ]
+  }, {
+    "iri" : "http://fairmat-nfdi.eu/taxonomy/MechanicalQualityFactor",
+    "baseIri" : "http://fairmat-nfdi.eu/taxonomy",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "MechanicalQualityFactor"
+    },
+    "attributes" : [ "external" ],
+    "id" : "173",
+    "superClasses" : [ "148" ]
+  }, {
+    "iri" : "http://fairmat-nfdi.eu/taxonomy/Fraction",
+    "baseIri" : "http://fairmat-nfdi.eu/taxonomy",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Fraction"
+    },
+    "attributes" : [ "external" ],
+    "id" : "174",
+    "superClasses" : [ "19" ]
+  }, {
+    "iri" : "http://fairmat-nfdi.eu/taxonomy/LangmuirSurfaceArea",
+    "baseIri" : "http://fairmat-nfdi.eu/taxonomy",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "LangmuirSurfaceArea"
+    },
+    "attributes" : [ "external" ],
+    "id" : "176",
+    "superClasses" : [ "19" ]
+  }, {
+    "iri" : "http://fairmat-nfdi.eu/taxonomy/Compressibility",
+    "baseIri" : "http://fairmat-nfdi.eu/taxonomy",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Compressibility"
+    },
+    "attributes" : [ "external" ],
+    "id" : "140",
+    "superClasses" : [ "17" ]
+  }, {
+    "iri" : "http://fairmat-nfdi.eu/taxonomy/HoleEffectiveMass",
+    "baseIri" : "http://fairmat-nfdi.eu/taxonomy",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "HoleEffectiveMass"
+    },
+    "attributes" : [ "external" ],
+    "id" : "181",
+    "superClasses" : [ "15" ]
+  }, {
+    "iri" : "http://fairmat-nfdi.eu/taxonomy/PhaseCrystalStructure",
+    "baseIri" : "http://fairmat-nfdi.eu/taxonomy",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "PhaseCrystalStructure"
+    },
+    "attributes" : [ "external" ],
+    "id" : "182",
+    "superClasses" : [ "19" ]
+  }, {
+    "iri" : "http://fairmat-nfdi.eu/taxonomy/Porosity",
+    "baseIri" : "http://fairmat-nfdi.eu/taxonomy",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Porosity"
+    },
+    "attributes" : [ "external" ],
+    "id" : "183",
+    "superClasses" : [ "19" ]
+  }, {
+    "iri" : "http://fairmat-nfdi.eu/taxonomy/PoreDiameter",
+    "baseIri" : "http://fairmat-nfdi.eu/taxonomy",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "PoreDiameter"
+    },
+    "attributes" : [ "external" ],
+    "id" : "184",
+    "superClasses" : [ "19" ]
+  }, {
+    "iri" : "http://fairmat-nfdi.eu/taxonomy/Density",
+    "baseIri" : "http://fairmat-nfdi.eu/taxonomy",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Density"
+    },
+    "attributes" : [ "external" ],
+    "id" : "1",
+    "superClasses" : [ "2", "19", "194" ]
+  }, {
+    "iri" : "http://fairmat-nfdi.eu/taxonomy/BulkModulus",
+    "baseIri" : "http://fairmat-nfdi.eu/taxonomy",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "BulkModulus"
+    },
+    "attributes" : [ "external" ],
+    "id" : "92",
+    "superClasses" : [ "17" ]
+  }, {
+    "iri" : "http://fairmat-nfdi.eu/taxonomy/Fugacity",
+    "baseIri" : "http://fairmat-nfdi.eu/taxonomy",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Fugacity"
+    },
+    "attributes" : [ "external" ],
+    "id" : "196",
+    "superClasses" : [ "13" ]
+  }, {
+    "iri" : "http://fairmat-nfdi.eu/taxonomy/ElectricalConductivity",
+    "baseIri" : "http://fairmat-nfdi.eu/taxonomy",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "ElectricalConductivity"
+    },
+    "attributes" : [ "external" ],
+    "id" : "200",
+    "superClasses" : [ "15" ]
+  }, {
+    "iri" : "http://fairmat-nfdi.eu/taxonomy/Hardness",
+    "baseIri" : "http://fairmat-nfdi.eu/taxonomy",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Hardness"
+    },
+    "attributes" : [ "external" ],
+    "id" : "209",
+    "superClasses" : [ "17" ]
+  }, {
+    "iri" : "http://fairmat-nfdi.eu/taxonomy/OneDDefect",
+    "baseIri" : "http://fairmat-nfdi.eu/taxonomy",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "OneDDefect"
+    },
+    "subClasses" : [ "33", "35", "1" ],
+    "attributes" : [ "external" ],
+    "id" : "2",
+    "superClasses" : [ "19" ]
+  }, {
+    "iri" : "http://fairmat-nfdi.eu/taxonomy/MagneticHysteresis",
+    "baseIri" : "http://fairmat-nfdi.eu/taxonomy",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "MagneticHysteresis"
+    },
+    "attributes" : [ "external" ],
+    "id" : "116",
+    "superClasses" : [ "45" ]
+  }, {
+    "iri" : "http://fairmat-nfdi.eu/taxonomy/DielectricConstant",
+    "baseIri" : "http://fairmat-nfdi.eu/taxonomy",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "DielectricConstant"
+    },
+    "attributes" : [ "external" ],
+    "id" : "218",
+    "superClasses" : [ "15" ]
+  }, {
+    "iri" : "http://fairmat-nfdi.eu/taxonomy/MaterialProperty",
+    "baseIri" : "http://fairmat-nfdi.eu/taxonomy",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "MaterialProperty"
+    },
+    "subClasses" : [ "4", "7", "9", "11", "13", "15", "17", "148", "45", "178", "19" ],
+    "attributes" : [ "external" ],
+    "id" : "5"
+  }, {
+    "iri" : "http://fairmat-nfdi.eu/taxonomy/CorrosionProperty",
+    "baseIri" : "http://fairmat-nfdi.eu/taxonomy",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "CorrosionProperty"
+    },
+    "subClasses" : [ "157", "160", "162", "164", "166", "168", "105", "106", "153", "119", "131", "133", "60", "136", "138" ],
+    "attributes" : [ "external" ],
+    "id" : "4",
+    "superClasses" : [ "5" ]
+  }, {
+    "iri" : "http://fairmat-nfdi.eu/taxonomy/ChemicalPotential",
+    "baseIri" : "http://fairmat-nfdi.eu/taxonomy",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "ChemicalPotential"
+    },
+    "attributes" : [ "external" ],
+    "id" : "228",
+    "superClasses" : [ "13" ]
+  }, {
+    "iri" : "http://fairmat-nfdi.eu/taxonomy/EnthalpyOfFormation",
+    "baseIri" : "http://fairmat-nfdi.eu/taxonomy",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "EnthalpyOfFormation"
+    },
+    "attributes" : [ "external" ],
+    "id" : "229",
+    "superClasses" : [ "13" ]
+  }, {
+    "iri" : "http://fairmat-nfdi.eu/taxonomy/ElectronEffectiveMass",
+    "baseIri" : "http://fairmat-nfdi.eu/taxonomy",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "ElectronEffectiveMass"
+    },
+    "attributes" : [ "external" ],
+    "id" : "191",
+    "superClasses" : [ "15" ]
+  }, {
+    "iri" : "http://fairmat-nfdi.eu/taxonomy/CreepProperty",
+    "baseIri" : "http://fairmat-nfdi.eu/taxonomy",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "CreepProperty"
+    },
+    "attributes" : [ "external" ],
+    "id" : "240",
+    "superClasses" : [ "17" ]
+  }, {
+    "iri" : "http://fairmat-nfdi.eu/taxonomy/YieldStrength",
+    "baseIri" : "http://fairmat-nfdi.eu/taxonomy",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "YieldStrength"
+    },
+    "attributes" : [ "external" ],
+    "id" : "241",
+    "superClasses" : [ "17" ]
+  }, {
+    "iri" : "http://fairmat-nfdi.eu/taxonomy/GrainSize",
+    "baseIri" : "http://fairmat-nfdi.eu/taxonomy",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "GrainSize"
+    },
+    "attributes" : [ "external" ],
+    "id" : "243",
+    "superClasses" : [ "19" ]
+  }, {
+    "iri" : "http://fairmat-nfdi.eu/taxonomy/ThermalExpansionCoefficient",
+    "baseIri" : "http://fairmat-nfdi.eu/taxonomy",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "ThermalExpansionCoefficient"
+    },
+    "attributes" : [ "external" ],
+    "id" : "246",
+    "superClasses" : [ "13" ]
+  }, {
+    "iri" : "http://fairmat-nfdi.eu/taxonomy/FatigueCrackGrowthThreshold",
+    "baseIri" : "http://fairmat-nfdi.eu/taxonomy",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "FatigueCrackGrowthThreshold"
+    },
+    "attributes" : [ "external" ],
+    "id" : "247",
+    "superClasses" : [ "17" ]
+  }, {
+    "iri" : "http://fairmat-nfdi.eu/taxonomy/AxialForce",
+    "baseIri" : "http://fairmat-nfdi.eu/taxonomy",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "AxialForce"
+    },
+    "attributes" : [ "external" ],
+    "id" : "248",
+    "superClasses" : [ "66" ]
+  }, {
+    "iri" : "http://fairmat-nfdi.eu/taxonomy/SaturationPolarization",
+    "baseIri" : "http://fairmat-nfdi.eu/taxonomy",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "SaturationPolarization"
+    },
+    "attributes" : [ "external" ],
+    "id" : "249",
+    "superClasses" : [ "178" ]
+  }, {
+    "iri" : "http://fairmat-nfdi.eu/taxonomy/BurgersVector",
+    "baseIri" : "http://fairmat-nfdi.eu/taxonomy",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "BurgersVector"
+    },
+    "attributes" : [ "external" ],
+    "id" : "35",
+    "superClasses" : [ "2" ]
+  }, {
+    "iri" : "http://fairmat-nfdi.eu/taxonomy/PiezoelectricChargeCoefficient",
+    "baseIri" : "http://fairmat-nfdi.eu/taxonomy",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "PiezoelectricChargeCoefficient"
+    },
+    "attributes" : [ "external" ],
+    "id" : "252",
+    "superClasses" : [ "148" ]
+  }, {
+    "iri" : "http://fairmat-nfdi.eu/taxonomy/LayerThickness",
+    "baseIri" : "http://fairmat-nfdi.eu/taxonomy",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "LayerThickness"
+    },
+    "attributes" : [ "external" ],
+    "id" : "251",
+    "superClasses" : [ "19" ]
+  }, {
+    "iri" : "http://fairmat-nfdi.eu/taxonomy/Photoluminescence",
+    "baseIri" : "http://fairmat-nfdi.eu/taxonomy",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Photoluminescence"
+    },
+    "attributes" : [ "external" ],
+    "id" : "41",
+    "superClasses" : [ "9" ]
+  }, {
+    "iri" : "http://fairmat-nfdi.eu/taxonomy/CoersiveField",
+    "baseIri" : "http://fairmat-nfdi.eu/taxonomy",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "CoersiveField"
+    },
+    "attributes" : [ "external" ],
+    "id" : "114",
+    "superClasses" : [ "45" ]
+  }, {
+    "iri" : "http://fairmat-nfdi.eu/taxonomy/Area",
+    "baseIri" : "http://fairmat-nfdi.eu/taxonomy",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Area"
+    },
+    "attributes" : [ "external" ],
+    "id" : "233",
+    "superClasses" : [ "19" ]
+  }, {
+    "iri" : "http://fairmat-nfdi.eu/taxonomy/SpecificHeat",
+    "baseIri" : "http://fairmat-nfdi.eu/taxonomy",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "SpecificHeat"
+    },
+    "attributes" : [ "external" ],
+    "id" : "274",
+    "superClasses" : [ "13" ]
+  }, {
+    "iri" : "http://fairmat-nfdi.eu/taxonomy/ReductionPotential",
+    "baseIri" : "http://fairmat-nfdi.eu/taxonomy",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "ReductionPotential"
+    },
+    "attributes" : [ "external" ],
+    "id" : "39",
+    "superClasses" : [ "28" ]
+  }, {
+    "iri" : "http://fairmat-nfdi.eu/taxonomy/AnodicPartialCurrent",
+    "baseIri" : "http://fairmat-nfdi.eu/taxonomy",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "AnodicPartialCurrent"
+    },
+    "attributes" : [ "external" ],
+    "id" : "160",
+    "superClasses" : [ "4" ]
+  }, {
+    "iri" : "http://fairmat-nfdi.eu/taxonomy/Reflectance",
+    "baseIri" : "http://fairmat-nfdi.eu/taxonomy",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Reflectance"
+    },
+    "attributes" : [ "external" ],
+    "id" : "43",
+    "superClasses" : [ "9" ]
+  }, {
+    "iri" : "http://fairmat-nfdi.eu/taxonomy/Permeability",
+    "baseIri" : "http://fairmat-nfdi.eu/taxonomy",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Permeability"
+    },
+    "attributes" : [ "external" ],
+    "id" : "111",
+    "superClasses" : [ "45" ]
+  }, {
+    "iri" : "http://fairmat-nfdi.eu/taxonomy/MechanicalProperty",
+    "baseIri" : "http://fairmat-nfdi.eu/taxonomy",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "MechanicalProperty"
+    },
+    "subClasses" : [ "140", "121", "123", "125", "127", "129", "94", "96", "98", "100", "102", "83", "68", "86", "88", "90", "92", "70", "69", "79", "81", "241", "240", "286", "287", "158", "288", "289", "103", "290", "247", "291", "292", "117", "73", "169", "58", "293", "294", "59", "295", "209", "296", "297", "298" ],
+    "attributes" : [ "external" ],
+    "id" : "17",
+    "superClasses" : [ "5" ]
+  }, {
+    "iri" : "http://fairmat-nfdi.eu/taxonomy/TwoDDefect",
+    "baseIri" : "http://fairmat-nfdi.eu/taxonomy",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "TwoDDefect"
+    },
+    "subClasses" : [ "145", "299", "300", "301", "302" ],
+    "attributes" : [ "external" ],
+    "id" : "146",
+    "superClasses" : [ "19" ]
+  }, {
+    "iri" : "http://fairmat-nfdi.eu/taxonomy/RheologicalProperty",
+    "baseIri" : "http://fairmat-nfdi.eu/taxonomy",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "RheologicalProperty"
+    },
+    "subClasses" : [ "303", "66" ],
+    "attributes" : [ "external" ],
+    "id" : "11",
+    "superClasses" : [ "5" ]
+  }, {
+    "iri" : "http://fairmat-nfdi.eu/taxonomy/PassivationCurrent",
+    "baseIri" : "http://fairmat-nfdi.eu/taxonomy",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "PassivationCurrent"
+    },
+    "attributes" : [ "external" ],
+    "id" : "136",
+    "superClasses" : [ "4" ]
+  }, {
+    "iri" : "http://fairmat-nfdi.eu/taxonomy/RemanentMagnetization",
+    "baseIri" : "http://fairmat-nfdi.eu/taxonomy",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "RemanentMagnetization"
+    },
+    "attributes" : [ "external" ],
+    "id" : "108",
+    "superClasses" : [ "45" ]
+  }, {
+    "iri" : "http://fairmat-nfdi.eu/taxonomy/Shape",
+    "baseIri" : "http://fairmat-nfdi.eu/taxonomy",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Shape"
+    },
+    "attributes" : [ "external" ],
+    "id" : "22",
+    "superClasses" : [ "20" ]
+  }, {
+    "iri" : "http://fairmat-nfdi.eu/taxonomy/MeltingTemperature",
+    "baseIri" : "http://fairmat-nfdi.eu/taxonomy",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "MeltingTemperature"
+    },
+    "attributes" : [ "external" ],
+    "id" : "321",
+    "superClasses" : [ "13" ]
+  }, {
+    "iri" : "http://fairmat-nfdi.eu/taxonomy/Grain",
+    "baseIri" : "http://fairmat-nfdi.eu/taxonomy",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Grain"
+    },
+    "attributes" : [ "external" ],
+    "id" : "239",
+    "superClasses" : [ "19" ]
+  }, {
+    "iri" : "http://fairmat-nfdi.eu/taxonomy/YieldStengthCompressive",
+    "baseIri" : "http://fairmat-nfdi.eu/taxonomy",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "YieldStengthCompressive"
+    },
+    "attributes" : [ "external" ],
+    "id" : "98",
+    "superClasses" : [ "17" ]
+  }, {
+    "iri" : "http://fairmat-nfdi.eu/taxonomy/TotalPoreVolume",
+    "baseIri" : "http://fairmat-nfdi.eu/taxonomy",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "TotalPoreVolume"
+    },
+    "attributes" : [ "external" ],
+    "id" : "314",
+    "superClasses" : [ "19" ]
+  }, {
+    "iri" : "http://fairmat-nfdi.eu/taxonomy/Squareness",
+    "baseIri" : "http://fairmat-nfdi.eu/taxonomy",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Squareness"
+    },
+    "attributes" : [ "external" ],
+    "id" : "113",
+    "superClasses" : [ "45" ]
+  }, {
+    "iri" : "http://fairmat-nfdi.eu/taxonomy/StandardStateTemperature",
+    "baseIri" : "http://fairmat-nfdi.eu/taxonomy",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "StandardStateTemperature"
+    },
+    "attributes" : [ "external" ],
+    "id" : "269",
+    "superClasses" : [ "13" ]
+  }, {
+    "iri" : "http://fairmat-nfdi.eu/taxonomy/StorageModulus",
+    "baseIri" : "http://fairmat-nfdi.eu/taxonomy",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "StorageModulus"
+    },
+    "attributes" : [ "external" ],
+    "id" : "277",
+    "superClasses" : [ "66" ]
+  }, {
+    "iri" : "http://fairmat-nfdi.eu/taxonomy/ZeroDDefect",
+    "baseIri" : "http://fairmat-nfdi.eu/taxonomy",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "ZeroDDefect"
+    },
+    "subClasses" : [ "338", "1", "339" ],
+    "attributes" : [ "external" ],
+    "id" : "194",
+    "superClasses" : [ "19" ]
+  }, {
+    "iri" : "http://fairmat-nfdi.eu/taxonomy/Toughness",
+    "baseIri" : "http://fairmat-nfdi.eu/taxonomy",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Toughness"
+    },
+    "attributes" : [ "external" ],
+    "id" : "294",
+    "superClasses" : [ "17" ]
+  }, {
+    "iri" : "http://fairmat-nfdi.eu/taxonomy/CurieTemperature",
+    "baseIri" : "http://fairmat-nfdi.eu/taxonomy",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "CurieTemperature"
+    },
+    "attributes" : [ "external" ],
+    "id" : "115",
+    "superClasses" : [ "45" ]
+  }, {
+    "iri" : "http://fairmat-nfdi.eu/taxonomy/Velocity",
+    "baseIri" : "http://fairmat-nfdi.eu/taxonomy",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Velocity"
+    },
+    "attributes" : [ "external" ],
+    "id" : "33",
+    "superClasses" : [ "2" ]
+  }, {
+    "iri" : "http://fairmat-nfdi.eu/taxonomy/Activity",
+    "baseIri" : "http://fairmat-nfdi.eu/taxonomy",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Activity"
+    },
+    "attributes" : [ "external" ],
+    "id" : "332",
+    "superClasses" : [ "13" ]
+  }, {
+    "iri" : "http://fairmat-nfdi.eu/taxonomy/DBTransTemp",
+    "baseIri" : "http://fairmat-nfdi.eu/taxonomy",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "DBTransTemp"
+    },
+    "attributes" : [ "external" ],
+    "id" : "83",
+    "superClasses" : [ "17" ]
+  }, {
+    "iri" : "http://fairmat-nfdi.eu/taxonomy/FerroelectricProperty",
+    "baseIri" : "http://fairmat-nfdi.eu/taxonomy",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "FerroelectricProperty"
+    },
+    "subClasses" : [ "249", "217", "222" ],
+    "attributes" : [ "external" ],
+    "id" : "178",
+    "superClasses" : [ "5" ]
+  }, {
+    "iri" : "http://fairmat-nfdi.eu/taxonomy/FatigueProperty",
+    "baseIri" : "http://fairmat-nfdi.eu/taxonomy",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "FatigueProperty"
+    },
+    "attributes" : [ "external" ],
+    "id" : "287",
+    "superClasses" : [ "17" ]
+  }, {
+    "iri" : "http://fairmat-nfdi.eu/taxonomy/CompressiveProperty",
+    "baseIri" : "http://fairmat-nfdi.eu/taxonomy",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "CompressiveProperty"
+    },
+    "attributes" : [ "external" ],
+    "id" : "291",
+    "superClasses" : [ "17" ]
+  }, {
+    "iri" : "http://fairmat-nfdi.eu/taxonomy/ReactivationPotential",
+    "baseIri" : "http://fairmat-nfdi.eu/taxonomy",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "ReactivationPotential"
+    },
+    "attributes" : [ "external" ],
+    "id" : "138",
+    "superClasses" : [ "4" ]
+  }, {
+    "iri" : "http://fairmat-nfdi.eu/taxonomy/ElectricalProperty",
+    "baseIri" : "http://fairmat-nfdi.eu/taxonomy",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "ElectricalProperty"
+    },
+    "subClasses" : [ "220", "181", "211", "215", "142", "144", "205", "208", "67", "198", "203", "200", "191", "189", "46", "193", "107", "186", "180", "170", "260", "265", "263", "255", "171", "258", "218" ],
+    "attributes" : [ "external" ],
+    "id" : "15",
+    "superClasses" : [ "5" ]
+  }, {
+    "iri" : "http://fairmat-nfdi.eu/taxonomy/PiezoelectricStrainCoefficient",
+    "baseIri" : "http://fairmat-nfdi.eu/taxonomy",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "PiezoelectricStrainCoefficient"
+    },
+    "attributes" : [ "external" ],
+    "id" : "349",
+    "superClasses" : [ "148" ]
+  }, {
+    "iri" : "http://fairmat-nfdi.eu/taxonomy/Impurity",
+    "baseIri" : "http://fairmat-nfdi.eu/taxonomy",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Impurity"
+    },
+    "attributes" : [ "external" ],
+    "id" : "309",
+    "superClasses" : [ "19" ]
+  }, {
+    "iri" : "http://fairmat-nfdi.eu/taxonomy/PoissonRatio",
+    "baseIri" : "http://fairmat-nfdi.eu/taxonomy",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "PoissonRatio"
+    },
+    "attributes" : [ "external" ],
+    "id" : "90",
+    "superClasses" : [ "17" ]
+  }, {
+    "iri" : "http://fairmat-nfdi.eu/taxonomy/MagneticAnisotropyConstant",
+    "baseIri" : "http://fairmat-nfdi.eu/taxonomy",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "MagneticAnisotropyConstant"
+    },
+    "attributes" : [ "external" ],
+    "id" : "110",
+    "superClasses" : [ "45" ]
+  }, {
+    "iri" : "http://fairmat-nfdi.eu/taxonomy/TimeTertiaryCreep",
+    "baseIri" : "http://fairmat-nfdi.eu/taxonomy",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "TimeTertiaryCreep"
+    },
+    "attributes" : [ "external" ],
+    "id" : "292",
+    "superClasses" : [ "17" ]
+  }, {
+    "iri" : "http://fairmat-nfdi.eu/taxonomy/StructuralProperty",
+    "baseIri" : "http://fairmat-nfdi.eu/taxonomy",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "StructuralProperty"
+    },
+    "subClasses" : [ "251", "63", "64", "18", "236", "20", "239", "143", "182", "183", "233", "184", "227", "225", "311", "309", "314", "149", "1", "305", "243", "72", "194", "118", "146", "75", "2", "174", "176" ],
+    "attributes" : [ "external" ],
+    "id" : "19",
+    "superClasses" : [ "5" ]
+  }, {
+    "iri" : "http://fairmat-nfdi.eu/taxonomy/StackingFaultEnergy",
+    "baseIri" : "http://fairmat-nfdi.eu/taxonomy",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "StackingFaultEnergy"
+    },
+    "attributes" : [ "external" ],
+    "id" : "299",
+    "superClasses" : [ "146" ]
+  }, {
+    "iri" : "http://fairmat-nfdi.eu/taxonomy/StandardStatePressure",
+    "baseIri" : "http://fairmat-nfdi.eu/taxonomy",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "StandardStatePressure"
+    },
+    "attributes" : [ "external" ],
+    "id" : "328",
+    "superClasses" : [ "13" ]
+  }, {
+    "iri" : "http://fairmat-nfdi.eu/taxonomy/OpticalBandGap",
+    "baseIri" : "http://fairmat-nfdi.eu/taxonomy",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "OpticalBandGap"
+    },
+    "attributes" : [ "external" ],
+    "id" : "57",
+    "superClasses" : [ "9" ]
+  }, {
+    "iri" : "http://fairmat-nfdi.eu/taxonomy/FractureToughness",
+    "baseIri" : "http://fairmat-nfdi.eu/taxonomy",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "FractureToughness"
+    },
+    "attributes" : [ "external" ],
+    "id" : "125",
+    "superClasses" : [ "17" ]
+  }, {
+    "iri" : "http://fairmat-nfdi.eu/taxonomy/RedoxPotential",
+    "baseIri" : "http://fairmat-nfdi.eu/taxonomy",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "RedoxPotential"
+    },
+    "attributes" : [ "external" ],
+    "id" : "168",
+    "superClasses" : [ "4" ]
+  }, {
+    "iri" : "http://fairmat-nfdi.eu/taxonomy/RealVolume",
+    "baseIri" : "http://fairmat-nfdi.eu/taxonomy",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "RealVolume"
+    },
+    "attributes" : [ "external" ],
+    "id" : "227",
+    "superClasses" : [ "19" ]
+  }, {
+    "iri" : "http://fairmat-nfdi.eu/taxonomy/VariableViscosity",
+    "baseIri" : "http://fairmat-nfdi.eu/taxonomy",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "VariableViscosity"
+    },
+    "subClasses" : [ "277", "65", "248" ],
+    "attributes" : [ "external" ],
+    "id" : "66",
+    "superClasses" : [ "11" ]
+  }, {
+    "iri" : "http://fairmat-nfdi.eu/taxonomy/RuptureTime",
+    "baseIri" : "http://fairmat-nfdi.eu/taxonomy",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "RuptureTime"
+    },
+    "attributes" : [ "external" ],
+    "id" : "86",
+    "superClasses" : [ "17" ]
+  }, {
+    "iri" : "http://fairmat-nfdi.eu/taxonomy/StressIntensityFactorRange",
+    "baseIri" : "http://fairmat-nfdi.eu/taxonomy",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "StressIntensityFactorRange"
+    },
+    "attributes" : [ "external" ],
+    "id" : "289",
+    "superClasses" : [ "17" ]
+  }, {
+    "iri" : "http://fairmat-nfdi.eu/taxonomy/CorrosionRate",
+    "baseIri" : "http://fairmat-nfdi.eu/taxonomy",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "CorrosionRate"
+    },
+    "attributes" : [ "external" ],
+    "id" : "157",
+    "superClasses" : [ "4" ]
+  }, {
+    "iri" : "http://fairmat-nfdi.eu/taxonomy/ThermophysicalProperty",
+    "baseIri" : "http://fairmat-nfdi.eu/taxonomy",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "ThermophysicalProperty"
+    },
+    "subClasses" : [ "269", "267", "272", "104", "246", "321", "55", "344", "141", "337", "228", "332", "330", "229", "274", "74", "324", "328", "196" ],
+    "attributes" : [ "external" ],
+    "id" : "13",
+    "superClasses" : [ "5" ]
+  }, {
+    "iri" : "http://fairmat-nfdi.eu/taxonomy/OxidationPotential",
+    "baseIri" : "http://fairmat-nfdi.eu/taxonomy",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "OxidationPotential"
+    },
+    "attributes" : [ "external" ],
+    "id" : "37",
+    "superClasses" : [ "28" ]
+  }, {
+    "iri" : "http://fairmat-nfdi.eu/taxonomy/CarrierDiffusionLength",
+    "baseIri" : "http://fairmat-nfdi.eu/taxonomy",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "CarrierDiffusionLength"
+    },
+    "attributes" : [ "external" ],
+    "id" : "180",
+    "superClasses" : [ "15" ]
+  }, {
+    "iri" : "http://fairmat-nfdi.eu/taxonomy/IonicConductivity",
+    "baseIri" : "http://fairmat-nfdi.eu/taxonomy",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "IonicConductivity"
+    },
+    "attributes" : [ "external" ],
+    "id" : "263",
+    "superClasses" : [ "15" ]
+  }, {
+    "iri" : "http://fairmat-nfdi.eu/taxonomy/Facet",
+    "baseIri" : "http://fairmat-nfdi.eu/taxonomy",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Facet"
+    },
+    "attributes" : [ "external" ],
+    "id" : "23",
+    "superClasses" : [ "20" ]
+  }, {
+    "iri" : "http://fairmat-nfdi.eu/taxonomy/PassivationPotential",
+    "baseIri" : "http://fairmat-nfdi.eu/taxonomy",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "PassivationPotential"
+    },
+    "attributes" : [ "external" ],
+    "id" : "131",
+    "superClasses" : [ "4" ]
+  }, {
+    "iri" : "http://fairmat-nfdi.eu/taxonomy/AbsorptionCoefficient",
+    "baseIri" : "http://fairmat-nfdi.eu/taxonomy",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "AbsorptionCoefficient"
+    },
+    "attributes" : [ "external" ],
+    "id" : "50",
+    "superClasses" : [ "9" ]
+  }, {
+    "iri" : "http://fairmat-nfdi.eu/taxonomy/FatigueLimit",
+    "baseIri" : "http://fairmat-nfdi.eu/taxonomy",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "FatigueLimit"
+    },
+    "attributes" : [ "external" ],
+    "id" : "129",
+    "superClasses" : [ "17" ]
+  }, {
+    "iri" : "http://fairmat-nfdi.eu/taxonomy/ElectrochemPhaseStability",
+    "baseIri" : "http://fairmat-nfdi.eu/taxonomy",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "ElectrochemPhaseStability"
+    },
+    "subClasses" : [ "37", "39" ],
+    "attributes" : [ "external" ],
+    "id" : "28",
+    "superClasses" : [ "7" ]
+  }, {
+    "iri" : "http://fairmat-nfdi.eu/taxonomy/Permittivity",
+    "baseIri" : "http://fairmat-nfdi.eu/taxonomy",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Permittivity"
+    },
+    "attributes" : [ "external" ],
+    "id" : "215",
+    "superClasses" : [ "15" ]
+  }, {
+    "iri" : "http://fairmat-nfdi.eu/taxonomy/BandGap",
+    "baseIri" : "http://fairmat-nfdi.eu/taxonomy",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "BandGap"
+    },
+    "attributes" : [ "external" ],
+    "id" : "193",
+    "superClasses" : [ "15" ]
+  }, {
+    "iri" : "http://fairmat-nfdi.eu/taxonomy/DensityOfStates",
+    "baseIri" : "http://fairmat-nfdi.eu/taxonomy",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "DensityOfStates"
+    },
+    "attributes" : [ "external" ],
+    "id" : "186",
+    "superClasses" : [ "15" ]
+  }, {
+    "iri" : "http://fairmat-nfdi.eu/taxonomy/TemperatureCoefficientOfResistance",
+    "baseIri" : "http://fairmat-nfdi.eu/taxonomy",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "TemperatureCoefficientOfResistance"
+    },
+    "attributes" : [ "external" ],
+    "id" : "260",
+    "superClasses" : [ "15" ]
+  }, {
+    "iri" : "http://fairmat-nfdi.eu/taxonomy/FermiLevel",
+    "baseIri" : "http://fairmat-nfdi.eu/taxonomy",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "FermiLevel"
+    },
+    "attributes" : [ "external" ],
+    "id" : "265",
+    "superClasses" : [ "15" ]
+  }, {
+    "iri" : "http://fairmat-nfdi.eu/taxonomy/ThermalDiffusivity",
+    "baseIri" : "http://fairmat-nfdi.eu/taxonomy",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "ThermalDiffusivity"
+    },
+    "attributes" : [ "external" ],
+    "id" : "330",
+    "superClasses" : [ "13" ]
+  }, {
+    "iri" : "http://fairmat-nfdi.eu/taxonomy/InterfacialEnergy",
+    "baseIri" : "http://fairmat-nfdi.eu/taxonomy",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "InterfacialEnergy"
+    },
+    "attributes" : [ "external" ],
+    "id" : "302",
+    "superClasses" : [ "146" ]
+  }, {
+    "iri" : "http://fairmat-nfdi.eu/taxonomy/Soc",
+    "baseIri" : "http://fairmat-nfdi.eu/taxonomy",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Soc"
+    },
+    "attributes" : [ "external" ],
+    "id" : "258",
+    "superClasses" : [ "15" ]
+  }, {
+    "iri" : "http://fairmat-nfdi.eu/taxonomy/ThermalConductivity",
+    "baseIri" : "http://fairmat-nfdi.eu/taxonomy",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "ThermalConductivity"
+    },
+    "attributes" : [ "external" ],
+    "id" : "267",
+    "superClasses" : [ "13" ]
+  }, {
+    "iri" : "http://fairmat-nfdi.eu/taxonomy/GibbsFreeEnergy",
+    "baseIri" : "http://fairmat-nfdi.eu/taxonomy",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "GibbsFreeEnergy"
+    },
+    "attributes" : [ "external" ],
+    "id" : "272",
+    "superClasses" : [ "13" ]
+  }, {
+    "iri" : "http://fairmat-nfdi.eu/taxonomy/SurfaceArea",
+    "baseIri" : "http://fairmat-nfdi.eu/taxonomy",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "SurfaceArea"
+    },
+    "attributes" : [ "external" ],
+    "id" : "236",
+    "superClasses" : [ "19" ]
+  }, {
+    "iri" : "http://fairmat-nfdi.eu/taxonomy/ReductionArea",
+    "baseIri" : "http://fairmat-nfdi.eu/taxonomy",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "ReductionArea"
+    },
+    "attributes" : [ "external" ],
+    "id" : "102",
+    "superClasses" : [ "17" ]
+  }, {
+    "iri" : "http://fairmat-nfdi.eu/taxonomy/OpticalProperty",
+    "baseIri" : "http://fairmat-nfdi.eu/taxonomy",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "OpticalProperty"
+    },
+    "subClasses" : [ "41", "43", "48", "50", "52", "54", "57" ],
+    "attributes" : [ "external" ],
+    "id" : "9",
+    "superClasses" : [ "5" ]
+  }, {
+    "iri" : "http://fairmat-nfdi.eu/taxonomy/CoerciveElectricField",
+    "baseIri" : "http://fairmat-nfdi.eu/taxonomy",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "CoerciveElectricField"
+    },
+    "attributes" : [ "external" ],
+    "id" : "222",
+    "superClasses" : [ "178" ]
+  }, {
+    "iri" : "http://fairmat-nfdi.eu/taxonomy/FatigueCrackGrowthRate",
+    "baseIri" : "http://fairmat-nfdi.eu/taxonomy",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "FatigueCrackGrowthRate"
+    },
+    "attributes" : [ "external" ],
+    "id" : "79",
+    "superClasses" : [ "17" ]
+  }, {
+    "iri" : "http://fairmat-nfdi.eu/taxonomy/Resistivity",
+    "baseIri" : "http://fairmat-nfdi.eu/taxonomy",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Resistivity"
+    },
+    "attributes" : [ "external" ],
+    "id" : "203",
+    "superClasses" : [ "15" ]
+  }, {
+    "iri" : "http://fairmat-nfdi.eu/taxonomy/CreepRuptureStrain",
+    "baseIri" : "http://fairmat-nfdi.eu/taxonomy",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "CreepRuptureStrain"
+    },
+    "attributes" : [ "external" ],
+    "id" : "81",
+    "superClasses" : [ "17" ]
+  }, {
+    "iri" : "http://fairmat-nfdi.eu/taxonomy/PlasticStrainRatio",
+    "baseIri" : "http://fairmat-nfdi.eu/taxonomy",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "PlasticStrainRatio"
+    },
+    "attributes" : [ "external" ],
+    "id" : "286",
+    "superClasses" : [ "17" ]
+  }, {
+    "iri" : "http://fairmat-nfdi.eu/taxonomy/ElectricSusceptibility",
+    "baseIri" : "http://fairmat-nfdi.eu/taxonomy",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "ElectricSusceptibility"
+    },
+    "attributes" : [ "external" ],
+    "id" : "189",
+    "superClasses" : [ "15" ]
+  }, {
+    "iri" : "http://fairmat-nfdi.eu/taxonomy/CorrosionCurrent",
+    "baseIri" : "http://fairmat-nfdi.eu/taxonomy",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "CorrosionCurrent"
+    },
+    "attributes" : [ "external" ],
+    "id" : "162",
+    "superClasses" : [ "4" ]
+  }, {
+    "iri" : "http://fairmat-nfdi.eu/taxonomy/RlectricCharge",
+    "baseIri" : "http://fairmat-nfdi.eu/taxonomy",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "RlectricCharge"
+    },
+    "attributes" : [ "external" ],
+    "id" : "338",
+    "superClasses" : [ "194" ]
+  }, {
+    "iri" : "http://fairmat-nfdi.eu/taxonomy/Misorientation",
+    "baseIri" : "http://fairmat-nfdi.eu/taxonomy",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Misorientation"
+    },
+    "attributes" : [ "external" ],
+    "id" : "301",
+    "superClasses" : [ "146" ]
+  }, {
+    "iri" : "http://fairmat-nfdi.eu/taxonomy/FormationEnergy",
+    "baseIri" : "http://fairmat-nfdi.eu/taxonomy",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "FormationEnergy"
+    },
+    "attributes" : [ "external" ],
+    "id" : "339",
+    "superClasses" : [ "194" ]
+  }, {
+    "iri" : "http://fairmat-nfdi.eu/taxonomy/Viscosity",
+    "baseIri" : "http://fairmat-nfdi.eu/taxonomy",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Viscosity"
+    },
+    "attributes" : [ "external" ],
+    "id" : "303",
+    "superClasses" : [ "11" ]
+  }, {
+    "iri" : "http://fairmat-nfdi.eu/taxonomy/IonicMobility",
+    "baseIri" : "http://fairmat-nfdi.eu/taxonomy",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "IonicMobility"
+    },
+    "attributes" : [ "external" ],
+    "id" : "208",
+    "superClasses" : [ "15" ]
+  }, {
+    "iri" : "http://fairmat-nfdi.eu/taxonomy/HallCoefficient",
+    "baseIri" : "http://fairmat-nfdi.eu/taxonomy",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "HallCoefficient"
+    },
+    "attributes" : [ "external" ],
+    "id" : "205",
+    "superClasses" : [ "15" ]
+  }, {
+    "iri" : "http://fairmat-nfdi.eu/taxonomy/FreeCorrosionPotential",
+    "baseIri" : "http://fairmat-nfdi.eu/taxonomy",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "FreeCorrosionPotential"
+    },
+    "attributes" : [ "external" ],
+    "id" : "164",
+    "superClasses" : [ "4" ]
+  }, {
+    "iri" : "http://fairmat-nfdi.eu/taxonomy/CryoscopicConstant",
+    "baseIri" : "http://fairmat-nfdi.eu/taxonomy",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "CryoscopicConstant"
+    },
+    "attributes" : [ "external" ],
+    "id" : "344",
+    "superClasses" : [ "13" ]
+  }, {
+    "iri" : "http://fairmat-nfdi.eu/taxonomy/Height",
+    "baseIri" : "http://fairmat-nfdi.eu/taxonomy",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Height"
+    },
+    "attributes" : [ "external" ],
+    "id" : "21",
+    "superClasses" : [ "20" ]
+  }, {
+    "iri" : "http://fairmat-nfdi.eu/taxonomy/MaxCompressiveStrength",
+    "baseIri" : "http://fairmat-nfdi.eu/taxonomy",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "MaxCompressiveStrength"
+    },
+    "attributes" : [ "external" ],
+    "id" : "293",
+    "superClasses" : [ "17" ]
+  }, {
+    "iri" : "http://fairmat-nfdi.eu/taxonomy/JIC",
+    "baseIri" : "http://fairmat-nfdi.eu/taxonomy",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "JIC"
+    },
+    "attributes" : [ "external" ],
+    "id" : "296",
+    "superClasses" : [ "17" ]
+  }, {
+    "iri" : "http://fairmat-nfdi.eu/taxonomy/CarrierLifetime",
+    "baseIri" : "http://fairmat-nfdi.eu/taxonomy",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "CarrierLifetime"
+    },
+    "attributes" : [ "external" ],
+    "id" : "220",
+    "superClasses" : [ "15" ]
+  }, {
+    "iri" : "http://fairmat-nfdi.eu/taxonomy/UpperShelfEnergy",
+    "baseIri" : "http://fairmat-nfdi.eu/taxonomy",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "UpperShelfEnergy"
+    },
+    "attributes" : [ "external" ],
+    "id" : "121",
+    "superClasses" : [ "17" ]
+  }, {
+    "iri" : "http://fairmat-nfdi.eu/taxonomy/AntiphaseDomainBoundaryEnergy",
+    "baseIri" : "http://fairmat-nfdi.eu/taxonomy",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "AntiphaseDomainBoundaryEnergy"
+    },
+    "attributes" : [ "external" ],
+    "id" : "300",
+    "superClasses" : [ "146" ]
+  }, {
+    "iri" : "http://fairmat-nfdi.eu/taxonomy/Diffusivity",
+    "baseIri" : "http://fairmat-nfdi.eu/taxonomy",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Diffusivity"
+    },
+    "attributes" : [ "external" ],
+    "id" : "337",
+    "superClasses" : [ "13" ]
+  }, {
+    "iri" : "http://fairmat-nfdi.eu/taxonomy/GrainAspectRatio",
+    "baseIri" : "http://fairmat-nfdi.eu/taxonomy",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "GrainAspectRatio"
+    },
+    "attributes" : [ "external" ],
+    "id" : "225",
+    "superClasses" : [ "19" ]
+  }, {
+    "iri" : "http://fairmat-nfdi.eu/taxonomy/Name",
+    "baseIri" : "http://fairmat-nfdi.eu/taxonomy",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Name"
+    },
+    "attributes" : [ "external" ],
+    "id" : "311",
+    "superClasses" : [ "19" ]
+  }, {
+    "iri" : "http://fairmat-nfdi.eu/taxonomy/HeatOfFusion",
+    "baseIri" : "http://fairmat-nfdi.eu/taxonomy",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "HeatOfFusion"
+    },
+    "attributes" : [ "external" ],
+    "id" : "324",
+    "superClasses" : [ "13" ]
+  }, {
+    "iri" : "http://fairmat-nfdi.eu/taxonomy/ShearModulus",
+    "baseIri" : "http://fairmat-nfdi.eu/taxonomy",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "ShearModulus"
+    },
+    "attributes" : [ "external" ],
+    "id" : "88",
+    "superClasses" : [ "17" ]
+  }, {
+    "iri" : "http://fairmat-nfdi.eu/taxonomy/BetSurfaceArea",
+    "baseIri" : "http://fairmat-nfdi.eu/taxonomy",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "BetSurfaceArea"
+    },
+    "attributes" : [ "external" ],
+    "id" : "305",
+    "superClasses" : [ "19" ]
+  }, {
+    "iri" : "http://fairmat-nfdi.eu/taxonomy/ElasticProperty",
+    "baseIri" : "http://fairmat-nfdi.eu/taxonomy",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "ElasticProperty"
+    },
+    "attributes" : [ "external" ],
+    "id" : "290",
+    "superClasses" : [ "17" ]
+  }, {
+    "iri" : "http://fairmat-nfdi.eu/taxonomy/CathodicPartialCurrent",
+    "baseIri" : "http://fairmat-nfdi.eu/taxonomy",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "CathodicPartialCurrent"
+    },
+    "attributes" : [ "external" ],
+    "id" : "153",
+    "superClasses" : [ "4" ]
+  }, {
+    "iri" : "http://fairmat-nfdi.eu/taxonomy/Width",
+    "baseIri" : "http://fairmat-nfdi.eu/taxonomy",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Width"
+    },
+    "attributes" : [ "external" ],
+    "id" : "25",
+    "superClasses" : [ "20" ]
+  }, {
+    "iri" : "http://fairmat-nfdi.eu/taxonomy/KIC",
+    "baseIri" : "http://fairmat-nfdi.eu/taxonomy",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "KIC"
+    },
+    "attributes" : [ "external" ],
+    "id" : "295",
+    "superClasses" : [ "17" ]
+  }, {
+    "iri" : "http://fairmat-nfdi.eu/taxonomy/SpinHallAngle",
+    "baseIri" : "http://fairmat-nfdi.eu/taxonomy",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "SpinHallAngle"
+    },
+    "attributes" : [ "external" ],
+    "id" : "255",
+    "superClasses" : [ "15" ]
+  }, {
+    "iri" : "http://fairmat-nfdi.eu/taxonomy/PiezoelectricProperty",
+    "baseIri" : "http://fairmat-nfdi.eu/taxonomy",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "PiezoelectricProperty"
+    },
+    "subClasses" : [ "349", "353", "252", "147", "173" ],
+    "attributes" : [ "external" ],
+    "id" : "148",
+    "superClasses" : [ "5" ]
+  }, {
+    "iri" : "http://fairmat-nfdi.eu/taxonomy/ImpactToughness",
+    "baseIri" : "http://fairmat-nfdi.eu/taxonomy",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "ImpactToughness"
+    },
+    "attributes" : [ "external" ],
+    "id" : "297",
+    "superClasses" : [ "17" ]
+  }, {
+    "iri" : "http://fairmat-nfdi.eu/taxonomy/CharpyImpactEnergy",
+    "baseIri" : "http://fairmat-nfdi.eu/taxonomy",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "CharpyImpactEnergy"
+    },
+    "attributes" : [ "external" ],
+    "id" : "298",
+    "superClasses" : [ "17" ]
+  }, {
+    "iri" : "http://fairmat-nfdi.eu/taxonomy/MaximumEnergyProduct",
+    "baseIri" : "http://fairmat-nfdi.eu/taxonomy",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "MaximumEnergyProduct"
+    },
+    "attributes" : [ "external" ],
+    "id" : "109",
+    "superClasses" : [ "45" ]
+  }, {
+    "iri" : "http://fairmat-nfdi.eu/taxonomy/Diameter",
+    "baseIri" : "http://fairmat-nfdi.eu/taxonomy",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Diameter"
+    },
+    "attributes" : [ "external" ],
+    "id" : "24",
+    "superClasses" : [ "20" ]
+  }, {
+    "iri" : "http://fairmat-nfdi.eu/taxonomy/FreeCorrosionCurrent",
+    "baseIri" : "http://fairmat-nfdi.eu/taxonomy",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "FreeCorrosionCurrent"
+    },
+    "attributes" : [ "external" ],
+    "id" : "166",
+    "superClasses" : [ "4" ]
+  }, {
+    "iri" : "http://fairmat-nfdi.eu/taxonomy/StressIntensityFactor",
+    "baseIri" : "http://fairmat-nfdi.eu/taxonomy",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "StressIntensityFactor"
+    },
+    "attributes" : [ "external" ],
+    "id" : "127",
+    "superClasses" : [ "17" ]
+  }, {
+    "iri" : "http://fairmat-nfdi.eu/taxonomy/ElectricCurieTemperature",
+    "baseIri" : "http://fairmat-nfdi.eu/taxonomy",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "ElectricCurieTemperature"
+    },
+    "attributes" : [ "external" ],
+    "id" : "211",
+    "superClasses" : [ "15" ]
+  }, {
+    "iri" : "http://fairmat-nfdi.eu/taxonomy/FatiguePropertyType",
+    "baseIri" : "http://fairmat-nfdi.eu/taxonomy",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "FatiguePropertyType"
+    },
+    "attributes" : [ "external" ],
+    "id" : "96",
+    "superClasses" : [ "17" ]
+  }, {
+    "iri" : "http://fairmat-nfdi.eu/taxonomy/MinimumCreepRate",
+    "baseIri" : "http://fairmat-nfdi.eu/taxonomy",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "MinimumCreepRate"
+    },
+    "attributes" : [ "external" ],
+    "id" : "100",
+    "superClasses" : [ "17" ]
+  }, {
+    "iri" : "http://www.w3.org/2002/07/owl#Thing",
+    "baseIri" : "http://owl2vowl.de",
+    "id" : "30",
+    "label" : {
+      "undefined" : "Thing"
+    }
+  }, {
+    "iri" : "http://fairmat-nfdi.eu/taxonomy/PiezoelectricVoltageCoefficient",
+    "baseIri" : "http://fairmat-nfdi.eu/taxonomy",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "PiezoelectricVoltageCoefficient"
+    },
+    "attributes" : [ "external" ],
+    "id" : "353",
+    "superClasses" : [ "148" ]
+  }, {
+    "iri" : "http://fairmat-nfdi.eu/taxonomy/CarrierConcentration",
+    "baseIri" : "http://fairmat-nfdi.eu/taxonomy",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "CarrierConcentration"
+    },
+    "attributes" : [ "external" ],
+    "id" : "198",
+    "superClasses" : [ "15" ]
+  }, {
+    "iri" : "http://fairmat-nfdi.eu/taxonomy/TotalElongation",
+    "baseIri" : "http://fairmat-nfdi.eu/taxonomy",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "TotalElongation"
+    },
+    "attributes" : [ "external" ],
+    "id" : "288",
+    "superClasses" : [ "17" ]
+  }, {
+    "iri" : "http://fairmat-nfdi.eu/taxonomy/Susceptibility",
+    "baseIri" : "http://fairmat-nfdi.eu/taxonomy",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Susceptibility"
+    },
+    "attributes" : [ "external" ],
+    "id" : "62",
+    "superClasses" : [ "45" ]
+  }, {
+    "iri" : "http://fairmat-nfdi.eu/taxonomy/Length",
+    "baseIri" : "http://fairmat-nfdi.eu/taxonomy",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Length"
+    },
+    "attributes" : [ "external" ],
+    "id" : "27",
+    "superClasses" : [ "20" ]
+  }, {
+    "iri" : "http://fairmat-nfdi.eu/taxonomy/RemanentPolarization",
+    "baseIri" : "http://fairmat-nfdi.eu/taxonomy",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "RemanentPolarization"
+    },
+    "attributes" : [ "external" ],
+    "id" : "217",
+    "superClasses" : [ "178" ]
+  }, {
+    "iri" : "http://fairmat-nfdi.eu/taxonomy/StandardElectrodePotential",
+    "baseIri" : "http://fairmat-nfdi.eu/taxonomy",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "StandardElectrodePotential"
+    },
+    "attributes" : [ "external" ],
+    "id" : "133",
+    "superClasses" : [ "4" ]
+  } ],
+  "property" : [ {
+    "id" : "0",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "3",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "6",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "8",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "10",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "12",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "14",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "16",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "29",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "32",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "34",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "36",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "38",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "40",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "42",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "47",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "49",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "51",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "53",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "56",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "61",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "76",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "77",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "78",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "80",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "82",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "84",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "85",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "87",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "89",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "91",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "93",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "95",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "97",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "99",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "101",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "120",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "122",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "124",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "126",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "128",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "130",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "132",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "134",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "135",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "137",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "139",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "150",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "151",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "152",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "154",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "155",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "156",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "159",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "161",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "163",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "165",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "167",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "172",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "175",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "177",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "179",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "185",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "187",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "188",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "190",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "192",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "195",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "197",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "199",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "201",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "202",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "204",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "206",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "207",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "210",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "212",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "213",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "214",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "216",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "219",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "221",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "223",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "224",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "226",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "230",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "231",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "232",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "234",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "235",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "237",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "238",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "242",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "244",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "245",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "250",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "253",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "254",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "256",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "257",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "259",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "261",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "262",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "264",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "266",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "268",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "270",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "271",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "273",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "275",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "276",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "278",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "279",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "280",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "281",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "282",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "283",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "284",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "285",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "304",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "306",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "307",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "308",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "310",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "312",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "313",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "315",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "316",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "317",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "318",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "319",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "320",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "322",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "323",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "325",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "326",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "327",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "329",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "331",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "333",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "334",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "335",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "336",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "31",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "340",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "341",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "342",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "343",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "345",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "346",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "347",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "348",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "350",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "351",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "352",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "354",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "355",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "356",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "357",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "358",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "359",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "360",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "361",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "362",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "363",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "364",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "365",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "366",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "367",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "368",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "369",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "370",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "371",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "372",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "373",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "374",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "375",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "376",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "377",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "378",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "379",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "380",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "381",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "382",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "383",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "384",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "385",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "386",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "387",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "388",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "389",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "390",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "391",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "392",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "393",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "394",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "395",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "396",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "397",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "398",
+    "type" : "rdfs:SubClassOf"
+  } ],
+  "propertyAttribute" : [ {
+    "range" : "2",
+    "domain" : "1",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "0"
+  }, {
+    "range" : "5",
+    "domain" : "4",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "3"
+  }, {
+    "range" : "5",
+    "domain" : "7",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "6"
+  }, {
+    "range" : "5",
+    "domain" : "9",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "8"
+  }, {
+    "range" : "5",
+    "domain" : "11",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "10"
+  }, {
+    "range" : "5",
+    "domain" : "13",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "12"
+  }, {
+    "range" : "5",
+    "domain" : "15",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "14"
+  }, {
+    "range" : "5",
+    "domain" : "17",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "16"
+  }, {
+    "iri" : "http://www.w3.org/2002/07/owl#topObjectProperty",
+    "baseIri" : "http://www.w3.org/2002/07/owl",
+    "range" : "30",
+    "label" : {
+      "IRI-based" : "topObjectProperty"
+    },
+    "domain" : "30",
+    "subproperty" : [ "31" ],
+    "attributes" : [ "object", "external" ],
+    "id" : "29"
+  }, {
+    "range" : "2",
+    "domain" : "33",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "32"
+  }, {
+    "range" : "2",
+    "domain" : "35",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "34"
+  }, {
+    "range" : "28",
+    "domain" : "37",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "36"
+  }, {
+    "range" : "28",
+    "domain" : "39",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "38"
+  }, {
+    "range" : "9",
+    "domain" : "41",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "40"
+  }, {
+    "range" : "9",
+    "domain" : "43",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "42"
+  }, {
+    "range" : "9",
+    "domain" : "48",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "47"
+  }, {
+    "range" : "9",
+    "domain" : "50",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "49"
+  }, {
+    "range" : "9",
+    "domain" : "52",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "51"
+  }, {
+    "range" : "9",
+    "domain" : "54",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "53"
+  }, {
+    "range" : "9",
+    "domain" : "57",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "56"
+  }, {
+    "range" : "45",
+    "domain" : "62",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "61"
+  }, {
+    "range" : "17",
+    "domain" : "70",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "76"
+  }, {
+    "range" : "17",
+    "domain" : "69",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "77"
+  }, {
+    "range" : "17",
+    "domain" : "79",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "78"
+  }, {
+    "range" : "17",
+    "domain" : "81",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "80"
+  }, {
+    "range" : "17",
+    "domain" : "83",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "82"
+  }, {
+    "range" : "17",
+    "domain" : "68",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "84"
+  }, {
+    "range" : "17",
+    "domain" : "86",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "85"
+  }, {
+    "range" : "17",
+    "domain" : "88",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "87"
+  }, {
+    "range" : "17",
+    "domain" : "90",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "89"
+  }, {
+    "range" : "17",
+    "domain" : "92",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "91"
+  }, {
+    "range" : "17",
+    "domain" : "94",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "93"
+  }, {
+    "range" : "17",
+    "domain" : "96",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "95"
+  }, {
+    "range" : "17",
+    "domain" : "98",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "97"
+  }, {
+    "range" : "17",
+    "domain" : "100",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "99"
+  }, {
+    "range" : "17",
+    "domain" : "102",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "101"
+  }, {
+    "range" : "17",
+    "domain" : "121",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "120"
+  }, {
+    "range" : "17",
+    "domain" : "123",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "122"
+  }, {
+    "range" : "17",
+    "domain" : "125",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "124"
+  }, {
+    "range" : "17",
+    "domain" : "127",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "126"
+  }, {
+    "range" : "17",
+    "domain" : "129",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "128"
+  }, {
+    "range" : "4",
+    "domain" : "131",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "130"
+  }, {
+    "range" : "4",
+    "domain" : "133",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "132"
+  }, {
+    "range" : "4",
+    "domain" : "60",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "134"
+  }, {
+    "range" : "4",
+    "domain" : "136",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "135"
+  }, {
+    "range" : "4",
+    "domain" : "138",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "137"
+  }, {
+    "range" : "17",
+    "domain" : "140",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "139"
+  }, {
+    "range" : "4",
+    "domain" : "105",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "150"
+  }, {
+    "range" : "4",
+    "domain" : "106",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "151"
+  }, {
+    "range" : "4",
+    "domain" : "153",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "152"
+  }, {
+    "range" : "4",
+    "domain" : "119",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "154"
+  }, {
+    "range" : "5",
+    "domain" : "19",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "155"
+  }, {
+    "range" : "4",
+    "domain" : "157",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "156"
+  }, {
+    "range" : "4",
+    "domain" : "160",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "159"
+  }, {
+    "range" : "4",
+    "domain" : "162",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "161"
+  }, {
+    "range" : "4",
+    "domain" : "164",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "163"
+  }, {
+    "range" : "4",
+    "domain" : "166",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "165"
+  }, {
+    "range" : "4",
+    "domain" : "168",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "167"
+  }, {
+    "range" : "5",
+    "domain" : "148",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "172"
+  }, {
+    "range" : "5",
+    "domain" : "45",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "175"
+  }, {
+    "range" : "5",
+    "domain" : "178",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "177"
+  }, {
+    "range" : "15",
+    "domain" : "180",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "179"
+  }, {
+    "range" : "15",
+    "domain" : "186",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "185"
+  }, {
+    "range" : "15",
+    "domain" : "107",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "187"
+  }, {
+    "range" : "15",
+    "domain" : "189",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "188"
+  }, {
+    "range" : "15",
+    "domain" : "191",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "190"
+  }, {
+    "range" : "15",
+    "domain" : "193",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "192"
+  }, {
+    "range" : "15",
+    "domain" : "46",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "195"
+  }, {
+    "range" : "15",
+    "domain" : "198",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "197"
+  }, {
+    "range" : "15",
+    "domain" : "67",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "199"
+  }, {
+    "range" : "15",
+    "domain" : "200",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "201"
+  }, {
+    "range" : "15",
+    "domain" : "203",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "202"
+  }, {
+    "range" : "15",
+    "domain" : "205",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "204"
+  }, {
+    "range" : "15",
+    "domain" : "144",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "206"
+  }, {
+    "range" : "15",
+    "domain" : "208",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "207"
+  }, {
+    "range" : "15",
+    "domain" : "211",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "210"
+  }, {
+    "range" : "15",
+    "domain" : "181",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "212"
+  }, {
+    "range" : "15",
+    "domain" : "142",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "213"
+  }, {
+    "range" : "15",
+    "domain" : "215",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "214"
+  }, {
+    "range" : "178",
+    "domain" : "217",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "216"
+  }, {
+    "range" : "15",
+    "domain" : "220",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "219"
+  }, {
+    "range" : "178",
+    "domain" : "222",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "221"
+  }, {
+    "range" : "19",
+    "domain" : "184",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "223"
+  }, {
+    "range" : "19",
+    "domain" : "225",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "224"
+  }, {
+    "range" : "19",
+    "domain" : "227",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "226"
+  }, {
+    "range" : "19",
+    "domain" : "182",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "230"
+  }, {
+    "range" : "19",
+    "domain" : "143",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "231"
+  }, {
+    "range" : "19",
+    "domain" : "233",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "232"
+  }, {
+    "range" : "19",
+    "domain" : "183",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "234"
+  }, {
+    "range" : "19",
+    "domain" : "236",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "235"
+  }, {
+    "range" : "19",
+    "domain" : "18",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "237"
+  }, {
+    "range" : "19",
+    "domain" : "239",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "238"
+  }, {
+    "range" : "19",
+    "domain" : "20",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "242"
+  }, {
+    "range" : "19",
+    "domain" : "64",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "244"
+  }, {
+    "range" : "19",
+    "domain" : "63",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "245"
+  }, {
+    "range" : "19",
+    "domain" : "251",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "250"
+  }, {
+    "range" : "15",
+    "domain" : "171",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "253"
+  }, {
+    "range" : "15",
+    "domain" : "255",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "254"
+  }, {
+    "range" : "15",
+    "domain" : "218",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "256"
+  }, {
+    "range" : "15",
+    "domain" : "258",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "257"
+  }, {
+    "range" : "15",
+    "domain" : "260",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "259"
+  }, {
+    "range" : "15",
+    "domain" : "170",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "261"
+  }, {
+    "range" : "15",
+    "domain" : "263",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "262"
+  }, {
+    "range" : "15",
+    "domain" : "265",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "264"
+  }, {
+    "range" : "13",
+    "domain" : "267",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "266"
+  }, {
+    "range" : "13",
+    "domain" : "269",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "268"
+  }, {
+    "range" : "13",
+    "domain" : "104",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "270"
+  }, {
+    "range" : "13",
+    "domain" : "272",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "271"
+  }, {
+    "range" : "66",
+    "domain" : "248",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "273"
+  }, {
+    "range" : "66",
+    "domain" : "65",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "275"
+  }, {
+    "range" : "66",
+    "domain" : "277",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "276"
+  }, {
+    "range" : "19",
+    "domain" : "2",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "278"
+  }, {
+    "range" : "19",
+    "domain" : "75",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "279"
+  }, {
+    "range" : "19",
+    "domain" : "176",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "280"
+  }, {
+    "range" : "19",
+    "domain" : "174",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "281"
+  }, {
+    "range" : "19",
+    "domain" : "194",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "282"
+  }, {
+    "range" : "19",
+    "domain" : "72",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "283"
+  }, {
+    "range" : "19",
+    "domain" : "146",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "284"
+  }, {
+    "range" : "19",
+    "domain" : "118",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "285"
+  }, {
+    "range" : "19",
+    "domain" : "305",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "304"
+  }, {
+    "range" : "19",
+    "domain" : "1",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "306"
+  }, {
+    "range" : "19",
+    "domain" : "243",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "307"
+  }, {
+    "range" : "19",
+    "domain" : "309",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "308"
+  }, {
+    "range" : "19",
+    "domain" : "311",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "310"
+  }, {
+    "range" : "19",
+    "domain" : "149",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "312"
+  }, {
+    "range" : "19",
+    "domain" : "314",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "313"
+  }, {
+    "range" : "45",
+    "domain" : "111",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "315"
+  }, {
+    "range" : "45",
+    "domain" : "110",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "316"
+  }, {
+    "range" : "45",
+    "domain" : "113",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "317"
+  }, {
+    "range" : "45",
+    "domain" : "112",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "318"
+  }, {
+    "range" : "45",
+    "domain" : "108",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "319"
+  }, {
+    "range" : "45",
+    "domain" : "44",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "320"
+  }, {
+    "range" : "45",
+    "domain" : "109",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "322"
+  }, {
+    "range" : "13",
+    "domain" : "324",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "323"
+  }, {
+    "range" : "13",
+    "domain" : "74",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "325"
+  }, {
+    "range" : "13",
+    "domain" : "196",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "326"
+  }, {
+    "range" : "13",
+    "domain" : "328",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "327"
+  }, {
+    "range" : "13",
+    "domain" : "330",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "329"
+  }, {
+    "range" : "13",
+    "domain" : "332",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "331"
+  }, {
+    "range" : "13",
+    "domain" : "274",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "333"
+  }, {
+    "range" : "13",
+    "domain" : "229",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "334"
+  }, {
+    "range" : "13",
+    "domain" : "228",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "335"
+  }, {
+    "range" : "13",
+    "domain" : "337",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "336"
+  }, {
+    "iri" : "http://fairmat-nfdi.eu/taxonomy/OWLObjectProperty_0ead6a14_8167_4543_9e1e_c51ee6d9a338",
+    "baseIri" : "http://fairmat-nfdi.eu/taxonomy",
+    "range" : "5",
+    "label" : {
+      "IRI-based" : "OWLObjectProperty_0ead6a14_8167_4543_9e1e_c51ee6d9a338",
+      "en" : "hasMaterialProperty"
+    },
+    "superproperty" : [ "29" ],
+    "domain" : "71",
+    "attributes" : [ "object", "external" ],
+    "id" : "31"
+  }, {
+    "range" : "13",
+    "domain" : "141",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "340"
+  }, {
+    "range" : "13",
+    "domain" : "321",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "341"
+  }, {
+    "range" : "13",
+    "domain" : "246",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "342"
+  }, {
+    "range" : "13",
+    "domain" : "344",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "343"
+  }, {
+    "range" : "13",
+    "domain" : "55",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "345"
+  }, {
+    "range" : "45",
+    "domain" : "115",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "346"
+  }, {
+    "range" : "45",
+    "domain" : "114",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "347"
+  }, {
+    "range" : "45",
+    "domain" : "116",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "348"
+  }, {
+    "range" : "11",
+    "domain" : "66",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "350"
+  }, {
+    "range" : "148",
+    "domain" : "349",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "351"
+  }, {
+    "range" : "148",
+    "domain" : "353",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "352"
+  }, {
+    "range" : "148",
+    "domain" : "252",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "354"
+  }, {
+    "range" : "148",
+    "domain" : "147",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "355"
+  }, {
+    "range" : "148",
+    "domain" : "173",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "356"
+  }, {
+    "range" : "194",
+    "domain" : "338",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "357"
+  }, {
+    "range" : "194",
+    "domain" : "1",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "358"
+  }, {
+    "range" : "194",
+    "domain" : "339",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "359"
+  }, {
+    "range" : "11",
+    "domain" : "303",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "360"
+  }, {
+    "range" : "17",
+    "domain" : "209",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "361"
+  }, {
+    "range" : "17",
+    "domain" : "296",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "362"
+  }, {
+    "range" : "17",
+    "domain" : "297",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "363"
+  }, {
+    "range" : "17",
+    "domain" : "298",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "364"
+  }, {
+    "range" : "146",
+    "domain" : "145",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "365"
+  }, {
+    "range" : "146",
+    "domain" : "299",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "366"
+  }, {
+    "range" : "146",
+    "domain" : "300",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "367"
+  }, {
+    "range" : "146",
+    "domain" : "301",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "368"
+  }, {
+    "range" : "146",
+    "domain" : "302",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "369"
+  }, {
+    "range" : "17",
+    "domain" : "59",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "370"
+  }, {
+    "range" : "17",
+    "domain" : "295",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "371"
+  }, {
+    "range" : "17",
+    "domain" : "291",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "372"
+  }, {
+    "range" : "17",
+    "domain" : "292",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "373"
+  }, {
+    "range" : "17",
+    "domain" : "117",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "374"
+  }, {
+    "range" : "17",
+    "domain" : "73",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "375"
+  }, {
+    "range" : "17",
+    "domain" : "169",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "376"
+  }, {
+    "range" : "17",
+    "domain" : "58",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "377"
+  }, {
+    "range" : "17",
+    "domain" : "293",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "378"
+  }, {
+    "range" : "17",
+    "domain" : "294",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "379"
+  }, {
+    "range" : "17",
+    "domain" : "103",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "380"
+  }, {
+    "range" : "17",
+    "domain" : "290",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "381"
+  }, {
+    "range" : "17",
+    "domain" : "247",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "382"
+  }, {
+    "range" : "17",
+    "domain" : "241",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "383"
+  }, {
+    "range" : "17",
+    "domain" : "240",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "384"
+  }, {
+    "range" : "17",
+    "domain" : "286",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "385"
+  }, {
+    "range" : "17",
+    "domain" : "287",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "386"
+  }, {
+    "range" : "17",
+    "domain" : "158",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "387"
+  }, {
+    "range" : "17",
+    "domain" : "288",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "388"
+  }, {
+    "range" : "17",
+    "domain" : "289",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "389"
+  }, {
+    "range" : "20",
+    "domain" : "22",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "390"
+  }, {
+    "range" : "20",
+    "domain" : "23",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "391"
+  }, {
+    "range" : "20",
+    "domain" : "24",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "392"
+  }, {
+    "range" : "20",
+    "domain" : "25",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "393"
+  }, {
+    "range" : "20",
+    "domain" : "26",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "394"
+  }, {
+    "range" : "20",
+    "domain" : "27",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "395"
+  }, {
+    "range" : "7",
+    "domain" : "28",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "396"
+  }, {
+    "range" : "178",
+    "domain" : "249",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "397"
+  }, {
+    "range" : "20",
+    "domain" : "21",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "398"
+  } ]
+}
