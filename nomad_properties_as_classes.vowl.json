@@ -1,0 +1,679 @@
+{
+  "_comment" : "Created with OWL2VOWL (version 0.3.7), http://vowl.visualdataweb.org",
+  "header" : {
+    "baseIris" : [ "http://fairmat-nfdi.eu/taxonomy", "http://www.w3.org/2002/07/owl", "http://www.w3.org/2000/01/rdf-schema" ],
+    "prefixList" : {
+      "owl" : "http://www.w3.org/2002/07/owl#",
+      "rdf" : "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+      "xsd" : "http://www.w3.org/2001/XMLSchema#",
+      "" : "http://www.semanticweb.org/klawohns/ontologies/2023/8/untitled-ontology-24/",
+      "xml" : "http://www.w3.org/XML/1998/namespace",
+      "rdfs" : "http://www.w3.org/2000/01/rdf-schema#"
+    },
+    "iri" : "http://fairmat-nfdi.eu/taxonomy"
+  },
+  "namespace" : [ ],
+  "class" : [ {
+    "id" : "0",
+    "type" : "owl:Class"
+  }, {
+    "id" : "2",
+    "type" : "owl:Class"
+  }, {
+    "id" : "6",
+    "type" : "owl:Class"
+  }, {
+    "id" : "8",
+    "type" : "owl:Class"
+  }, {
+    "id" : "10",
+    "type" : "owl:Class"
+  }, {
+    "id" : "11",
+    "type" : "owl:Class"
+  }, {
+    "id" : "22",
+    "type" : "owl:Class"
+  }, {
+    "id" : "27",
+    "type" : "owl:Class"
+  }, {
+    "id" : "34",
+    "type" : "owl:Class"
+  }, {
+    "id" : "7",
+    "type" : "owl:Class"
+  }, {
+    "id" : "5",
+    "type" : "owl:Class"
+  }, {
+    "id" : "36",
+    "type" : "owl:Class"
+  }, {
+    "id" : "4",
+    "type" : "owl:Class"
+  }, {
+    "id" : "50",
+    "type" : "owl:Class"
+  }, {
+    "id" : "3",
+    "type" : "owl:Class"
+  }, {
+    "id" : "1",
+    "type" : "owl:Class"
+  }, {
+    "id" : "45",
+    "type" : "owl:Class"
+  }, {
+    "id" : "26",
+    "type" : "owl:Class"
+  }, {
+    "id" : "12",
+    "type" : "owl:Class"
+  }, {
+    "id" : "31",
+    "type" : "owl:Class"
+  }, {
+    "id" : "17",
+    "type" : "owl:Thing"
+  }, {
+    "id" : "40",
+    "type" : "owl:Class"
+  }, {
+    "id" : "30",
+    "type" : "owl:Class"
+  }, {
+    "id" : "35",
+    "type" : "owl:Class"
+  }, {
+    "id" : "24",
+    "type" : "owl:Class"
+  }, {
+    "id" : "9",
+    "type" : "owl:Class"
+  }, {
+    "id" : "15",
+    "type" : "owl:Class"
+  }, {
+    "id" : "51",
+    "type" : "owl:Class"
+  }, {
+    "id" : "20",
+    "type" : "owl:Class"
+  }, {
+    "id" : "14",
+    "type" : "owl:Class"
+  }, {
+    "id" : "44",
+    "type" : "owl:Class"
+  } ],
+  "classAttribute" : [ {
+    "iri" : "http://fairmat-nfdi.eu/taxonomy/VibrationalProperty",
+    "baseIri" : "http://fairmat-nfdi.eu/taxonomy",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "VibrationalProperty"
+    },
+    "subClasses" : [ "2", "3", "4", "5" ],
+    "attributes" : [ "external" ],
+    "id" : "0",
+    "superClasses" : [ "1" ]
+  }, {
+    "iri" : "http://fairmat-nfdi.eu/taxonomy/DOSPhonon",
+    "baseIri" : "http://fairmat-nfdi.eu/taxonomy",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "DOSPhonon"
+    },
+    "attributes" : [ "external" ],
+    "id" : "2",
+    "superClasses" : [ "0" ]
+  }, {
+    "iri" : "http://fairmat-nfdi.eu/taxonomy/EnergyVolumeCurve",
+    "baseIri" : "http://fairmat-nfdi.eu/taxonomy",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "EnergyVolumeCurve"
+    },
+    "attributes" : [ "external" ],
+    "id" : "6",
+    "superClasses" : [ "7" ]
+  }, {
+    "iri" : "http://fairmat-nfdi.eu/taxonomy/RadialDistributionFunction",
+    "baseIri" : "http://fairmat-nfdi.eu/taxonomy",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "RadialDistributionFunction"
+    },
+    "attributes" : [ "external" ],
+    "id" : "8",
+    "superClasses" : [ "9" ]
+  }, {
+    "iri" : "http://fairmat-nfdi.eu/taxonomy/GeometryOptimization",
+    "baseIri" : "http://fairmat-nfdi.eu/taxonomy",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "GeometryOptimization"
+    },
+    "attributes" : [ "external" ],
+    "id" : "10",
+    "superClasses" : [ "1" ]
+  }, {
+    "iri" : "http://fairmat-nfdi.eu/taxonomy/DOSElectronic",
+    "baseIri" : "http://fairmat-nfdi.eu/taxonomy",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "DOSElectronic"
+    },
+    "attributes" : [ "external" ],
+    "id" : "11",
+    "superClasses" : [ "12" ]
+  }, {
+    "iri" : "http://fairmat-nfdi.eu/taxonomy/ShearModulus",
+    "baseIri" : "http://fairmat-nfdi.eu/taxonomy",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "ShearModulus"
+    },
+    "attributes" : [ "external" ],
+    "id" : "22",
+    "superClasses" : [ "7" ]
+  }, {
+    "iri" : "http://fairmat-nfdi.eu/taxonomy/BulkModulus",
+    "baseIri" : "http://fairmat-nfdi.eu/taxonomy",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "BulkModulus"
+    },
+    "attributes" : [ "external" ],
+    "id" : "27",
+    "superClasses" : [ "7" ]
+  }, {
+    "iri" : "http://fairmat-nfdi.eu/taxonomy/Spectroscopy",
+    "baseIri" : "http://fairmat-nfdi.eu/taxonomy",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Spectroscopy"
+    },
+    "attributes" : [ "external" ],
+    "id" : "34",
+    "superClasses" : [ "1" ]
+  }, {
+    "iri" : "http://fairmat-nfdi.eu/taxonomy/MechanicalProperty",
+    "baseIri" : "http://fairmat-nfdi.eu/taxonomy",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "MechanicalProperty"
+    },
+    "subClasses" : [ "6", "22", "27" ],
+    "attributes" : [ "external" ],
+    "id" : "7",
+    "superClasses" : [ "1" ]
+  }, {
+    "iri" : "http://fairmat-nfdi.eu/taxonomy/BandStructurePhonon",
+    "baseIri" : "http://fairmat-nfdi.eu/taxonomy",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "BandStructurePhonon"
+    },
+    "attributes" : [ "external" ],
+    "id" : "5",
+    "superClasses" : [ "0" ]
+  }, {
+    "iri" : "http://fairmat-nfdi.eu/taxonomy/GreensFunctionsElectronic",
+    "baseIri" : "http://fairmat-nfdi.eu/taxonomy",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "GreensFunctionsElectronic"
+    },
+    "attributes" : [ "external" ],
+    "id" : "36",
+    "superClasses" : [ "12" ]
+  }, {
+    "iri" : "http://fairmat-nfdi.eu/taxonomy/HeatCapacityConstantVolume",
+    "baseIri" : "http://fairmat-nfdi.eu/taxonomy",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "HeatCapacityConstantVolume"
+    },
+    "attributes" : [ "external" ],
+    "id" : "4",
+    "superClasses" : [ "0" ]
+  }, {
+    "iri" : "http://fairmat-nfdi.eu/taxonomy/ThermodynamicProperty",
+    "baseIri" : "http://fairmat-nfdi.eu/taxonomy",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "ThermodynamicProperty"
+    },
+    "subClasses" : [ "51" ],
+    "attributes" : [ "external" ],
+    "id" : "50",
+    "superClasses" : [ "1" ]
+  }, {
+    "iri" : "http://fairmat-nfdi.eu/taxonomy/EnergyFreeHelmholtz",
+    "baseIri" : "http://fairmat-nfdi.eu/taxonomy",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "EnergyFreeHelmholtz"
+    },
+    "attributes" : [ "external" ],
+    "id" : "3",
+    "superClasses" : [ "0" ]
+  }, {
+    "iri" : "http://fairmat-nfdi.eu/taxonomy/MaterialProperty",
+    "baseIri" : "http://fairmat-nfdi.eu/taxonomy",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "MaterialProperty"
+    },
+    "subClasses" : [ "0", "50", "45", "12", "34", "31", "7", "10", "15", "9" ],
+    "attributes" : [ "external" ],
+    "id" : "1"
+  }, {
+    "iri" : "http://fairmat-nfdi.eu/taxonomy/DynamicalProperty",
+    "baseIri" : "http://fairmat-nfdi.eu/taxonomy",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "DynamicalProperty"
+    },
+    "subClasses" : [ "44" ],
+    "attributes" : [ "external" ],
+    "id" : "45",
+    "superClasses" : [ "1" ]
+  }, {
+    "iri" : "http://fairmat-nfdi.eu/taxonomy/PrimitiveStructure",
+    "baseIri" : "http://fairmat-nfdi.eu/taxonomy",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "PrimitiveStructure"
+    },
+    "attributes" : [ "external" ],
+    "id" : "26",
+    "superClasses" : [ "15" ]
+  }, {
+    "iri" : "http://fairmat-nfdi.eu/taxonomy/ElectronicProperty",
+    "baseIri" : "http://fairmat-nfdi.eu/taxonomy",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "ElectronicProperty"
+    },
+    "subClasses" : [ "36", "11", "40" ],
+    "attributes" : [ "external" ],
+    "id" : "12",
+    "superClasses" : [ "1" ]
+  }, {
+    "iri" : "http://fairmat-nfdi.eu/taxonomy/OptoelectronicProperty",
+    "baseIri" : "http://fairmat-nfdi.eu/taxonomy",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "OptoelectronicProperty"
+    },
+    "subClasses" : [ "30" ],
+    "attributes" : [ "external" ],
+    "id" : "31",
+    "superClasses" : [ "1" ]
+  }, {
+    "iri" : "http://www.w3.org/2002/07/owl#Thing",
+    "baseIri" : "http://owl2vowl.de",
+    "id" : "17",
+    "label" : {
+      "undefined" : "Thing"
+    }
+  }, {
+    "iri" : "http://fairmat-nfdi.eu/taxonomy/BandStructureElectronic",
+    "baseIri" : "http://fairmat-nfdi.eu/taxonomy",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "BandStructureElectronic"
+    },
+    "attributes" : [ "external" ],
+    "id" : "40",
+    "superClasses" : [ "12" ]
+  }, {
+    "iri" : "http://fairmat-nfdi.eu/taxonomy/SolarCell",
+    "baseIri" : "http://fairmat-nfdi.eu/taxonomy",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "SolarCell"
+    },
+    "attributes" : [ "external" ],
+    "id" : "30",
+    "superClasses" : [ "31" ]
+  }, {
+    "iri" : "http://fairmat-nfdi.eu/taxonomy/Material",
+    "baseIri" : "http://fairmat-nfdi.eu/taxonomy",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Material"
+    },
+    "attributes" : [ "external" ],
+    "id" : "35"
+  }, {
+    "iri" : "http://fairmat-nfdi.eu/taxonomy/OriginalStructure",
+    "baseIri" : "http://fairmat-nfdi.eu/taxonomy",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "OriginalStructure"
+    },
+    "attributes" : [ "external" ],
+    "id" : "24",
+    "superClasses" : [ "15" ]
+  }, {
+    "iri" : "http://fairmat-nfdi.eu/taxonomy/StructuralProperty",
+    "baseIri" : "http://fairmat-nfdi.eu/taxonomy",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "StructuralProperty"
+    },
+    "subClasses" : [ "8", "20" ],
+    "attributes" : [ "external" ],
+    "id" : "9",
+    "superClasses" : [ "1" ]
+  }, {
+    "iri" : "http://fairmat-nfdi.eu/taxonomy/Structures",
+    "baseIri" : "http://fairmat-nfdi.eu/taxonomy",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Structures"
+    },
+    "subClasses" : [ "26", "24", "14" ],
+    "attributes" : [ "external" ],
+    "id" : "15",
+    "superClasses" : [ "1" ]
+  }, {
+    "iri" : "http://fairmat-nfdi.eu/taxonomy/Trajectory",
+    "baseIri" : "http://fairmat-nfdi.eu/taxonomy",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Trajectory"
+    },
+    "attributes" : [ "external" ],
+    "id" : "51",
+    "superClasses" : [ "50" ]
+  }, {
+    "iri" : "http://fairmat-nfdi.eu/taxonomy/RadiusOfGyration",
+    "baseIri" : "http://fairmat-nfdi.eu/taxonomy",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "RadiusOfGyration"
+    },
+    "attributes" : [ "external" ],
+    "id" : "20",
+    "superClasses" : [ "9" ]
+  }, {
+    "iri" : "http://fairmat-nfdi.eu/taxonomy/ConventionalStructure",
+    "baseIri" : "http://fairmat-nfdi.eu/taxonomy",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "ConventionalStructure"
+    },
+    "attributes" : [ "external" ],
+    "id" : "14",
+    "superClasses" : [ "15" ]
+  }, {
+    "iri" : "http://fairmat-nfdi.eu/taxonomy/MeanSquaredDisplacement",
+    "baseIri" : "http://fairmat-nfdi.eu/taxonomy",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "MeanSquaredDisplacement"
+    },
+    "attributes" : [ "external" ],
+    "id" : "44",
+    "superClasses" : [ "45" ]
+  } ],
+  "property" : [ {
+    "id" : "13",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "16",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "19",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "21",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "23",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "25",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "28",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "29",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "32",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "33",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "18",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "37",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "38",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "39",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "41",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "42",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "43",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "46",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "47",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "48",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "49",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "52",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "53",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "54",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "55",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "56",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "57",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "58",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "59",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "60",
+    "type" : "rdfs:SubClassOf"
+  } ],
+  "propertyAttribute" : [ {
+    "range" : "15",
+    "domain" : "14",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "13"
+  }, {
+    "iri" : "http://www.w3.org/2002/07/owl#topObjectProperty",
+    "baseIri" : "http://www.w3.org/2002/07/owl",
+    "range" : "17",
+    "label" : {
+      "IRI-based" : "topObjectProperty"
+    },
+    "domain" : "17",
+    "subproperty" : [ "18" ],
+    "attributes" : [ "object", "external" ],
+    "id" : "16"
+  }, {
+    "range" : "9",
+    "domain" : "20",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "19"
+  }, {
+    "range" : "9",
+    "domain" : "8",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "21"
+  }, {
+    "range" : "15",
+    "domain" : "24",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "23"
+  }, {
+    "range" : "15",
+    "domain" : "26",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "25"
+  }, {
+    "range" : "7",
+    "domain" : "6",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "28"
+  }, {
+    "range" : "31",
+    "domain" : "30",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "29"
+  }, {
+    "range" : "7",
+    "domain" : "27",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "32"
+  }, {
+    "range" : "7",
+    "domain" : "22",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "33"
+  }, {
+    "iri" : "http://fairmat-nfdi.eu/taxonomy/hasMaterialProperty",
+    "baseIri" : "http://fairmat-nfdi.eu/taxonomy",
+    "range" : "1",
+    "label" : {
+      "IRI-based" : "hasMaterialProperty"
+    },
+    "superproperty" : [ "16" ],
+    "domain" : "35",
+    "attributes" : [ "object", "external" ],
+    "id" : "18"
+  }, {
+    "range" : "12",
+    "domain" : "11",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "37"
+  }, {
+    "range" : "12",
+    "domain" : "36",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "38"
+  }, {
+    "range" : "12",
+    "domain" : "40",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "39"
+  }, {
+    "range" : "1",
+    "domain" : "15",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "41"
+  }, {
+    "range" : "1",
+    "domain" : "10",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "42"
+  }, {
+    "range" : "45",
+    "domain" : "44",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "43"
+  }, {
+    "range" : "1",
+    "domain" : "9",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "46"
+  }, {
+    "range" : "1",
+    "domain" : "34",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "47"
+  }, {
+    "range" : "1",
+    "domain" : "7",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "48"
+  }, {
+    "range" : "1",
+    "domain" : "31",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "49"
+  }, {
+    "range" : "0",
+    "domain" : "3",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "52"
+  }, {
+    "range" : "0",
+    "domain" : "4",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "53"
+  }, {
+    "range" : "0",
+    "domain" : "5",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "54"
+  }, {
+    "range" : "50",
+    "domain" : "51",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "55"
+  }, {
+    "range" : "1",
+    "domain" : "0",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "56"
+  }, {
+    "range" : "1",
+    "domain" : "50",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "57"
+  }, {
+    "range" : "1",
+    "domain" : "45",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "58"
+  }, {
+    "range" : "1",
+    "domain" : "12",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "59"
+  }, {
+    "range" : "0",
+    "domain" : "2",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "60"
+  } ]
+}

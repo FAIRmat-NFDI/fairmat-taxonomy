@@ -1,0 +1,174 @@
+@prefix : <http://www.semanticweb.org/klawohns/ontologies/2023/8/untitled-ontology-24/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@base <http://www.semanticweb.org/klawohns/ontologies/2023/8/untitled-ontology-24/> .
+
+<http://fairmat-nfdi.eu/taxonomy> rdf:type owl:Ontology .
+
+#################################################################
+#    Object Properties
+#################################################################
+
+###  http://fairmat-nfdi.eu/taxonomy/hasMaterialProperty
+<http://fairmat-nfdi.eu/taxonomy/hasMaterialProperty> rdf:type owl:ObjectProperty ;
+                                                      rdfs:subPropertyOf owl:topObjectProperty ;
+                                                      rdfs:domain <http://fairmat-nfdi.eu/taxonomy/Material> ;
+                                                      rdfs:range <http://fairmat-nfdi.eu/taxonomy/MaterialProperty> .
+
+
+#################################################################
+#    Classes
+#################################################################
+
+###  http://fairmat-nfdi.eu/taxonomy/BandStructureElectronic
+<http://fairmat-nfdi.eu/taxonomy/BandStructureElectronic> rdf:type owl:Class ;
+                                                          rdfs:subClassOf <http://fairmat-nfdi.eu/taxonomy/ElectronicProperty> .
+
+
+###  http://fairmat-nfdi.eu/taxonomy/BandStructurePhonon
+<http://fairmat-nfdi.eu/taxonomy/BandStructurePhonon> rdf:type owl:Class ;
+                                                      rdfs:subClassOf <http://fairmat-nfdi.eu/taxonomy/VibrationalProperty> .
+
+
+###  http://fairmat-nfdi.eu/taxonomy/BulkModulus
+<http://fairmat-nfdi.eu/taxonomy/BulkModulus> rdf:type owl:Class ;
+                                              rdfs:subClassOf <http://fairmat-nfdi.eu/taxonomy/MechanicalProperty> .
+
+
+###  http://fairmat-nfdi.eu/taxonomy/ConventionalStructure
+<http://fairmat-nfdi.eu/taxonomy/ConventionalStructure> rdf:type owl:Class ;
+                                                        rdfs:subClassOf <http://fairmat-nfdi.eu/taxonomy/Structures> .
+
+
+###  http://fairmat-nfdi.eu/taxonomy/DOSElectronic
+<http://fairmat-nfdi.eu/taxonomy/DOSElectronic> rdf:type owl:Class ;
+                                                rdfs:subClassOf <http://fairmat-nfdi.eu/taxonomy/ElectronicProperty> .
+
+
+###  http://fairmat-nfdi.eu/taxonomy/DOSPhonon
+<http://fairmat-nfdi.eu/taxonomy/DOSPhonon> rdf:type owl:Class ;
+                                            rdfs:subClassOf <http://fairmat-nfdi.eu/taxonomy/VibrationalProperty> .
+
+
+###  http://fairmat-nfdi.eu/taxonomy/DynamicalProperty
+<http://fairmat-nfdi.eu/taxonomy/DynamicalProperty> rdf:type owl:Class ;
+                                                    rdfs:subClassOf <http://fairmat-nfdi.eu/taxonomy/MaterialProperty> .
+
+
+###  http://fairmat-nfdi.eu/taxonomy/ElectronicProperty
+<http://fairmat-nfdi.eu/taxonomy/ElectronicProperty> rdf:type owl:Class ;
+                                                     rdfs:subClassOf <http://fairmat-nfdi.eu/taxonomy/MaterialProperty> .
+
+
+###  http://fairmat-nfdi.eu/taxonomy/EnergyFreeHelmholtz
+<http://fairmat-nfdi.eu/taxonomy/EnergyFreeHelmholtz> rdf:type owl:Class ;
+                                                      rdfs:subClassOf <http://fairmat-nfdi.eu/taxonomy/VibrationalProperty> .
+
+
+###  http://fairmat-nfdi.eu/taxonomy/EnergyVolumeCurve
+<http://fairmat-nfdi.eu/taxonomy/EnergyVolumeCurve> rdf:type owl:Class ;
+                                                    rdfs:subClassOf <http://fairmat-nfdi.eu/taxonomy/MechanicalProperty> .
+
+
+###  http://fairmat-nfdi.eu/taxonomy/GeometryOptimization
+<http://fairmat-nfdi.eu/taxonomy/GeometryOptimization> rdf:type owl:Class ;
+                                                       rdfs:subClassOf <http://fairmat-nfdi.eu/taxonomy/MaterialProperty> .
+
+
+###  http://fairmat-nfdi.eu/taxonomy/GreensFunctionsElectronic
+<http://fairmat-nfdi.eu/taxonomy/GreensFunctionsElectronic> rdf:type owl:Class ;
+                                                            rdfs:subClassOf <http://fairmat-nfdi.eu/taxonomy/ElectronicProperty> .
+
+
+###  http://fairmat-nfdi.eu/taxonomy/HeatCapacityConstantVolume
+<http://fairmat-nfdi.eu/taxonomy/HeatCapacityConstantVolume> rdf:type owl:Class ;
+                                                             rdfs:subClassOf <http://fairmat-nfdi.eu/taxonomy/VibrationalProperty> .
+
+
+###  http://fairmat-nfdi.eu/taxonomy/Material
+<http://fairmat-nfdi.eu/taxonomy/Material> rdf:type owl:Class .
+
+
+###  http://fairmat-nfdi.eu/taxonomy/MaterialProperty
+<http://fairmat-nfdi.eu/taxonomy/MaterialProperty> rdf:type owl:Class .
+
+
+###  http://fairmat-nfdi.eu/taxonomy/MeanSquaredDisplacement
+<http://fairmat-nfdi.eu/taxonomy/MeanSquaredDisplacement> rdf:type owl:Class ;
+                                                          rdfs:subClassOf <http://fairmat-nfdi.eu/taxonomy/DynamicalProperty> .
+
+
+###  http://fairmat-nfdi.eu/taxonomy/MechanicalProperty
+<http://fairmat-nfdi.eu/taxonomy/MechanicalProperty> rdf:type owl:Class ;
+                                                     rdfs:subClassOf <http://fairmat-nfdi.eu/taxonomy/MaterialProperty> .
+
+
+###  http://fairmat-nfdi.eu/taxonomy/OptoelectronicProperty
+<http://fairmat-nfdi.eu/taxonomy/OptoelectronicProperty> rdf:type owl:Class ;
+                                                         rdfs:subClassOf <http://fairmat-nfdi.eu/taxonomy/MaterialProperty> .
+
+
+###  http://fairmat-nfdi.eu/taxonomy/OriginalStructure
+<http://fairmat-nfdi.eu/taxonomy/OriginalStructure> rdf:type owl:Class ;
+                                                    rdfs:subClassOf <http://fairmat-nfdi.eu/taxonomy/Structures> .
+
+
+###  http://fairmat-nfdi.eu/taxonomy/PrimitiveStructure
+<http://fairmat-nfdi.eu/taxonomy/PrimitiveStructure> rdf:type owl:Class ;
+                                                     rdfs:subClassOf <http://fairmat-nfdi.eu/taxonomy/Structures> .
+
+
+###  http://fairmat-nfdi.eu/taxonomy/RadialDistributionFunction
+<http://fairmat-nfdi.eu/taxonomy/RadialDistributionFunction> rdf:type owl:Class ;
+                                                             rdfs:subClassOf <http://fairmat-nfdi.eu/taxonomy/StructuralProperty> .
+
+
+###  http://fairmat-nfdi.eu/taxonomy/RadiusOfGyration
+<http://fairmat-nfdi.eu/taxonomy/RadiusOfGyration> rdf:type owl:Class ;
+                                                   rdfs:subClassOf <http://fairmat-nfdi.eu/taxonomy/StructuralProperty> .
+
+
+###  http://fairmat-nfdi.eu/taxonomy/ShearModulus
+<http://fairmat-nfdi.eu/taxonomy/ShearModulus> rdf:type owl:Class ;
+                                               rdfs:subClassOf <http://fairmat-nfdi.eu/taxonomy/MechanicalProperty> .
+
+
+###  http://fairmat-nfdi.eu/taxonomy/SolarCell
+<http://fairmat-nfdi.eu/taxonomy/SolarCell> rdf:type owl:Class ;
+                                            rdfs:subClassOf <http://fairmat-nfdi.eu/taxonomy/OptoelectronicProperty> .
+
+
+###  http://fairmat-nfdi.eu/taxonomy/Spectroscopy
+<http://fairmat-nfdi.eu/taxonomy/Spectroscopy> rdf:type owl:Class ;
+                                               rdfs:subClassOf <http://fairmat-nfdi.eu/taxonomy/MaterialProperty> .
+
+
+###  http://fairmat-nfdi.eu/taxonomy/StructuralProperty
+<http://fairmat-nfdi.eu/taxonomy/StructuralProperty> rdf:type owl:Class ;
+                                                     rdfs:subClassOf <http://fairmat-nfdi.eu/taxonomy/MaterialProperty> .
+
+
+###  http://fairmat-nfdi.eu/taxonomy/Structures
+<http://fairmat-nfdi.eu/taxonomy/Structures> rdf:type owl:Class ;
+                                             rdfs:subClassOf <http://fairmat-nfdi.eu/taxonomy/MaterialProperty> .
+
+
+###  http://fairmat-nfdi.eu/taxonomy/ThermodynamicProperty
+<http://fairmat-nfdi.eu/taxonomy/ThermodynamicProperty> rdf:type owl:Class ;
+                                                        rdfs:subClassOf <http://fairmat-nfdi.eu/taxonomy/MaterialProperty> .
+
+
+###  http://fairmat-nfdi.eu/taxonomy/Trajectory
+<http://fairmat-nfdi.eu/taxonomy/Trajectory> rdf:type owl:Class ;
+                                             rdfs:subClassOf <http://fairmat-nfdi.eu/taxonomy/ThermodynamicProperty> .
+
+
+###  http://fairmat-nfdi.eu/taxonomy/VibrationalProperty
+<http://fairmat-nfdi.eu/taxonomy/VibrationalProperty> rdf:type owl:Class ;
+                                                      rdfs:subClassOf <http://fairmat-nfdi.eu/taxonomy/MaterialProperty> .
+
+
+###  Generated by the OWL API (version 4.5.25.2023-02-15T19:15:49Z) https://github.com/owlcs/owlapi
