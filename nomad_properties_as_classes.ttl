@@ -23,6 +23,11 @@
 #    Classes
 #################################################################
 
+###  http://fairmat-nfdi.eu/taxonomy/BandGap
+<http://fairmat-nfdi.eu/taxonomy/BandGap> rdf:type owl:Class ;
+                                          rdfs:subClassOf <http://fairmat-nfdi.eu/taxonomy/ElectronicProperty> .
+
+
 ###  http://fairmat-nfdi.eu/taxonomy/BandStructureElectronic
 <http://fairmat-nfdi.eu/taxonomy/BandStructureElectronic> rdf:type owl:Class ;
                                                           rdfs:subClassOf <http://fairmat-nfdi.eu/taxonomy/ElectronicProperty> .
@@ -139,6 +144,11 @@
 ###  http://fairmat-nfdi.eu/taxonomy/SolarCell
 <http://fairmat-nfdi.eu/taxonomy/SolarCell> rdf:type owl:Class ;
                                             rdfs:subClassOf <http://fairmat-nfdi.eu/taxonomy/OptoelectronicProperty> .
+
+
+###  http://fairmat-nfdi.eu/taxonomy/Spectra
+<http://fairmat-nfdi.eu/taxonomy/Spectra> rdf:type owl:Class ;
+                                          rdfs:subClassOf <http://fairmat-nfdi.eu/taxonomy/Spectroscopy> .
 
 
 ###  http://fairmat-nfdi.eu/taxonomy/Spectroscopy
