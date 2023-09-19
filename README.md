@@ -4,7 +4,7 @@ Welcome to the FAIRmat Taxonomy repository! This is a work in progress, aiming t
 
 ## Background and Related Projects
 
-The initial materials properties and their classification are based on the original schema published by our colleagues from KRISS in the Korean Journal, "Jaeryo Madang" in 2022. For more details, please refer to our publication:
+The initial materials properties and their classification are based on the original schema published by our colleagues from KRISS in the Korean Journal, "Jaeryo Madang" in 2022. For more details, please refer to their publication:
 
 **S. Kim et al., "Structure of Materials R&D Data and Standard Vocabulary Dictionary," Jaeryo Madang, 35 (1), 67 (2022).**
 
