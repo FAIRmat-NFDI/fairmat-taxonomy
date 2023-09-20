@@ -1,0 +1,1017 @@
+@prefix : <http://fairmat-nfdi.eu/taxonomy/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@base <http://fairmat-nfdi.eu/taxonomy/> .
+
+<http://fairmat-nfdi.eu/taxonomy> rdf:type owl:Ontology .
+
+#################################################################
+#    Object Properties
+#################################################################
+
+###  http://fairmat-nfdi.eu/taxonomy/OWLObjectProperty_0ead6a14_8167_4543_9e1e_c51ee6d9a338
+:OWLObjectProperty_0ead6a14_8167_4543_9e1e_c51ee6d9a338 rdf:type owl:ObjectProperty ;
+                                                        rdfs:subPropertyOf owl:topObjectProperty ;
+                                                        rdfs:domain :Material ;
+                                                        rdfs:range :MaterialProperty ;
+                                                        rdfs:label "hasMaterialProperty"@en .
+
+
+#################################################################
+#    Classes
+#################################################################
+
+###  http://fairmat-nfdi.eu/taxonomy/AbsorptionCoefficient
+:AbsorptionCoefficient rdf:type owl:Class ;
+                       rdfs:subClassOf :OpticalProperty .
+
+
+###  http://fairmat-nfdi.eu/taxonomy/Activity
+:Activity rdf:type owl:Class ;
+          rdfs:subClassOf :ThermophysicalProperty .
+
+
+###  http://fairmat-nfdi.eu/taxonomy/AnodicPartialCurrent
+:AnodicPartialCurrent rdf:type owl:Class ;
+                      rdfs:subClassOf :CorrosionProperty .
+
+
+###  http://fairmat-nfdi.eu/taxonomy/AntiphaseDomainBoundaryEnergy
+:AntiphaseDomainBoundaryEnergy rdf:type owl:Class ;
+                               rdfs:subClassOf :TwoDDefect .
+
+
+###  http://fairmat-nfdi.eu/taxonomy/Area
+:Area rdf:type owl:Class ;
+      rdfs:subClassOf :StructuralProperty .
+
+
+###  http://fairmat-nfdi.eu/taxonomy/AxialForce
+:AxialForce rdf:type owl:Class ;
+            rdfs:subClassOf :VariableViscosity .
+
+
+###  http://fairmat-nfdi.eu/taxonomy/BandGap
+:BandGap rdf:type owl:Class ;
+         rdfs:subClassOf :ElectricalProperty .
+
+
+###  http://fairmat-nfdi.eu/taxonomy/BetSurfaceArea
+:BetSurfaceArea rdf:type owl:Class ;
+                rdfs:subClassOf :StructuralProperty .
+
+
+###  http://fairmat-nfdi.eu/taxonomy/BowingParameter
+:BowingParameter rdf:type owl:Class ;
+                 rdfs:subClassOf :ElectricalProperty .
+
+
+###  http://fairmat-nfdi.eu/taxonomy/BulkModulus
+:BulkModulus rdf:type owl:Class ;
+             rdfs:subClassOf :MechanicalProperty .
+
+
+###  http://fairmat-nfdi.eu/taxonomy/BurgersVector
+:BurgersVector rdf:type owl:Class ;
+               rdfs:subClassOf :OneDDefect .
+
+
+###  http://fairmat-nfdi.eu/taxonomy/CarrierConcentration
+:CarrierConcentration rdf:type owl:Class ;
+                      rdfs:subClassOf :ElectricalProperty .
+
+
+###  http://fairmat-nfdi.eu/taxonomy/CarrierDiffusionLength
+:CarrierDiffusionLength rdf:type owl:Class ;
+                        rdfs:subClassOf :ElectricalProperty .
+
+
+###  http://fairmat-nfdi.eu/taxonomy/CarrierLifetime
+:CarrierLifetime rdf:type owl:Class ;
+                 rdfs:subClassOf :ElectricalProperty .
+
+
+###  http://fairmat-nfdi.eu/taxonomy/CathodicPartialCurrent
+:CathodicPartialCurrent rdf:type owl:Class ;
+                        rdfs:subClassOf :CorrosionProperty .
+
+
+###  http://fairmat-nfdi.eu/taxonomy/CharpyImpactEnergy
+:CharpyImpactEnergy rdf:type owl:Class ;
+                    rdfs:subClassOf :MechanicalProperty .
+
+
+###  http://fairmat-nfdi.eu/taxonomy/ChemicalPotential
+:ChemicalPotential rdf:type owl:Class ;
+                   rdfs:subClassOf :ThermophysicalProperty .
+
+
+###  http://fairmat-nfdi.eu/taxonomy/CoerciveElectricField
+:CoerciveElectricField rdf:type owl:Class ;
+                       rdfs:subClassOf :FerroelectricProperty .
+
+
+###  http://fairmat-nfdi.eu/taxonomy/CoersiveField
+:CoersiveField rdf:type owl:Class ;
+               rdfs:subClassOf :MagneticProperty .
+
+
+###  http://fairmat-nfdi.eu/taxonomy/Color
+:Color rdf:type owl:Class ;
+       rdfs:subClassOf :OpticalProperty .
+
+
+###  http://fairmat-nfdi.eu/taxonomy/Composition
+:Composition rdf:type owl:Class ;
+             rdfs:subClassOf :StructuralProperty .
+
+
+###  http://fairmat-nfdi.eu/taxonomy/Compressibility
+:Compressibility rdf:type owl:Class ;
+                 rdfs:subClassOf :MechanicalProperty .
+
+
+###  http://fairmat-nfdi.eu/taxonomy/CompressiveProperty
+:CompressiveProperty rdf:type owl:Class ;
+                     rdfs:subClassOf :MechanicalProperty .
+
+
+###  http://fairmat-nfdi.eu/taxonomy/CorrosionCurrent
+:CorrosionCurrent rdf:type owl:Class ;
+                  rdfs:subClassOf :CorrosionProperty .
+
+
+###  http://fairmat-nfdi.eu/taxonomy/CorrosionPotential
+:CorrosionPotential rdf:type owl:Class ;
+                    rdfs:subClassOf :CorrosionProperty .
+
+
+###  http://fairmat-nfdi.eu/taxonomy/CorrosionProperty
+:CorrosionProperty rdf:type owl:Class ;
+                   rdfs:subClassOf :MaterialProperty .
+
+
+###  http://fairmat-nfdi.eu/taxonomy/CorrosionRate
+:CorrosionRate rdf:type owl:Class ;
+               rdfs:subClassOf :CorrosionProperty .
+
+
+###  http://fairmat-nfdi.eu/taxonomy/Crack_tip_opening_displacement
+:Crack_tip_opening_displacement rdf:type owl:Class ;
+                                rdfs:subClassOf :MechanicalProperty .
+
+
+###  http://fairmat-nfdi.eu/taxonomy/CreepProperty
+:CreepProperty rdf:type owl:Class ;
+               rdfs:subClassOf :MechanicalProperty .
+
+
+###  http://fairmat-nfdi.eu/taxonomy/CreepRuptureStrain
+:CreepRuptureStrain rdf:type owl:Class ;
+                    rdfs:subClassOf :MechanicalProperty .
+
+
+###  http://fairmat-nfdi.eu/taxonomy/CreepRuptureStrength
+:CreepRuptureStrength rdf:type owl:Class ;
+                      rdfs:subClassOf :MechanicalProperty .
+
+
+###  http://fairmat-nfdi.eu/taxonomy/CriticalResolvedShearStress
+:CriticalResolvedShearStress rdf:type owl:Class ;
+                             rdfs:subClassOf :MechanicalProperty .
+
+
+###  http://fairmat-nfdi.eu/taxonomy/CryoscopicConstant
+:CryoscopicConstant rdf:type owl:Class ;
+                    rdfs:subClassOf :ThermophysicalProperty .
+
+
+###  http://fairmat-nfdi.eu/taxonomy/CurieTemperature
+:CurieTemperature rdf:type owl:Class ;
+                  rdfs:subClassOf :MagneticProperty .
+
+
+###  http://fairmat-nfdi.eu/taxonomy/DBTransTemp
+:DBTransTemp rdf:type owl:Class ;
+             rdfs:subClassOf :MechanicalProperty .
+
+
+###  http://fairmat-nfdi.eu/taxonomy/DebyeTemperature
+:DebyeTemperature rdf:type owl:Class ;
+                  rdfs:subClassOf :ThermophysicalProperty .
+
+
+###  http://fairmat-nfdi.eu/taxonomy/Defect
+:Defect rdf:type owl:Class ;
+        rdfs:subClassOf :StructuralProperty .
+
+
+###  http://fairmat-nfdi.eu/taxonomy/Density
+:Density rdf:type owl:Class ;
+         rdfs:subClassOf :OneDDefect ,
+                         :StructuralProperty ,
+                         :ZeroDDefect .
+
+
+###  http://fairmat-nfdi.eu/taxonomy/DensityOfStates
+:DensityOfStates rdf:type owl:Class ;
+                 rdfs:subClassOf :ElectricalProperty .
+
+
+###  http://fairmat-nfdi.eu/taxonomy/Diameter
+:Diameter rdf:type owl:Class ;
+          rdfs:subClassOf :Particle .
+
+
+###  http://fairmat-nfdi.eu/taxonomy/DielectricConstant
+:DielectricConstant rdf:type owl:Class ;
+                    rdfs:subClassOf :ElectricalProperty .
+
+
+###  http://fairmat-nfdi.eu/taxonomy/DielectricStrength
+:DielectricStrength rdf:type owl:Class ;
+                    rdfs:subClassOf :ElectricalProperty .
+
+
+###  http://fairmat-nfdi.eu/taxonomy/Diffusivity
+:Diffusivity rdf:type owl:Class ;
+             rdfs:subClassOf :ThermophysicalProperty .
+
+
+###  http://fairmat-nfdi.eu/taxonomy/Ecsa
+:Ecsa rdf:type owl:Class ;
+      rdfs:subClassOf :StructuralProperty .
+
+
+###  http://fairmat-nfdi.eu/taxonomy/EffectiveVolume
+:EffectiveVolume rdf:type owl:Class ;
+                 rdfs:subClassOf :StructuralProperty .
+
+
+###  http://fairmat-nfdi.eu/taxonomy/ElasticProperty
+:ElasticProperty rdf:type owl:Class ;
+                 rdfs:subClassOf :MechanicalProperty .
+
+
+###  http://fairmat-nfdi.eu/taxonomy/ElectricCurieTemperature
+:ElectricCurieTemperature rdf:type owl:Class ;
+                          rdfs:subClassOf :ElectricalProperty .
+
+
+###  http://fairmat-nfdi.eu/taxonomy/ElectricSusceptibility
+:ElectricSusceptibility rdf:type owl:Class ;
+                        rdfs:subClassOf :ElectricalProperty .
+
+
+###  http://fairmat-nfdi.eu/taxonomy/ElectricalConductivity
+:ElectricalConductivity rdf:type owl:Class ;
+                        rdfs:subClassOf :ElectricalProperty .
+
+
+###  http://fairmat-nfdi.eu/taxonomy/ElectricalProperty
+:ElectricalProperty rdf:type owl:Class ;
+                    rdfs:subClassOf :MaterialProperty .
+
+
+###  http://fairmat-nfdi.eu/taxonomy/ElectrochemPhaseStability
+:ElectrochemPhaseStability rdf:type owl:Class ;
+                           rdfs:subClassOf :ElectrochemicalProperty .
+
+
+###  http://fairmat-nfdi.eu/taxonomy/ElectrochemicalProperty
+:ElectrochemicalProperty rdf:type owl:Class ;
+                         rdfs:subClassOf :MaterialProperty .
+
+
+###  http://fairmat-nfdi.eu/taxonomy/ElectromechanicalCouplingFactor
+:ElectromechanicalCouplingFactor rdf:type owl:Class ;
+                                 rdfs:subClassOf :PiezoelectricProperty .
+
+
+###  http://fairmat-nfdi.eu/taxonomy/ElectronEffectiveMass
+:ElectronEffectiveMass rdf:type owl:Class ;
+                       rdfs:subClassOf :ElectricalProperty .
+
+
+###  http://fairmat-nfdi.eu/taxonomy/ElectronMobility
+:ElectronMobility rdf:type owl:Class ;
+                  rdfs:subClassOf :ElectricalProperty .
+
+
+###  http://fairmat-nfdi.eu/taxonomy/EnthalpyOfFormation
+:EnthalpyOfFormation rdf:type owl:Class ;
+                     rdfs:subClassOf :ThermophysicalProperty .
+
+
+###  http://fairmat-nfdi.eu/taxonomy/ExcitonBindingEnergy
+:ExcitonBindingEnergy rdf:type owl:Class ;
+                      rdfs:subClassOf :ElectricalProperty .
+
+
+###  http://fairmat-nfdi.eu/taxonomy/Facet
+:Facet rdf:type owl:Class ;
+       rdfs:subClassOf :Particle .
+
+
+###  http://fairmat-nfdi.eu/taxonomy/FatigueCrackGrowthRate
+:FatigueCrackGrowthRate rdf:type owl:Class ;
+                        rdfs:subClassOf :MechanicalProperty .
+
+
+###  http://fairmat-nfdi.eu/taxonomy/FatigueCrackGrowthThreshold
+:FatigueCrackGrowthThreshold rdf:type owl:Class ;
+                             rdfs:subClassOf :MechanicalProperty .
+
+
+###  http://fairmat-nfdi.eu/taxonomy/FatigueLife
+:FatigueLife rdf:type owl:Class ;
+             rdfs:subClassOf :MechanicalProperty .
+
+
+###  http://fairmat-nfdi.eu/taxonomy/FatigueLimit
+:FatigueLimit rdf:type owl:Class ;
+              rdfs:subClassOf :MechanicalProperty .
+
+
+###  http://fairmat-nfdi.eu/taxonomy/FatigueProperty
+:FatigueProperty rdf:type owl:Class ;
+                 rdfs:subClassOf :MechanicalProperty .
+
+
+###  http://fairmat-nfdi.eu/taxonomy/FatiguePropertyType
+:FatiguePropertyType rdf:type owl:Class ;
+                     rdfs:subClassOf :MechanicalProperty .
+
+
+###  http://fairmat-nfdi.eu/taxonomy/FermiLevel
+:FermiLevel rdf:type owl:Class ;
+            rdfs:subClassOf :ElectricalProperty .
+
+
+###  http://fairmat-nfdi.eu/taxonomy/FerroelectricProperty
+:FerroelectricProperty rdf:type owl:Class ;
+                       rdfs:subClassOf :MaterialProperty .
+
+
+###  http://fairmat-nfdi.eu/taxonomy/FormationEnergy
+:FormationEnergy rdf:type owl:Class ;
+                 rdfs:subClassOf :ZeroDDefect .
+
+
+###  http://fairmat-nfdi.eu/taxonomy/Fraction
+:Fraction rdf:type owl:Class ;
+          rdfs:subClassOf :StructuralProperty .
+
+
+###  http://fairmat-nfdi.eu/taxonomy/FractureToughness
+:FractureToughness rdf:type owl:Class ;
+                   rdfs:subClassOf :MechanicalProperty .
+
+
+###  http://fairmat-nfdi.eu/taxonomy/FreeCorrosionCurrent
+:FreeCorrosionCurrent rdf:type owl:Class ;
+                      rdfs:subClassOf :CorrosionProperty .
+
+
+###  http://fairmat-nfdi.eu/taxonomy/FreeCorrosionPotential
+:FreeCorrosionPotential rdf:type owl:Class ;
+                        rdfs:subClassOf :CorrosionProperty .
+
+
+###  http://fairmat-nfdi.eu/taxonomy/Fugacity
+:Fugacity rdf:type owl:Class ;
+          rdfs:subClassOf :ThermophysicalProperty .
+
+
+###  http://fairmat-nfdi.eu/taxonomy/GibbsFreeEnergy
+:GibbsFreeEnergy rdf:type owl:Class ;
+                 rdfs:subClassOf :ThermophysicalProperty .
+
+
+###  http://fairmat-nfdi.eu/taxonomy/Grain
+:Grain rdf:type owl:Class ;
+       rdfs:subClassOf :StructuralProperty .
+
+
+###  http://fairmat-nfdi.eu/taxonomy/GrainAspectRatio
+:GrainAspectRatio rdf:type owl:Class ;
+                  rdfs:subClassOf :StructuralProperty .
+
+
+###  http://fairmat-nfdi.eu/taxonomy/GrainSize
+:GrainSize rdf:type owl:Class ;
+           rdfs:subClassOf :StructuralProperty .
+
+
+###  http://fairmat-nfdi.eu/taxonomy/HallCoefficient
+:HallCoefficient rdf:type owl:Class ;
+                 rdfs:subClassOf :ElectricalProperty .
+
+
+###  http://fairmat-nfdi.eu/taxonomy/HallVoltage
+:HallVoltage rdf:type owl:Class ;
+             rdfs:subClassOf :ElectricalProperty .
+
+
+###  http://fairmat-nfdi.eu/taxonomy/Hardness
+:Hardness rdf:type owl:Class ;
+          rdfs:subClassOf :MechanicalProperty .
+
+
+###  http://fairmat-nfdi.eu/taxonomy/HeatCapacity
+:HeatCapacity rdf:type owl:Class ;
+              rdfs:subClassOf :ThermophysicalProperty .
+
+
+###  http://fairmat-nfdi.eu/taxonomy/HeatOfFusion
+:HeatOfFusion rdf:type owl:Class ;
+              rdfs:subClassOf :ThermophysicalProperty .
+
+
+###  http://fairmat-nfdi.eu/taxonomy/Height
+:Height rdf:type owl:Class ;
+        rdfs:subClassOf :Particle .
+
+
+###  http://fairmat-nfdi.eu/taxonomy/HoleEffectiveMass
+:HoleEffectiveMass rdf:type owl:Class ;
+                   rdfs:subClassOf :ElectricalProperty .
+
+
+###  http://fairmat-nfdi.eu/taxonomy/HoleMobility
+:HoleMobility rdf:type owl:Class ;
+              rdfs:subClassOf :ElectricalProperty .
+
+
+###  http://fairmat-nfdi.eu/taxonomy/ImpactToughness
+:ImpactToughness rdf:type owl:Class ;
+                 rdfs:subClassOf :MechanicalProperty .
+
+
+###  http://fairmat-nfdi.eu/taxonomy/Impurity
+:Impurity rdf:type owl:Class ;
+          rdfs:subClassOf :StructuralProperty .
+
+
+###  http://fairmat-nfdi.eu/taxonomy/InitialVolume
+:InitialVolume rdf:type owl:Class ;
+               rdfs:subClassOf :StructuralProperty .
+
+
+###  http://fairmat-nfdi.eu/taxonomy/InstantaneousStrain
+:InstantaneousStrain rdf:type owl:Class ;
+                     rdfs:subClassOf :MechanicalProperty .
+
+
+###  http://fairmat-nfdi.eu/taxonomy/InterfacialEnergy
+:InterfacialEnergy rdf:type owl:Class ;
+                   rdfs:subClassOf :TwoDDefect .
+
+
+###  http://fairmat-nfdi.eu/taxonomy/IonicConductivity
+:IonicConductivity rdf:type owl:Class ;
+                   rdfs:subClassOf :ElectricalProperty .
+
+
+###  http://fairmat-nfdi.eu/taxonomy/IonicMobility
+:IonicMobility rdf:type owl:Class ;
+               rdfs:subClassOf :ElectricalProperty .
+
+
+###  http://fairmat-nfdi.eu/taxonomy/JIC
+:JIC rdf:type owl:Class ;
+     rdfs:subClassOf :MechanicalProperty .
+
+
+###  http://fairmat-nfdi.eu/taxonomy/KIC
+:KIC rdf:type owl:Class ;
+     rdfs:subClassOf :MechanicalProperty .
+
+
+###  http://fairmat-nfdi.eu/taxonomy/LangmuirSurfaceArea
+:LangmuirSurfaceArea rdf:type owl:Class ;
+                     rdfs:subClassOf :StructuralProperty .
+
+
+###  http://fairmat-nfdi.eu/taxonomy/LayerThickness
+:LayerThickness rdf:type owl:Class ;
+                rdfs:subClassOf :StructuralProperty .
+
+
+###  http://fairmat-nfdi.eu/taxonomy/Length
+:Length rdf:type owl:Class ;
+        rdfs:subClassOf :Particle .
+
+
+###  http://fairmat-nfdi.eu/taxonomy/LossModulus
+:LossModulus rdf:type owl:Class ;
+             rdfs:subClassOf :VariableViscosity .
+
+
+###  http://fairmat-nfdi.eu/taxonomy/LowerShelfEnergy
+:LowerShelfEnergy rdf:type owl:Class ;
+                  rdfs:subClassOf :MechanicalProperty .
+
+
+###  http://fairmat-nfdi.eu/taxonomy/MagneticAnisotropyConstant
+:MagneticAnisotropyConstant rdf:type owl:Class ;
+                            rdfs:subClassOf :MagneticProperty .
+
+
+###  http://fairmat-nfdi.eu/taxonomy/MagneticAnisotropyField
+:MagneticAnisotropyField rdf:type owl:Class ;
+                         rdfs:subClassOf :MagneticProperty .
+
+
+###  http://fairmat-nfdi.eu/taxonomy/MagneticHysteresis
+:MagneticHysteresis rdf:type owl:Class ;
+                    rdfs:subClassOf :MagneticProperty .
+
+
+###  http://fairmat-nfdi.eu/taxonomy/MagneticProperty
+:MagneticProperty rdf:type owl:Class ;
+                  rdfs:subClassOf :MaterialProperty .
+
+
+###  http://fairmat-nfdi.eu/taxonomy/Material
+:Material rdf:type owl:Class .
+
+
+###  http://fairmat-nfdi.eu/taxonomy/MaterialProperty
+:MaterialProperty rdf:type owl:Class .
+
+
+###  http://fairmat-nfdi.eu/taxonomy/MaxCompressiveStrength
+:MaxCompressiveStrength rdf:type owl:Class ;
+                        rdfs:subClassOf :MechanicalProperty .
+
+
+###  http://fairmat-nfdi.eu/taxonomy/MaximumEnergyProduct
+:MaximumEnergyProduct rdf:type owl:Class ;
+                      rdfs:subClassOf :MagneticProperty .
+
+
+###  http://fairmat-nfdi.eu/taxonomy/MechanicalProperty
+:MechanicalProperty rdf:type owl:Class ;
+                    rdfs:subClassOf :MaterialProperty .
+
+
+###  http://fairmat-nfdi.eu/taxonomy/MechanicalQualityFactor
+:MechanicalQualityFactor rdf:type owl:Class ;
+                         rdfs:subClassOf :PiezoelectricProperty .
+
+
+###  http://fairmat-nfdi.eu/taxonomy/MeltingRange
+:MeltingRange rdf:type owl:Class ;
+              rdfs:subClassOf :ThermophysicalProperty .
+
+
+###  http://fairmat-nfdi.eu/taxonomy/MeltingTemperature
+:MeltingTemperature rdf:type owl:Class ;
+                    rdfs:subClassOf :ThermophysicalProperty .
+
+
+###  http://fairmat-nfdi.eu/taxonomy/MinimumCreepRate
+:MinimumCreepRate rdf:type owl:Class ;
+                  rdfs:subClassOf :MechanicalProperty .
+
+
+###  http://fairmat-nfdi.eu/taxonomy/Misorientation
+:Misorientation rdf:type owl:Class ;
+                rdfs:subClassOf :TwoDDefect .
+
+
+###  http://fairmat-nfdi.eu/taxonomy/Morphology
+:Morphology rdf:type owl:Class ;
+            rdfs:subClassOf :StructuralProperty .
+
+
+###  http://fairmat-nfdi.eu/taxonomy/Name
+:Name rdf:type owl:Class ;
+      rdfs:subClassOf :StructuralProperty .
+
+
+###  http://fairmat-nfdi.eu/taxonomy/OneDDefect
+:OneDDefect rdf:type owl:Class ;
+            rdfs:subClassOf :StructuralProperty .
+
+
+###  http://fairmat-nfdi.eu/taxonomy/OpticalBandGap
+:OpticalBandGap rdf:type owl:Class ;
+                rdfs:subClassOf :OpticalProperty .
+
+
+###  http://fairmat-nfdi.eu/taxonomy/OpticalProperty
+:OpticalProperty rdf:type owl:Class ;
+                 rdfs:subClassOf :MaterialProperty .
+
+
+###  http://fairmat-nfdi.eu/taxonomy/OxidationPotential
+:OxidationPotential rdf:type owl:Class ;
+                    rdfs:subClassOf :ElectrochemPhaseStability .
+
+
+###  http://fairmat-nfdi.eu/taxonomy/Particle
+:Particle rdf:type owl:Class ;
+          rdfs:subClassOf :StructuralProperty .
+
+
+###  http://fairmat-nfdi.eu/taxonomy/PassivationCurrent
+:PassivationCurrent rdf:type owl:Class ;
+                    rdfs:subClassOf :CorrosionProperty .
+
+
+###  http://fairmat-nfdi.eu/taxonomy/PassivationPotential
+:PassivationPotential rdf:type owl:Class ;
+                      rdfs:subClassOf :CorrosionProperty .
+
+
+###  http://fairmat-nfdi.eu/taxonomy/Permeability
+:Permeability rdf:type owl:Class ;
+              rdfs:subClassOf :MagneticProperty .
+
+
+###  http://fairmat-nfdi.eu/taxonomy/Permittivity
+:Permittivity rdf:type owl:Class ;
+              rdfs:subClassOf :ElectricalProperty .
+
+
+###  http://fairmat-nfdi.eu/taxonomy/PhaseCrystalStructure
+:PhaseCrystalStructure rdf:type owl:Class ;
+                       rdfs:subClassOf :StructuralProperty .
+
+
+###  http://fairmat-nfdi.eu/taxonomy/Photoluminescence
+:Photoluminescence rdf:type owl:Class ;
+                   rdfs:subClassOf :OpticalProperty .
+
+
+###  http://fairmat-nfdi.eu/taxonomy/PiezoelectricChargeCoefficient
+:PiezoelectricChargeCoefficient rdf:type owl:Class ;
+                                rdfs:subClassOf :PiezoelectricProperty .
+
+
+###  http://fairmat-nfdi.eu/taxonomy/PiezoelectricProperty
+:PiezoelectricProperty rdf:type owl:Class ;
+                       rdfs:subClassOf :MaterialProperty .
+
+
+###  http://fairmat-nfdi.eu/taxonomy/PiezoelectricStrainCoefficient
+:PiezoelectricStrainCoefficient rdf:type owl:Class ;
+                                rdfs:subClassOf :PiezoelectricProperty .
+
+
+###  http://fairmat-nfdi.eu/taxonomy/PiezoelectricVoltageCoefficient
+:PiezoelectricVoltageCoefficient rdf:type owl:Class ;
+                                 rdfs:subClassOf :PiezoelectricProperty .
+
+
+###  http://fairmat-nfdi.eu/taxonomy/PittingInitiationPotential
+:PittingInitiationPotential rdf:type owl:Class ;
+                            rdfs:subClassOf :CorrosionProperty .
+
+
+###  http://fairmat-nfdi.eu/taxonomy/PlasticStrainRatio
+:PlasticStrainRatio rdf:type owl:Class ;
+                    rdfs:subClassOf :MechanicalProperty .
+
+
+###  http://fairmat-nfdi.eu/taxonomy/PoissonRatio
+:PoissonRatio rdf:type owl:Class ;
+              rdfs:subClassOf :MechanicalProperty .
+
+
+###  http://fairmat-nfdi.eu/taxonomy/PoralizedPotential
+:PoralizedPotential rdf:type owl:Class ;
+                    rdfs:subClassOf :CorrosionProperty .
+
+
+###  http://fairmat-nfdi.eu/taxonomy/PoreDiameter
+:PoreDiameter rdf:type owl:Class ;
+              rdfs:subClassOf :StructuralProperty .
+
+
+###  http://fairmat-nfdi.eu/taxonomy/PoreLimitingDiameter
+:PoreLimitingDiameter rdf:type owl:Class ;
+                      rdfs:subClassOf :StructuralProperty .
+
+
+###  http://fairmat-nfdi.eu/taxonomy/Porosity
+:Porosity rdf:type owl:Class ;
+          rdfs:subClassOf :StructuralProperty .
+
+
+###  http://fairmat-nfdi.eu/taxonomy/ReactivationPotential
+:ReactivationPotential rdf:type owl:Class ;
+                       rdfs:subClassOf :CorrosionProperty .
+
+
+###  http://fairmat-nfdi.eu/taxonomy/RealVolume
+:RealVolume rdf:type owl:Class ;
+            rdfs:subClassOf :StructuralProperty .
+
+
+###  http://fairmat-nfdi.eu/taxonomy/RedoxPotential
+:RedoxPotential rdf:type owl:Class ;
+                rdfs:subClassOf :CorrosionProperty .
+
+
+###  http://fairmat-nfdi.eu/taxonomy/ReductionArea
+:ReductionArea rdf:type owl:Class ;
+               rdfs:subClassOf :MechanicalProperty .
+
+
+###  http://fairmat-nfdi.eu/taxonomy/ReductionPotential
+:ReductionPotential rdf:type owl:Class ;
+                    rdfs:subClassOf :ElectrochemPhaseStability .
+
+
+###  http://fairmat-nfdi.eu/taxonomy/Reflectance
+:Reflectance rdf:type owl:Class ;
+             rdfs:subClassOf :OpticalProperty .
+
+
+###  http://fairmat-nfdi.eu/taxonomy/RefractiveIndex
+:RefractiveIndex rdf:type owl:Class ;
+                 rdfs:subClassOf :OpticalProperty .
+
+
+###  http://fairmat-nfdi.eu/taxonomy/RemanentMagnetization
+:RemanentMagnetization rdf:type owl:Class ;
+                       rdfs:subClassOf :MagneticProperty .
+
+
+###  http://fairmat-nfdi.eu/taxonomy/RemanentPolarization
+:RemanentPolarization rdf:type owl:Class ;
+                      rdfs:subClassOf :FerroelectricProperty .
+
+
+###  http://fairmat-nfdi.eu/taxonomy/ResilienceModulus
+:ResilienceModulus rdf:type owl:Class ;
+                   rdfs:subClassOf :MechanicalProperty .
+
+
+###  http://fairmat-nfdi.eu/taxonomy/Resistivity
+:Resistivity rdf:type owl:Class ;
+             rdfs:subClassOf :ElectricalProperty .
+
+
+###  http://fairmat-nfdi.eu/taxonomy/RheologicalProperty
+:RheologicalProperty rdf:type owl:Class ;
+                     rdfs:subClassOf :MaterialProperty .
+
+
+###  http://fairmat-nfdi.eu/taxonomy/RlectricCharge
+:RlectricCharge rdf:type owl:Class ;
+                rdfs:subClassOf :ZeroDDefect .
+
+
+###  http://fairmat-nfdi.eu/taxonomy/RuptureTime
+:RuptureTime rdf:type owl:Class ;
+             rdfs:subClassOf :MechanicalProperty .
+
+
+###  http://fairmat-nfdi.eu/taxonomy/SaturationMagentization
+:SaturationMagentization rdf:type owl:Class ;
+                         rdfs:subClassOf :MagneticProperty .
+
+
+###  http://fairmat-nfdi.eu/taxonomy/SaturationPolarization
+:SaturationPolarization rdf:type owl:Class ;
+                        rdfs:subClassOf :FerroelectricProperty .
+
+
+###  http://fairmat-nfdi.eu/taxonomy/Shape
+:Shape rdf:type owl:Class ;
+       rdfs:subClassOf :Particle .
+
+
+###  http://fairmat-nfdi.eu/taxonomy/ShearModulus
+:ShearModulus rdf:type owl:Class ;
+              rdfs:subClassOf :MechanicalProperty .
+
+
+###  http://fairmat-nfdi.eu/taxonomy/Size
+:Size rdf:type owl:Class ;
+      rdfs:subClassOf :Particle .
+
+
+###  http://fairmat-nfdi.eu/taxonomy/Soc
+:Soc rdf:type owl:Class ;
+     rdfs:subClassOf :ElectricalProperty .
+
+
+###  http://fairmat-nfdi.eu/taxonomy/SpecificHeat
+:SpecificHeat rdf:type owl:Class ;
+              rdfs:subClassOf :ThermophysicalProperty .
+
+
+###  http://fairmat-nfdi.eu/taxonomy/SpinHallAngle
+:SpinHallAngle rdf:type owl:Class ;
+               rdfs:subClassOf :ElectricalProperty .
+
+
+###  http://fairmat-nfdi.eu/taxonomy/SpinOrbitSplittingEnergy
+:SpinOrbitSplittingEnergy rdf:type owl:Class ;
+                          rdfs:subClassOf :ElectricalProperty .
+
+
+###  http://fairmat-nfdi.eu/taxonomy/Squareness
+:Squareness rdf:type owl:Class ;
+            rdfs:subClassOf :MagneticProperty .
+
+
+###  http://fairmat-nfdi.eu/taxonomy/StackingFaultEnergy
+:StackingFaultEnergy rdf:type owl:Class ;
+                     rdfs:subClassOf :TwoDDefect .
+
+
+###  http://fairmat-nfdi.eu/taxonomy/StandardElectrodePotential
+:StandardElectrodePotential rdf:type owl:Class ;
+                            rdfs:subClassOf :CorrosionProperty .
+
+
+###  http://fairmat-nfdi.eu/taxonomy/StandardState
+:StandardState rdf:type owl:Class ;
+               rdfs:subClassOf :ThermophysicalProperty .
+
+
+###  http://fairmat-nfdi.eu/taxonomy/StandardStatePressure
+:StandardStatePressure rdf:type owl:Class ;
+                       rdfs:subClassOf :ThermophysicalProperty .
+
+
+###  http://fairmat-nfdi.eu/taxonomy/StandardStateTemperature
+:StandardStateTemperature rdf:type owl:Class ;
+                          rdfs:subClassOf :ThermophysicalProperty .
+
+
+###  http://fairmat-nfdi.eu/taxonomy/StorageModulus
+:StorageModulus rdf:type owl:Class ;
+                rdfs:subClassOf :VariableViscosity .
+
+
+###  http://fairmat-nfdi.eu/taxonomy/StrainHardeningExponent
+:StrainHardeningExponent rdf:type owl:Class ;
+                         rdfs:subClassOf :MechanicalProperty .
+
+
+###  http://fairmat-nfdi.eu/taxonomy/StressIntensityFactor
+:StressIntensityFactor rdf:type owl:Class ;
+                       rdfs:subClassOf :MechanicalProperty .
+
+
+###  http://fairmat-nfdi.eu/taxonomy/StressIntensityFactorRange
+:StressIntensityFactorRange rdf:type owl:Class ;
+                            rdfs:subClassOf :MechanicalProperty .
+
+
+###  http://fairmat-nfdi.eu/taxonomy/StructuralProperty
+:StructuralProperty rdf:type owl:Class ;
+                    rdfs:subClassOf :MaterialProperty .
+
+
+###  http://fairmat-nfdi.eu/taxonomy/SurfaceArea
+:SurfaceArea rdf:type owl:Class ;
+             rdfs:subClassOf :StructuralProperty .
+
+
+###  http://fairmat-nfdi.eu/taxonomy/Susceptibility
+:Susceptibility rdf:type owl:Class ;
+                rdfs:subClassOf :MagneticProperty .
+
+
+###  http://fairmat-nfdi.eu/taxonomy/TemperatureCoefficientOfResistance
+:TemperatureCoefficientOfResistance rdf:type owl:Class ;
+                                    rdfs:subClassOf :ElectricalProperty .
+
+
+###  http://fairmat-nfdi.eu/taxonomy/TensileProperty
+:TensileProperty rdf:type owl:Class ;
+                 rdfs:subClassOf :MechanicalProperty .
+
+
+###  http://fairmat-nfdi.eu/taxonomy/TensileStrength
+:TensileStrength rdf:type owl:Class ;
+                 rdfs:subClassOf :MechanicalProperty .
+
+
+###  http://fairmat-nfdi.eu/taxonomy/ThermalConductivity
+:ThermalConductivity rdf:type owl:Class ;
+                     rdfs:subClassOf :ThermophysicalProperty .
+
+
+###  http://fairmat-nfdi.eu/taxonomy/ThermalDiffusivity
+:ThermalDiffusivity rdf:type owl:Class ;
+                    rdfs:subClassOf :ThermophysicalProperty .
+
+
+###  http://fairmat-nfdi.eu/taxonomy/ThermalExpansionCoefficient
+:ThermalExpansionCoefficient rdf:type owl:Class ;
+                             rdfs:subClassOf :ThermophysicalProperty .
+
+
+###  http://fairmat-nfdi.eu/taxonomy/ThermophysicalProperty
+:ThermophysicalProperty rdf:type owl:Class ;
+                        rdfs:subClassOf :MaterialProperty .
+
+
+###  http://fairmat-nfdi.eu/taxonomy/TimeTertiaryCreep
+:TimeTertiaryCreep rdf:type owl:Class ;
+                   rdfs:subClassOf :MechanicalProperty .
+
+
+###  http://fairmat-nfdi.eu/taxonomy/TotalElongation
+:TotalElongation rdf:type owl:Class ;
+                 rdfs:subClassOf :MechanicalProperty .
+
+
+###  http://fairmat-nfdi.eu/taxonomy/TotalPoreVolume
+:TotalPoreVolume rdf:type owl:Class ;
+                 rdfs:subClassOf :StructuralProperty .
+
+
+###  http://fairmat-nfdi.eu/taxonomy/Toughness
+:Toughness rdf:type owl:Class ;
+           rdfs:subClassOf :MechanicalProperty .
+
+
+###  http://fairmat-nfdi.eu/taxonomy/TransPassivationPotential
+:TransPassivationPotential rdf:type owl:Class ;
+                           rdfs:subClassOf :CorrosionProperty .
+
+
+###  http://fairmat-nfdi.eu/taxonomy/Transmittance
+:Transmittance rdf:type owl:Class ;
+               rdfs:subClassOf :OpticalProperty .
+
+
+###  http://fairmat-nfdi.eu/taxonomy/TwoDDefect
+:TwoDDefect rdf:type owl:Class ;
+            rdfs:subClassOf :StructuralProperty .
+
+
+###  http://fairmat-nfdi.eu/taxonomy/Type
+:Type rdf:type owl:Class ;
+      rdfs:subClassOf :TwoDDefect .
+
+
+###  http://fairmat-nfdi.eu/taxonomy/UniformElongation
+:UniformElongation rdf:type owl:Class ;
+                   rdfs:subClassOf :MechanicalProperty .
+
+
+###  http://fairmat-nfdi.eu/taxonomy/UpperShelfEnergy
+:UpperShelfEnergy rdf:type owl:Class ;
+                  rdfs:subClassOf :MechanicalProperty .
+
+
+###  http://fairmat-nfdi.eu/taxonomy/VariableViscosity
+:VariableViscosity rdf:type owl:Class ;
+                   rdfs:subClassOf :RheologicalProperty .
+
+
+###  http://fairmat-nfdi.eu/taxonomy/Velocity
+:Velocity rdf:type owl:Class ;
+          rdfs:subClassOf :OneDDefect .
+
+
+###  http://fairmat-nfdi.eu/taxonomy/Viscosity
+:Viscosity rdf:type owl:Class ;
+           rdfs:subClassOf :RheologicalProperty .
+
+
+###  http://fairmat-nfdi.eu/taxonomy/Width
+:Width rdf:type owl:Class ;
+       rdfs:subClassOf :Particle .
+
+
+###  http://fairmat-nfdi.eu/taxonomy/YieldStengthCompressive
+:YieldStengthCompressive rdf:type owl:Class ;
+                         rdfs:subClassOf :MechanicalProperty .
+
+
+###  http://fairmat-nfdi.eu/taxonomy/YieldStrength
+:YieldStrength rdf:type owl:Class ;
+               rdfs:subClassOf :MechanicalProperty .
+
+
+###  http://fairmat-nfdi.eu/taxonomy/YoungsModulus
+:YoungsModulus rdf:type owl:Class ;
+               rdfs:subClassOf :MechanicalProperty .
+
+
+###  http://fairmat-nfdi.eu/taxonomy/ZeroDDefect
+:ZeroDDefect rdf:type owl:Class ;
+             rdfs:subClassOf :StructuralProperty .
+
+
+###  http://fairmat-nfdi.eu/taxonomy/Phase_(n)
+<http://fairmat-nfdi.eu/taxonomy/Phase_(n)> rdf:type owl:Class ;
+                                            rdfs:subClassOf :StructuralProperty .
+
+
+###  Generated by the OWL API (version 4.5.25.2023-02-15T19:15:49Z) https://github.com/owlcs/owlapi
