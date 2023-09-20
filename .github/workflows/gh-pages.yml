@@ -1,0 +1,45 @@
+name: Build GitHub Pages
+
+on:
+  push:
+    branches: main
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: false
+
+jobs:
+
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - uses: actions/configure-pages@v3
+      - name: Download Widoco
+        env:
+          widoco_url: https://github.com/dgarijo/Widoco/releases/download/v1.4.17/java-11-widoco-1.4.17-jar-with-dependencies.jar
+        run: wget ${widoco_url} -O widoco.jar
+      - name: Convert RDF
+        env:
+          ont_file: draft.ttl
+        run: |
+          java -jar widoco.jar -ontFile ${ont_file} -outFolder ./_site \
+               -uniteSections -includeAnnotationProperties -webVowl
+          mv ./_site/index-en.html ./_site/index.html
+      - uses: actions/upload-pages-artifact@v2
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: GitHub Pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - id: deployment
+        uses: actions/deploy-pages@v2
