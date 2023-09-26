@@ -241,16 +241,26 @@
 
 ###  http://fairmat-nfdi.eu/taxonomy/Density
 :Density rdf:type owl:Class ;
-         rdfs:subClassOf :OneDDefect ,
-                         :StructuralProperty ,
-                         :ZeroDDefect ;
+         rdfs:subClassOf :StructuralProperty ;
          rdfs:comment "mass per unit volum of a substance"@en .
+
+
+###  http://fairmat-nfdi.eu/taxonomy/ZeroDDefectDensity
+:ZeroDDefectDensity rdf:type owl:Class ;
+                    rdfs:subClassOf :ZeroDDefect ;
+                    rdfs:comment "ratio of defected lattice sites to those containig atoms"@en .
+
+
+###  http://fairmat-nfdi.eu/taxonomy/OneDDefectDensity
+:OneDDefectDensity rdf:type owl:Class ;
+                   rdfs:subClassOf :OneDDefect ;
+                   rdfs:comment "measure of the number of dislocations in a unit volume of a crystalline material"@en .
 
 
 ###  http://fairmat-nfdi.eu/taxonomy/DensityOfStates
 :DensityOfStates rdf:type owl:Class ;
                  rdfs:subClassOf :ElectricalProperty ;
-                 rdfs:comment "proportion of states that are to be occupied by the system at each energy, submitted in the form of file or array numeric data"@en .
+                 rdfs:comment "proportion of states that are to be occupied bsy the system at each energy, submitted in the form of file or array numeric data"@en .
 
 
 ###  http://fairmat-nfdi.eu/taxonomy/Diameter
