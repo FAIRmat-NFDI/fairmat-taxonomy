@@ -12,8 +12,8 @@
 #    Object Properties
 #################################################################
 
-###  http://fairmat-nfdi.eu/taxonomy/OWLObjectProperty_0ead6a14_8167_4543_9e1e_c51ee6d9a338
-:OWLObjectProperty_0ead6a14_8167_4543_9e1e_c51ee6d9a338 rdf:type owl:ObjectProperty ;
+###  http://fairmat-nfdi.eu/taxonomy/hasMaterialProperty
+:hasMaterialProperty rdf:type owl:ObjectProperty ;
                                                         rdfs:subPropertyOf owl:topObjectProperty ;
                                                         rdfs:domain :Material ;
                                                         rdfs:range :MaterialProperty ;
