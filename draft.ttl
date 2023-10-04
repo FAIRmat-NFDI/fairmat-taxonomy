@@ -55,8 +55,19 @@
 
 ###  http://fairmat-nfdi.eu/taxonomy/BandGap
 :BandGap rdf:type owl:Class ;
-         rdfs:subClassOf :ElectricalProperty ;
+         rdfs:subClassOf :ElectricalProperty ,
+                         :ElectronicProperty ;
          rdfs:comment "an energy range in a solid where no electronic states can exist (between valence band and conduction band)"@en .
+
+
+###  http://fairmat-nfdi.eu/taxonomy/BandStructureElectronic
+:BandStructureElectronic rdf:type owl:Class ;
+                         rdfs:subClassOf :ElectronicProperty .
+
+
+###  http://fairmat-nfdi.eu/taxonomy/BandStructurePhonon
+:BandStructurePhonon rdf:type owl:Class ;
+                     rdfs:subClassOf :VibrationalProperty .
 
 
 ###  http://fairmat-nfdi.eu/taxonomy/BetSurfaceArea
@@ -155,6 +166,11 @@
                      rdfs:comment "properties indicate how the material will react to forces being applied in compression"@en .
 
 
+###  http://fairmat-nfdi.eu/taxonomy/ConventionalStructure
+:ConventionalStructure rdf:type owl:Class ;
+                       rdfs:subClassOf :Structures .
+
+
 ###  http://fairmat-nfdi.eu/taxonomy/CorrosionCurrent
 :CorrosionCurrent rdf:type owl:Class ;
                   rdfs:subClassOf :CorrosionProperty ;
@@ -227,6 +243,16 @@
              rdfs:comment "temperature at which there is a pronounced decrease in a material’s ability to absorb force without fracturing"@en .
 
 
+###  http://fairmat-nfdi.eu/taxonomy/DOSElectronic
+:DOSElectronic rdf:type owl:Class ;
+               rdfs:subClassOf :ElectronicProperty .
+
+
+###  http://fairmat-nfdi.eu/taxonomy/DOSPhonon
+:DOSPhonon rdf:type owl:Class ;
+           rdfs:subClassOf :VibrationalProperty .
+
+
 ###  http://fairmat-nfdi.eu/taxonomy/DebyeTemperature
 :DebyeTemperature rdf:type owl:Class ;
                   rdfs:subClassOf :ThermophysicalProperty ;
@@ -243,18 +269,6 @@
 :Density rdf:type owl:Class ;
          rdfs:subClassOf :StructuralProperty ;
          rdfs:comment "mass per unit volum of a substance"@en .
-
-
-###  http://fairmat-nfdi.eu/taxonomy/ZeroDDefectDensity
-:ZeroDDefectDensity rdf:type owl:Class ;
-                    rdfs:subClassOf :ZeroDDefect ;
-                    rdfs:comment "ratio of defected lattice sites to those containig atoms"@en .
-
-
-###  http://fairmat-nfdi.eu/taxonomy/OneDDefectDensity
-:OneDDefectDensity rdf:type owl:Class ;
-                   rdfs:subClassOf :OneDDefect ;
-                   rdfs:comment "measure of the number of dislocations in a unit volume of a crystalline material"@en .
 
 
 ###  http://fairmat-nfdi.eu/taxonomy/DensityOfStates
@@ -285,6 +299,11 @@
 :Diffusivity rdf:type owl:Class ;
              rdfs:subClassOf :ThermophysicalProperty ;
              rdfs:comment "the ratio of flux density to the negative of the concentration gradient in direction of diffusion"@en .
+
+
+###  http://fairmat-nfdi.eu/taxonomy/DynamicalProperty
+:DynamicalProperty rdf:type owl:Class ;
+                   rdfs:subClassOf :MaterialProperty .
 
 
 ###  http://fairmat-nfdi.eu/taxonomy/Ecsa
@@ -363,6 +382,21 @@
 :ElectronMobility rdf:type owl:Class ;
                   rdfs:subClassOf :ElectricalProperty ;
                   rdfs:comment "a value that represents how quickly a single electron can move through a metal or semiconductor, when pulled by an electric field"@en .
+
+
+###  http://fairmat-nfdi.eu/taxonomy/ElectronicProperty
+:ElectronicProperty rdf:type owl:Class ;
+                    rdfs:subClassOf :MaterialProperty .
+
+
+###  http://fairmat-nfdi.eu/taxonomy/EnergyFreeHelmholtz
+:EnergyFreeHelmholtz rdf:type owl:Class ;
+                     rdfs:subClassOf :VibrationalProperty .
+
+
+###  http://fairmat-nfdi.eu/taxonomy/EnergyVolumeCurve
+:EnergyVolumeCurve rdf:type owl:Class ;
+                   rdfs:subClassOf :MechanicalProperty .
 
 
 ###  http://fairmat-nfdi.eu/taxonomy/EnthalpyOfFormation
@@ -467,6 +501,11 @@
           rdfs:comment "a measure of the effective pressure of a species in a real gas"@en .
 
 
+###  http://fairmat-nfdi.eu/taxonomy/GeometryOptimization
+:GeometryOptimization rdf:type owl:Class ;
+                      rdfs:subClassOf :MaterialProperty .
+
+
 ###  http://fairmat-nfdi.eu/taxonomy/GibbsFreeEnergy
 :GibbsFreeEnergy rdf:type owl:Class ;
                  rdfs:subClassOf :ThermophysicalProperty ;
@@ -491,6 +530,11 @@
            rdfs:comment "estimate of the average grain diameter"@en .
 
 
+###  http://fairmat-nfdi.eu/taxonomy/GreensFunctionsElectronic
+:GreensFunctionsElectronic rdf:type owl:Class ;
+                           rdfs:subClassOf :ElectronicProperty .
+
+
 ###  http://fairmat-nfdi.eu/taxonomy/HallCoefficient
 :HallCoefficient rdf:type owl:Class ;
                  rdfs:subClassOf :ElectricalProperty ;
@@ -513,6 +557,11 @@
 :HeatCapacity rdf:type owl:Class ;
               rdfs:subClassOf :ThermophysicalProperty ;
               rdfs:comment "quantity of heat necessary to change the temperature of an entity, substance or system by one Kelvin of temperature"@en .
+
+
+###  http://fairmat-nfdi.eu/taxonomy/HeatCapacityConstantVolume
+:HeatCapacityConstantVolume rdf:type owl:Class ;
+                            rdfs:subClassOf :VibrationalProperty .
 
 
 ###  http://fairmat-nfdi.eu/taxonomy/HeatOfFusion
@@ -667,6 +716,11 @@
                       rdfs:comment "The maximum energy product is defined based on the magnetic hysteresis saturation loop (B-H curve), in the demagnetizing portion where the B and H fields are in opposition. It is defined as the maximal value of the product of B and H along this curve"@en .
 
 
+###  http://fairmat-nfdi.eu/taxonomy/MeanSquaredDisplacement
+:MeanSquaredDisplacement rdf:type owl:Class ;
+                         rdfs:subClassOf :DynamicalProperty .
+
+
 ###  http://fairmat-nfdi.eu/taxonomy/MechanicalProperty
 :MechanicalProperty rdf:type owl:Class ;
                     rdfs:subClassOf :MaterialProperty ;
@@ -721,6 +775,12 @@
             rdfs:comment "linear crystallographic defect or irregularity within a crystal structure which contains an abrupt change in the arrangement of atoms"@en .
 
 
+###  http://fairmat-nfdi.eu/taxonomy/OneDDefectDensity
+:OneDDefectDensity rdf:type owl:Class ;
+                   rdfs:subClassOf :OneDDefect ;
+                   rdfs:comment "measure of the number of dislocations in a unit volume of a crystalline material"@en .
+
+
 ###  http://fairmat-nfdi.eu/taxonomy/OpticalBandGap
 :OpticalBandGap rdf:type owl:Class ;
                 rdfs:subClassOf :OpticalProperty ;
@@ -731,6 +791,16 @@
 :OpticalProperty rdf:type owl:Class ;
                  rdfs:subClassOf :MaterialProperty ;
                  rdfs:comment "opical properties of the materials"@en .
+
+
+###  http://fairmat-nfdi.eu/taxonomy/OptoelectronicProperty
+:OptoelectronicProperty rdf:type owl:Class ;
+                        rdfs:subClassOf :MaterialProperty .
+
+
+###  http://fairmat-nfdi.eu/taxonomy/OriginalStructure
+:OriginalStructure rdf:type owl:Class ;
+                   rdfs:subClassOf :Structures .
 
 
 ###  http://fairmat-nfdi.eu/taxonomy/OxidationPotential
@@ -847,6 +917,21 @@
           rdfs:comment "pore density of materials"@en .
 
 
+###  http://fairmat-nfdi.eu/taxonomy/PrimitiveStructure
+:PrimitiveStructure rdf:type owl:Class ;
+                    rdfs:subClassOf :Structures .
+
+
+###  http://fairmat-nfdi.eu/taxonomy/RadialDistributionFunction
+:RadialDistributionFunction rdf:type owl:Class ;
+                            rdfs:subClassOf :StructuralProperty .
+
+
+###  http://fairmat-nfdi.eu/taxonomy/RadiusOfGyration
+:RadiusOfGyration rdf:type owl:Class ;
+                  rdfs:subClassOf :StructuralProperty .
+
+
 ###  http://fairmat-nfdi.eu/taxonomy/ReactivationPotential
 :ReactivationPotential rdf:type owl:Class ;
                        rdfs:subClassOf :CorrosionProperty ;
@@ -961,10 +1046,25 @@
      rdfs:comment "spin-orbit coupling"@en .
 
 
+###  http://fairmat-nfdi.eu/taxonomy/SolarCell
+:SolarCell rdf:type owl:Class ;
+           rdfs:subClassOf :OptoelectronicProperty .
+
+
 ###  http://fairmat-nfdi.eu/taxonomy/SpecificHeat
 :SpecificHeat rdf:type owl:Class ;
               rdfs:subClassOf :ThermophysicalProperty ;
               rdfs:comment "heat capacity of a substance divided by mass"@en .
+
+
+###  http://fairmat-nfdi.eu/taxonomy/Spectra
+:Spectra rdf:type owl:Class ;
+         rdfs:subClassOf :Spectroscopy .
+
+
+###  http://fairmat-nfdi.eu/taxonomy/Spectroscopy
+:Spectroscopy rdf:type owl:Class ;
+              rdfs:subClassOf :MaterialProperty .
 
 
 ###  http://fairmat-nfdi.eu/taxonomy/SpinHallAngle
@@ -1044,6 +1144,11 @@
                     rdfs:comment "microscopic structure related properties"@en .
 
 
+###  http://fairmat-nfdi.eu/taxonomy/Structures
+:Structures rdf:type owl:Class ;
+            rdfs:subClassOf :MaterialProperty .
+
+
 ###  http://fairmat-nfdi.eu/taxonomy/SurfaceArea
 :SurfaceArea rdf:type owl:Class ;
              rdfs:subClassOf :StructuralProperty ;
@@ -1092,6 +1197,11 @@
                              rdfs:comment "fractional change in size of a material in response to a change in temperature"@en .
 
 
+###  http://fairmat-nfdi.eu/taxonomy/ThermodynamicProperty
+:ThermodynamicProperty rdf:type owl:Class ;
+                       rdfs:subClassOf :MaterialProperty .
+
+
 ###  http://fairmat-nfdi.eu/taxonomy/ThermophysicalProperty
 :ThermophysicalProperty rdf:type owl:Class ;
                         rdfs:subClassOf :MaterialProperty ;
@@ -1120,6 +1230,11 @@
 :Toughness rdf:type owl:Class ;
            rdfs:subClassOf :MechanicalProperty ;
            rdfs:comment "The amount of energy a material can absorb before it fractures"@en .
+
+
+###  http://fairmat-nfdi.eu/taxonomy/Trajectory
+:Trajectory rdf:type owl:Class ;
+            rdfs:subClassOf :ThermodynamicProperty .
 
 
 ###  http://fairmat-nfdi.eu/taxonomy/TransPassivationPotential
@@ -1164,6 +1279,11 @@
           rdfs:comment "Scan speed used for line scanning"@en .
 
 
+###  http://fairmat-nfdi.eu/taxonomy/VibrationalProperty
+:VibrationalProperty rdf:type owl:Class ;
+                     rdfs:subClassOf :MaterialProperty .
+
+
 ###  http://fairmat-nfdi.eu/taxonomy/Viscosity
 :Viscosity rdf:type owl:Class ;
            rdfs:subClassOf :RheologicalProperty ;
@@ -1198,6 +1318,12 @@
 :ZeroDDefect rdf:type owl:Class ;
              rdfs:subClassOf :StructuralProperty ;
              rdfs:comment "defects that occur only at or around a single lattice point"@en .
+
+
+###  http://fairmat-nfdi.eu/taxonomy/ZeroDDefectDensity
+:ZeroDDefectDensity rdf:type owl:Class ;
+                    rdfs:subClassOf :ZeroDDefect ;
+                    rdfs:comment "ratio of defected lattice sites to those containig atoms"@en .
 
 
 ###  http://fairmat-nfdi.eu/taxonomy/Phase_(n)
