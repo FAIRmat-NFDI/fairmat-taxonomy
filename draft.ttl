@@ -1,23 +1,43 @@
-@prefix : <http://fairmat-nfdi.eu/taxonomy/> .
+@prefix : <http://fairmat-nfdi.eu/taxonomy#> .
+@prefix qk: <http://qudt.org/vocab/quantitykind/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix xml: <http://www.w3.org/XML/1998/namespace> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix qudt: <http://qudt.org/2.1/schema/qudt/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
-@base <http://fairmat-nfdi.eu/taxonomy/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@base <http://fairmat-nfdi.eu/taxonomy> .
 
 <http://fairmat-nfdi.eu/taxonomy> rdf:type owl:Ontology .
+
+#################################################################
+#    Annotation properties
+#################################################################
+
+###  http://www.w3.org/2004/02/skos/core#altLabel
+skos:altLabel rdf:type owl:AnnotationProperty .
+
+
+###  http://www.w3.org/2004/02/skos/core#prefLabel
+skos:prefLabel rdf:type owl:AnnotationProperty .
+
 
 #################################################################
 #    Object Properties
 #################################################################
 
 ###  http://fairmat-nfdi.eu/taxonomy/hasMaterialProperty
-:hasMaterialProperty rdf:type owl:ObjectProperty ;
-                     rdfs:subPropertyOf owl:topObjectProperty ;
-                     rdfs:domain :Material ;
-                     rdfs:range :MaterialProperty ;
-                     rdfs:label "hasMaterialProperty"@en .
+<http://fairmat-nfdi.eu/taxonomy/hasMaterialProperty> rdf:type owl:ObjectProperty ;
+                                                      rdfs:subPropertyOf owl:topObjectProperty ;
+                                                      rdfs:domain <http://fairmat-nfdi.eu/taxonomy/Material> ;
+                                                      rdfs:range <http://fairmat-nfdi.eu/taxonomy/MaterialProperty> ;
+                                                      skos:prefLabel "hasMaterialProperty"@en .
+
+
+###  http://qudt.org/2.1/schema/qudt/hasQuantityKind
+qudt:hasQuantityKind rdf:type owl:ObjectProperty ;
+                     rdfs:range qudt:QuantityKind .
 
 
 #################################################################
@@ -25,1311 +45,1491 @@
 #################################################################
 
 ###  http://fairmat-nfdi.eu/taxonomy/AbsorptionCoefficient
-:AbsorptionCoefficient rdf:type owl:Class ;
-                       rdfs:subClassOf :OpticalProperty ;
-                       rdfs:comment "a value representing how far into a material light of a particular wavelength can penetrate before it is absorbed"@en .
-
-
-###  http://fairmat-nfdi.eu/taxonomy/Activity
-:Activity rdf:type owl:Class ;
-          rdfs:subClassOf :ThermophysicalProperty ;
-          rdfs:comment "a measure of the effective concentration of a species under non-ideal (e.g., concentrated) conditions"@en .
+<http://fairmat-nfdi.eu/taxonomy/AbsorptionCoefficient> rdf:type owl:Class ;
+                                                        rdfs:subClassOf <http://fairmat-nfdi.eu/taxonomy/OpticalProperty> ;
+                                                        rdfs:comment "Distance that light of a specific wavelength can travel into a material before being absorbed."@en ;
+                                                        skos:prefLabel "AbsorptionCoefficient"@en .
 
 
 ###  http://fairmat-nfdi.eu/taxonomy/AnodicPartialCurrent
-:AnodicPartialCurrent rdf:type owl:Class ;
-                      rdfs:subClassOf :CorrosionProperty ;
-                      rdfs:comment "sum of all the currents corresponding to anodic reactions on the electrode"@en .
+<http://fairmat-nfdi.eu/taxonomy/AnodicPartialCurrent> rdf:type owl:Class ;
+                                                       rdfs:subClassOf <http://fairmat-nfdi.eu/taxonomy/ChemicalProperty> ;
+                                                       rdfs:comment "Flow of electrons from the chemical species in solution into the electrode."@en ;
+                                                       skos:prefLabel "AnodicPartialCurrent"@en .
+
+
+###  http://fairmat-nfdi.eu/taxonomy/AnodicPartialCurrentCorrosion
+<http://fairmat-nfdi.eu/taxonomy/AnodicPartialCurrentCorrosion> rdf:type owl:Class ;
+                                                                rdfs:subClassOf <http://fairmat-nfdi.eu/taxonomy/CorrosionProperty> ;
+                                                                rdfs:comment "Flow of electrons in a corrosion reaction indicating the extend of metal deterioration."@en ;
+                                                                skos:altLabel "CorrosionCurrent"@en ;
+                                                                skos:prefLabel "AnodicPartialCurrentCorrosion"@en .
 
 
 ###  http://fairmat-nfdi.eu/taxonomy/Area
-:Area rdf:type owl:Class ;
-      rdfs:subClassOf :StructuralProperty ;
-      rdfs:comment "area of the specimen surface"@en .
+<http://fairmat-nfdi.eu/taxonomy/Area> rdf:type owl:Class ;
+                                       rdfs:subClassOf <http://fairmat-nfdi.eu/taxonomy/StructuralProperty> ;
+                                       rdfs:comment "Area of a 2D material."@en ;
+                                       skos:prefLabel "Area"@en .
 
 
-###  http://fairmat-nfdi.eu/taxonomy/AxialForce
-:AxialForce rdf:type owl:Class ;
-            rdfs:subClassOf :VariableViscosity .
+###  http://fairmat-nfdi.eu/taxonomy/BETSurfaceArea
+<http://fairmat-nfdi.eu/taxonomy/BETSurfaceArea> rdf:type owl:Class ;
+                                                 rdfs:subClassOf <http://fairmat-nfdi.eu/taxonomy/StructuralProperty> ;
+                                                 rdfs:comment "Brunauer-Emmett-Teller (BET) surface area of the material."@en ;
+                                                 skos:altLabel "BetSurfaceArea"@en ;
+                                                 skos:prefLabel "BETSurfaceArea"@en .
 
 
-###  http://fairmat-nfdi.eu/taxonomy/BandGap
-:BandGap rdf:type owl:Class ;
-         rdfs:subClassOf :ElectricalProperty ,
-                         :ElectronicProperty ;
-         rdfs:comment "an energy range in a solid where no electronic states can exist (between valence band and conduction band)"@en .
+###  http://fairmat-nfdi.eu/taxonomy/BandGapElectronicBowingCoefficient
+<http://fairmat-nfdi.eu/taxonomy/BandGapElectronicBowingCoefficient> rdf:type owl:Class ;
+                                                                     rdfs:subClassOf <http://fairmat-nfdi.eu/taxonomy/ElectronicProperty> ;
+                                                                     rdfs:comment "Curvature coefficient of the empirical Vergard's law to fit band gaps of mixtures of semiconductors with different lattice parameters."@en ;
+                                                                     skos:altLabel "BandGapElectronicBowingParameter"@en ,
+                                                                                   "BowingCoefficient"@en ;
+                                                                     skos:prefLabel "BandGapElectronicBowingCoefficient"@en .
 
 
-###  http://fairmat-nfdi.eu/taxonomy/BandStructureElectronic
-:BandStructureElectronic rdf:type owl:Class ;
-                         rdfs:subClassOf :ElectronicProperty .
+###  http://fairmat-nfdi.eu/taxonomy/BindingEnergyExciton
+<http://fairmat-nfdi.eu/taxonomy/BindingEnergyExciton> rdf:type owl:Class ;
+                                                       rdfs:subClassOf <http://fairmat-nfdi.eu/taxonomy/ElectronicProperty> ;
+                                                       rdfs:comment "Binding energy of electron-hole pairs in semiconductors and insulators. The excitonic binding energy is given with respect to the bottom of the conduction or the top of the valence band."@en ;
+                                                       skos:prefLabel "BindingEnergyExciton"@en .
 
 
-###  http://fairmat-nfdi.eu/taxonomy/BandStructurePhonon
-:BandStructurePhonon rdf:type owl:Class ;
-                     rdfs:subClassOf :VibrationalProperty .
-
-
-###  http://fairmat-nfdi.eu/taxonomy/BetSurfaceArea
-:BetSurfaceArea rdf:type owl:Class ;
-                rdfs:subClassOf :StructuralProperty ;
-                rdfs:comment "Brunauer-Emmett-Teller (BET) surface area of material_n"@en .
-
-
-###  http://fairmat-nfdi.eu/taxonomy/BowingParameter
-:BowingParameter rdf:type owl:Class ;
-                 rdfs:subClassOf :ElectricalProperty ;
-                 rdfs:comment "A parameter that decribes nonlinear variation of band gap between two materials with different lattice constants"@en .
+###  http://fairmat-nfdi.eu/taxonomy/BoilingTemperature
+<http://fairmat-nfdi.eu/taxonomy/BoilingTemperature> rdf:type owl:Class ;
+                                                     rdfs:subClassOf <http://fairmat-nfdi.eu/taxonomy/ThermodynamicProperty> ,
+                                                                     [ rdf:type owl:Restriction ;
+                                                                       owl:onProperty qudt:hasQuantityKind ;
+                                                                       owl:hasValue qk:Temperature
+                                                                     ] ;
+                                                     rdfs:comment "Temperature at which a substance changes from liquid to gas."@en ;
+                                                     skos:altLabel "BoilingPoint"@en ;
+                                                     skos:prefLabel "BoilingTemperature"@en .
 
 
 ###  http://fairmat-nfdi.eu/taxonomy/BulkModulus
-:BulkModulus rdf:type owl:Class ;
-             rdfs:subClassOf :MechanicalProperty ;
-             rdfs:comment "measure of how resistant to compression that substance is"@en .
+<http://fairmat-nfdi.eu/taxonomy/BulkModulus> rdf:type owl:Class ;
+                                              rdfs:subClassOf <http://fairmat-nfdi.eu/taxonomy/MechanicalProperty> ;
+                                              rdfs:comment "Resistance measure of a material to compression."@en ;
+                                              skos:prefLabel "BulkModulus"@en .
 
 
-###  http://fairmat-nfdi.eu/taxonomy/BurgersVector
-:BurgersVector rdf:type owl:Class ;
-               rdfs:subClassOf :OneDDefect ;
-               rdfs:comment "magnitude and direction of the lattice distortion resulting from a dislocation"@en .
-
-
-###  http://fairmat-nfdi.eu/taxonomy/CarrierConcentration
-:CarrierConcentration rdf:type owl:Class ;
-                      rdfs:subClassOf :ElectricalProperty ;
-                      rdfs:comment "number of charge carriers per volume"@en .
+###  http://fairmat-nfdi.eu/taxonomy/CarrierDensity
+<http://fairmat-nfdi.eu/taxonomy/CarrierDensity> rdf:type owl:Class ;
+                                                 rdfs:subClassOf <http://fairmat-nfdi.eu/taxonomy/ElectronicProperty> ;
+                                                 rdfs:comment "Number of charge carriers per volume."@en ;
+                                                 skos:altLabel "CarrierConcentration"@en ;
+                                                 skos:prefLabel "CarrierDensity"@en .
 
 
 ###  http://fairmat-nfdi.eu/taxonomy/CarrierDiffusionLength
-:CarrierDiffusionLength rdf:type owl:Class ;
-                        rdfs:subClassOf :ElectricalProperty ;
-                        rdfs:comment "an average distance that the excess carriers can cover before they recombine"@en .
+<http://fairmat-nfdi.eu/taxonomy/CarrierDiffusionLength> rdf:type owl:Class ;
+                                                         rdfs:subClassOf <http://fairmat-nfdi.eu/taxonomy/ElectronicTransportProperty> ;
+                                                         rdfs:comment "Average distance that the excess carriers can cover before they recombine."@en ;
+                                                         skos:prefLabel "CarrierDiffusionLength"@en .
 
 
 ###  http://fairmat-nfdi.eu/taxonomy/CarrierLifetime
-:CarrierLifetime rdf:type owl:Class ;
-                 rdfs:subClassOf :ElectricalProperty ;
-                 rdfs:comment "an average time it takes for a minority carrier to recombine"@en .
+<http://fairmat-nfdi.eu/taxonomy/CarrierLifetime> rdf:type owl:Class ;
+                                                  rdfs:subClassOf <http://fairmat-nfdi.eu/taxonomy/ElectronicTransportProperty> ;
+                                                  rdfs:comment "Average time for the carriers to recombine. Typically obtained for minority carriers."@en ;
+                                                  skos:prefLabel "CarrierLifetime"@en .
 
 
 ###  http://fairmat-nfdi.eu/taxonomy/CathodicPartialCurrent
-:CathodicPartialCurrent rdf:type owl:Class ;
-                        rdfs:subClassOf :CorrosionProperty ;
-                        rdfs:comment "sum of all the currents corresponding to cathodic electochemical reactions on the electrode"@en .
+<http://fairmat-nfdi.eu/taxonomy/CathodicPartialCurrent> rdf:type owl:Class ;
+                                                         rdfs:subClassOf <http://fairmat-nfdi.eu/taxonomy/ChemicalProperty> ;
+                                                         rdfs:comment "Flow of electrons from the electrode surface to the chemical species in solution."@en ;
+                                                         skos:prefLabel "CathodicPartialCurrent"@en .
 
 
 ###  http://fairmat-nfdi.eu/taxonomy/CharpyImpactEnergy
-:CharpyImpactEnergy rdf:type owl:Class ;
-                    rdfs:subClassOf :MechanicalProperty ;
-                    rdfs:comment "work done to fracture a test specimen measured by Charpy impact test"@en .
+<http://fairmat-nfdi.eu/taxonomy/CharpyImpactEnergy> rdf:type owl:Class ;
+                                                     rdfs:subClassOf <http://fairmat-nfdi.eu/taxonomy/FracturesProperty> ;
+                                                     rdfs:comment "Amount of energy needed to fracture a material during a Charpy impact test."@en ;
+                                                     skos:prefLabel "CharpyImpactEnergy"@en .
 
 
 ###  http://fairmat-nfdi.eu/taxonomy/ChemicalPotential
-:ChemicalPotential rdf:type owl:Class ;
-                   rdfs:subClassOf :ThermophysicalProperty ;
-                   rdfs:comment "rate of increase in the Gibbs free energy of the system with respect to the increase in the number of moles of species"@en .
+<http://fairmat-nfdi.eu/taxonomy/ChemicalPotential> rdf:type owl:Class ;
+                                                    rdfs:subClassOf <http://fairmat-nfdi.eu/taxonomy/ThermodynamicProperty> ,
+                                                                    [ rdf:type owl:Restriction ;
+                                                                      owl:onProperty qudt:hasQuantityKind ;
+                                                                      owl:hasValue qk:ChemicalPotential
+                                                                    ] ;
+                                                    rdfs:comment "Free energy cost of adding or extracting a particle from a thermodynamic system."@en ;
+                                                    skos:prefLabel "ChemicalPotential"@en .
 
 
-###  http://fairmat-nfdi.eu/taxonomy/CoerciveElectricField
-:CoerciveElectricField rdf:type owl:Class ;
-                       rdfs:subClassOf :FerroelectricProperty ;
-                       rdfs:comment "the strength of the electric field at which the macroscopic polarization of the ferroelectric capacitor disappears, presented by values assigned to symbols E_{c}"@en .
-
-
-###  http://fairmat-nfdi.eu/taxonomy/CoersiveField
-:CoersiveField rdf:type owl:Class ;
-               rdfs:subClassOf :MagneticProperty ;
-               rdfs:comment "The magnitude of the magnetic field in the opposite direction required to make the residual magnetism that remains even after applying a magnetic field to a ferromagnetic material to make it magentic until it becomes saturated and the reducing the magnetic field to zero again."@en .
+###  http://fairmat-nfdi.eu/taxonomy/ChemicalProperty
+<http://fairmat-nfdi.eu/taxonomy/ChemicalProperty> rdf:type owl:Class ;
+                                                   rdfs:subClassOf <http://fairmat-nfdi.eu/taxonomy/MaterialProperty> ;
+                                                   rdfs:comment "Property that describes the reactivity and transformation of a material based on its chemical composition, detailing how it undergoes alterations in its molecular structure when subjected to chemical reactions."@en ;
+                                                   skos:prefLabel "ChemicalProperty"@en .
 
 
 ###  http://fairmat-nfdi.eu/taxonomy/Color
-:Color rdf:type owl:Class ;
-       rdfs:subClassOf :OpticalProperty ;
-       rdfs:comment "color of a material"@en .
-
-
-###  http://fairmat-nfdi.eu/taxonomy/Composition
-:Composition rdf:type owl:Class ;
-             rdfs:subClassOf :StructuralProperty ;
-             rdfs:comment "elemental constituent of phase_n"@en .
+<http://fairmat-nfdi.eu/taxonomy/Color> rdf:type owl:Class ;
+                                        rdfs:subClassOf <http://fairmat-nfdi.eu/taxonomy/OpticalProperty> ;
+                                        rdfs:comment "Color of a material due to its interaction with light, characterized by its perceived hue, saturation, and brightness."@en ;
+                                        skos:prefLabel "Color"@en .
 
 
 ###  http://fairmat-nfdi.eu/taxonomy/Compressibility
-:Compressibility rdf:type owl:Class ;
-                 rdfs:subClassOf :MechanicalProperty ;
-                 rdfs:comment "reciprocal of bulk modulus"@en .
-
-
-###  http://fairmat-nfdi.eu/taxonomy/CompressiveProperty
-:CompressiveProperty rdf:type owl:Class ;
-                     rdfs:subClassOf :MechanicalProperty ;
-                     rdfs:comment "properties indicate how the material will react to forces being applied in compression"@en .
-
-
-###  http://fairmat-nfdi.eu/taxonomy/ConventionalStructure
-:ConventionalStructure rdf:type owl:Class ;
-                       rdfs:subClassOf :Structures .
-
-
-###  http://fairmat-nfdi.eu/taxonomy/CorrosionCurrent
-:CorrosionCurrent rdf:type owl:Class ;
-                  rdfs:subClassOf :CorrosionProperty ;
-                  rdfs:comment "anodic partial current due to metal oxidation"@en .
+<http://fairmat-nfdi.eu/taxonomy/Compressibility> rdf:type owl:Class ;
+                                                  rdfs:subClassOf <http://fairmat-nfdi.eu/taxonomy/MechanicalProperty> ;
+                                                  rdfs:comment "Response of the material to changes in the volume due to external pressure."@en ;
+                                                  skos:prefLabel "Compressibility"@en .
 
 
 ###  http://fairmat-nfdi.eu/taxonomy/CorrosionPotential
-:CorrosionPotential rdf:type owl:Class ;
-                    rdfs:subClassOf :CorrosionProperty ;
-                    rdfs:comment "electrode potential of a metal in a given corrosion system"@en .
+<http://fairmat-nfdi.eu/taxonomy/CorrosionPotential> rdf:type owl:Class ;
+                                                     rdfs:subClassOf <http://fairmat-nfdi.eu/taxonomy/CorrosionProperty> ;
+                                                     rdfs:comment "Electrode potential of a material in a corrosive environment."@en ;
+                                                     skos:prefLabel "CorrosionPotential"@en .
 
 
 ###  http://fairmat-nfdi.eu/taxonomy/CorrosionProperty
-:CorrosionProperty rdf:type owl:Class ;
-                   rdfs:subClassOf :MaterialProperty ;
-                   rdfs:comment "properties related to deterioration of a material as it reacts with its envirionment via electrochemical and chemical reactions"@en .
+<http://fairmat-nfdi.eu/taxonomy/CorrosionProperty> rdf:type owl:Class ;
+                                                    rdfs:subClassOf <http://fairmat-nfdi.eu/taxonomy/ChemicalProperty> ;
+                                                    rdfs:comment "Property that describes the deterioration of a material when it interacts with the environment via chemical reactions."@en ;
+                                                    skos:prefLabel "CorrosionProperty"@en .
 
 
 ###  http://fairmat-nfdi.eu/taxonomy/CorrosionRate
-:CorrosionRate rdf:type owl:Class ;
-               rdfs:subClassOf :CorrosionProperty ;
-               rdfs:comment "amount of corrosion loss per year in thckness"@en .
+<http://fairmat-nfdi.eu/taxonomy/CorrosionRate> rdf:type owl:Class ;
+                                                rdfs:subClassOf <http://fairmat-nfdi.eu/taxonomy/CorrosionProperty> ;
+                                                rdfs:comment "Speed at which a material undergoes corrosion in a specific environment expressed as the mass loss per unit area over a specified time."@en ;
+                                                skos:prefLabel "CorrosionRate"@en .
 
 
-###  http://fairmat-nfdi.eu/taxonomy/Crack_tip_opening_displacement
-:Crack_tip_opening_displacement rdf:type owl:Class ;
-                                rdfs:subClassOf :MechanicalProperty ;
-                                rdfs:comment "\"crack displacement resulting from the total deformation at variously defined locations near the original crack tip\"" .
+###  http://fairmat-nfdi.eu/taxonomy/CoulombInteractions
+<http://fairmat-nfdi.eu/taxonomy/CoulombInteractions> rdf:type owl:Class ;
+                                                      rdfs:subClassOf <http://fairmat-nfdi.eu/taxonomy/ElectronicProperty> ;
+                                                      rdfs:comment "Charge-charge Coulomb repulsions."@en ;
+                                                      skos:prefLabel "CoulombInteractions"@en .
 
 
-###  http://fairmat-nfdi.eu/taxonomy/CreepProperty
-:CreepProperty rdf:type owl:Class ;
-               rdfs:subClassOf :MechanicalProperty ;
-               rdfs:comment "materials response upon long-term exposure to high levels of stress that are still below the yield strength of the materials"@en .
-
-
-###  http://fairmat-nfdi.eu/taxonomy/CreepRuptureStrain
-:CreepRuptureStrain rdf:type owl:Class ;
-                    rdfs:subClassOf :MechanicalProperty ;
-                    rdfs:comment "total strain after creep rupture test"@en .
-
-
-###  http://fairmat-nfdi.eu/taxonomy/CreepRuptureStrength
-:CreepRuptureStrength rdf:type owl:Class ;
-                      rdfs:subClassOf :MechanicalProperty ;
-                      rdfs:comment "stress causing fracture in a creep test at a given time, in a specified constant environment"@en .
+###  http://fairmat-nfdi.eu/taxonomy/CrackTipOpeningDisplacement
+<http://fairmat-nfdi.eu/taxonomy/CrackTipOpeningDisplacement> rdf:type owl:Class ;
+                                                              rdfs:subClassOf <http://fairmat-nfdi.eu/taxonomy/FracturesProperty> ;
+                                                              rdfs:comment "Distance between the opposite faces of a crack tip at the 90 degrees intercept positions."@en ;
+                                                              skos:altLabel "CTOD"@en ;
+                                                              skos:prefLabel "CrackTipOpeningDisplacement"@en .
 
 
 ###  http://fairmat-nfdi.eu/taxonomy/CriticalResolvedShearStress
-:CriticalResolvedShearStress rdf:type owl:Class ;
-                             rdfs:subClassOf :MechanicalProperty ;
-                             rdfs:comment "component of shear stress necessary to initiate slip in a grain"@en .
+<http://fairmat-nfdi.eu/taxonomy/CriticalResolvedShearStress> rdf:type owl:Class ;
+                                                              rdfs:subClassOf <http://fairmat-nfdi.eu/taxonomy/MechanicalProperty> ;
+                                                              rdfs:comment "Component of shear stress, resolved in the direction of slip, necessary to initiate slip in a grain."@en ;
+                                                              skos:altLabel "CRSS"@en ;
+                                                              skos:prefLabel "CriticalResolvedShearStress"@en .
 
 
 ###  http://fairmat-nfdi.eu/taxonomy/CryoscopicConstant
-:CryoscopicConstant rdf:type owl:Class ;
-                    rdfs:subClassOf :ThermophysicalProperty ;
-                    rdfs:comment "elevation in boiling point produced when 1 mole of solute is dissolved in 1 kg of solvent"@en .
-
-
-###  http://fairmat-nfdi.eu/taxonomy/CurieTemperature
-:CurieTemperature rdf:type owl:Class ;
-                  rdfs:subClassOf :MagneticProperty ;
-                  rdfs:comment "temperature above which certain materials lose their permanent magnetic properties"@en .
-
-
-###  http://fairmat-nfdi.eu/taxonomy/DBTransTemp
-:DBTransTemp rdf:type owl:Class ;
-             rdfs:subClassOf :MechanicalProperty ;
-             rdfs:comment "temperature at which there is a pronounced decrease in a material’s ability to absorb force without fracturing"@en .
-
-
-###  http://fairmat-nfdi.eu/taxonomy/DOSElectronic
-:DOSElectronic rdf:type owl:Class ;
-               rdfs:subClassOf :ElectronicProperty .
-
-
-###  http://fairmat-nfdi.eu/taxonomy/DOSPhonon
-:DOSPhonon rdf:type owl:Class ;
-           rdfs:subClassOf :VibrationalProperty .
+<http://fairmat-nfdi.eu/taxonomy/CryoscopicConstant> rdf:type owl:Class ;
+                                                     rdfs:subClassOf <http://fairmat-nfdi.eu/taxonomy/ThermodynamicProperty> ;
+                                                     rdfs:comment "Decrease in the freezing point per unit molality of solute in a solution."@en ;
+                                                     skos:prefLabel "CryoscopicConstant"@en .
 
 
 ###  http://fairmat-nfdi.eu/taxonomy/DebyeTemperature
-:DebyeTemperature rdf:type owl:Class ;
-                  rdfs:subClassOf :ThermophysicalProperty ;
-                  rdfs:comment "temperature of a crystal's highest normal mode of a vibration"@en .
+<http://fairmat-nfdi.eu/taxonomy/DebyeTemperature> rdf:type owl:Class ;
+                                                   rdfs:subClassOf <http://fairmat-nfdi.eu/taxonomy/VibrationalProperty> ,
+                                                                   [ rdf:type owl:Restriction ;
+                                                                     owl:onProperty qudt:hasQuantityKind ;
+                                                                     owl:hasValue qk:Temperature
+                                                                   ] ;
+                                                   rdfs:comment "Temperature at which all possible phonic states are currently occupied. It is also a measure of the size of the phonon frequencies occurring in a material."@en ;
+                                                   skos:prefLabel "DebyeTemperature"@en .
 
 
 ###  http://fairmat-nfdi.eu/taxonomy/Defect
-:Defect rdf:type owl:Class ;
-        rdfs:subClassOf :StructuralProperty ;
-        rdfs:comment "defect of materials ranging from 0D point defects to 2D interface"@en .
+<http://fairmat-nfdi.eu/taxonomy/Defect> rdf:type owl:Class ;
+                                         rdfs:subClassOf <http://fairmat-nfdi.eu/taxonomy/StructuralProperty> ;
+                                         rdfs:comment "Defect of different dimensions (from 0D point defects to 2D interfaces) in a given material."@en ;
+                                         skos:prefLabel "Defect"@en .
 
 
 ###  http://fairmat-nfdi.eu/taxonomy/Density
-:Density rdf:type owl:Class ;
-         rdfs:subClassOf :StructuralProperty ;
-         rdfs:comment "mass per unit volum of a substance"@en .
-
-
-###  http://fairmat-nfdi.eu/taxonomy/DensityOfStates
-:DensityOfStates rdf:type owl:Class ;
-                 rdfs:subClassOf :ElectricalProperty ;
-                 rdfs:comment "proportion of states that are to be occupied bsy the system at each energy, submitted in the form of file or array numeric data"@en .
-
-
-###  http://fairmat-nfdi.eu/taxonomy/Diameter
-:Diameter rdf:type owl:Class ;
-          rdfs:subClassOf :Particle ;
-          rdfs:comment "average diameter of spherical or rod shaped particles"@en .
-
-
-###  http://fairmat-nfdi.eu/taxonomy/DielectricConstant
-:DielectricConstant rdf:type owl:Class ;
-                    rdfs:subClassOf :ElectricalProperty ;
-                    rdfs:comment "relative premittivity compared to the vacuum in induced polarization stored in a material under electric field."@en .
+<http://fairmat-nfdi.eu/taxonomy/Density> rdf:type owl:Class ;
+                                          rdfs:subClassOf <http://fairmat-nfdi.eu/taxonomy/StructuralProperty> ;
+                                          rdfs:comment "Mass per unit volume of a material."@en ;
+                                          skos:prefLabel "Density"@en .
 
 
 ###  http://fairmat-nfdi.eu/taxonomy/DielectricStrength
-:DielectricStrength rdf:type owl:Class ;
-                    rdfs:subClassOf :ElectricalProperty ;
-                    rdfs:comment "the maximum electric field that the material can withstand under ideal conditions without undergoing electrical breakdown and becoming electrically conductive"@en .
+<http://fairmat-nfdi.eu/taxonomy/DielectricStrength> rdf:type owl:Class ;
+                                                     rdfs:subClassOf <http://fairmat-nfdi.eu/taxonomy/ElectronicProperty> ;
+                                                     rdfs:comment "Maximum electric field that the material can withstand under ideal conditions without undergoing electrical breakdown and becoming conductive."@en ;
+                                                     skos:prefLabel "DielectricStrength"@en .
 
 
-###  http://fairmat-nfdi.eu/taxonomy/Diffusivity
-:Diffusivity rdf:type owl:Class ;
-             rdfs:subClassOf :ThermophysicalProperty ;
-             rdfs:comment "the ratio of flux density to the negative of the concentration gradient in direction of diffusion"@en .
+###  http://fairmat-nfdi.eu/taxonomy/DuctileToBrittleTransitionTemperature
+<http://fairmat-nfdi.eu/taxonomy/DuctileToBrittleTransitionTemperature> rdf:type owl:Class ;
+                                                                        rdfs:subClassOf <http://fairmat-nfdi.eu/taxonomy/FracturesProperty> ;
+                                                                        rdfs:comment "Temperature at which there is a pronounced decrease in a material’s ability to absorb force without fracturing, transitioning from a ductile to a brittle state."@en ;
+                                                                        skos:altLabel "DBTT"@en ,
+                                                                                      "DBTransTemp"@en ;
+                                                                        skos:prefLabel "DuctileToBrittleTransitionTemperature"@en .
 
 
-###  http://fairmat-nfdi.eu/taxonomy/DynamicalProperty
-:DynamicalProperty rdf:type owl:Class ;
-                   rdfs:subClassOf :MaterialProperty .
+###  http://fairmat-nfdi.eu/taxonomy/EffectiveElectronMass
+<http://fairmat-nfdi.eu/taxonomy/EffectiveElectronMass> rdf:type owl:Class ;
+                                                        rdfs:subClassOf <http://fairmat-nfdi.eu/taxonomy/ElectronicProperty> ;
+                                                        rdfs:comment "Mass that electrons have in the presence of interactions. In semiconductors, it is the curvature of the top of the valence band. In strongly correlated materials, it is related with the Green's function slope with the frequency near zero."@en ;
+                                                        skos:prefLabel "EffectiveElectronMass"@en .
 
 
-###  http://fairmat-nfdi.eu/taxonomy/Ecsa
-:Ecsa rdf:type owl:Class ;
-      rdfs:subClassOf :StructuralProperty ;
-      rdfs:comment "electrochemically active surface area (ECSA) of material_n"@en .
+###  http://fairmat-nfdi.eu/taxonomy/EffectiveHoleMass
+<http://fairmat-nfdi.eu/taxonomy/EffectiveHoleMass> rdf:type owl:Class ;
+                                                    rdfs:subClassOf <http://fairmat-nfdi.eu/taxonomy/ElectronicProperty> ;
+                                                    rdfs:comment "Mass that holes have in the presence of interactions. In semiconductors, it is the curvature of the bottom of the conduction band. In strongly correlated materials, it is related with the Green's function slope with the frequency near zero."@en ;
+                                                    skos:altLabel "EffectiveMassHole"@en ;
+                                                    skos:prefLabel "EffectiveHoleMass"@en .
 
 
-###  http://fairmat-nfdi.eu/taxonomy/EffectiveVolume
-:EffectiveVolume rdf:type owl:Class ;
-                 rdfs:subClassOf :StructuralProperty ;
-                 rdfs:comment "effective volume of the specimen"@en .
-
-
-###  http://fairmat-nfdi.eu/taxonomy/ElasticProperty
-:ElasticProperty rdf:type owl:Class ;
-                 rdfs:subClassOf :MechanicalProperty ;
-                 rdfs:comment "mechanical property of a material to withstand the compression or the elongation with respect to its length"@en .
-
-
-###  http://fairmat-nfdi.eu/taxonomy/ElectricCharge
-:ElectricCharge rdf:type owl:Class ;
-                rdfs:subClassOf :ZeroDDefect ;
-                rdfs:comment "charge state of point defecs in the unit of electron"@en .
+###  http://fairmat-nfdi.eu/taxonomy/ElectricCoercitivity
+<http://fairmat-nfdi.eu/taxonomy/ElectricCoercitivity> rdf:type owl:Class ;
+                                                       rdfs:subClassOf <http://fairmat-nfdi.eu/taxonomy/FerroelectricProperty> ;
+                                                       rdfs:comment "Ability of the material to withstand the external electric field without depolarizing."@en ;
+                                                       skos:altLabel "CoercitivityElectric"@en ,
+                                                                     "CoerciveFieldElectric"@en ;
+                                                       skos:prefLabel "ElectricCoercitivity"@en .
 
 
 ###  http://fairmat-nfdi.eu/taxonomy/ElectricCurieTemperature
-:ElectricCurieTemperature rdf:type owl:Class ;
-                          rdfs:subClassOf :ElectricalProperty ;
-                          rdfs:comment "temperature above which certain materials lose their permanent polarization properties"@en .
+<http://fairmat-nfdi.eu/taxonomy/ElectricCurieTemperature> rdf:type owl:Class ;
+                                                           rdfs:subClassOf <http://fairmat-nfdi.eu/taxonomy/FerroelectricProperty> ;
+                                                           rdfs:comment "Critical temperature at which the electronic dipoles order forming ferroelectric or antiferroelectric ordered states."@en ;
+                                                           skos:prefLabel "ElectricCurieTemperature"@en .
 
 
-###  http://fairmat-nfdi.eu/taxonomy/ElectricSusceptibility
-:ElectricSusceptibility rdf:type owl:Class ;
-                        rdfs:subClassOf :ElectricalProperty ;
-                        rdfs:comment "a dimensionless proportionality constant that indicates the degree of polarization of a material"@en .
+###  http://fairmat-nfdi.eu/taxonomy/ElectricHysteresis
+<http://fairmat-nfdi.eu/taxonomy/ElectricHysteresis> rdf:type owl:Class ;
+                                                     rdfs:subClassOf <http://fairmat-nfdi.eu/taxonomy/FerroelectricProperty> ;
+                                                     rdfs:comment "Polarization history of a material in terms of the applied electric field."@en ;
+                                                     skos:prefLabel "ElectricHysteresis"@en .
 
 
 ###  http://fairmat-nfdi.eu/taxonomy/ElectricalConductivity
-:ElectricalConductivity rdf:type owl:Class ;
-                        rdfs:subClassOf :ElectricalProperty ;
-                        rdfs:comment "quantity how strongly it conducts electric current"@en .
+<http://fairmat-nfdi.eu/taxonomy/ElectricalConductivity> rdf:type owl:Class ;
+                                                         rdfs:subClassOf <http://fairmat-nfdi.eu/taxonomy/ElectronicTransportProperty> ;
+                                                         rdfs:comment "Ability of the charges to move in the presence of an electric current."@en ;
+                                                         skos:prefLabel "ElectricalConductivity"@en .
 
 
-###  http://fairmat-nfdi.eu/taxonomy/ElectricalProperty
-:ElectricalProperty rdf:type owl:Class ;
-                    rdfs:subClassOf :MaterialProperty ;
-                    rdfs:comment "physical properties that a material exhibits upon the application of electric forces"@en .
+###  http://fairmat-nfdi.eu/taxonomy/ElectricalResistivity
+<http://fairmat-nfdi.eu/taxonomy/ElectricalResistivity> rdf:type owl:Class ;
+                                                        rdfs:subClassOf <http://fairmat-nfdi.eu/taxonomy/ElectronicTransportProperty> ;
+                                                        rdfs:comment "Resistance of the charges to move in the presence of an electric current."@en ;
+                                                        skos:prefLabel "ElectricalResistivity"@en .
 
 
-###  http://fairmat-nfdi.eu/taxonomy/ElectrochemPhaseStability
-:ElectrochemPhaseStability rdf:type owl:Class ;
-                           rdfs:subClassOf :ElectrochemicalProperty ;
-                           rdfs:comment "the oxidation and reduction potential of solid or liquid materials (eg. the  solvent, the conductive salt or solid electrolytes)"@en .
-
-
-###  http://fairmat-nfdi.eu/taxonomy/ElectrochemicalProperty
-:ElectrochemicalProperty rdf:type owl:Class ;
-                         rdfs:subClassOf :MaterialProperty ;
-                         rdfs:comment "property either caused or accompanied by the passage of an electric current"@en .
+###  http://fairmat-nfdi.eu/taxonomy/ElectrochemicallyActiveSurfaceArea
+<http://fairmat-nfdi.eu/taxonomy/ElectrochemicallyActiveSurfaceArea> rdf:type owl:Class ;
+                                                                     rdfs:subClassOf <http://fairmat-nfdi.eu/taxonomy/StructuralProperty> ;
+                                                                     rdfs:comment "Electrochemically active surface area of a material."@en ;
+                                                                     skos:altLabel "ECSA"@en ;
+                                                                     skos:prefLabel "ElectrochemicallyActiveSurfaceArea"@en .
 
 
 ###  http://fairmat-nfdi.eu/taxonomy/ElectromechanicalCouplingFactor
-:ElectromechanicalCouplingFactor rdf:type owl:Class ;
-                                 rdfs:subClassOf :PiezoelectricProperty ;
-                                 rdfs:comment "conversion efficiency between electrical and mechanical energy,k^2"@en .
-
-
-###  http://fairmat-nfdi.eu/taxonomy/ElectronEffectiveMass
-:ElectronEffectiveMass rdf:type owl:Class ;
-                       rdfs:subClassOf :ElectricalProperty ;
-                       rdfs:comment "a mass that a particle seems to have when responding to forces or interacting with other identical particles in a thermal distribution"@en .
+<http://fairmat-nfdi.eu/taxonomy/ElectromechanicalCouplingFactor> rdf:type owl:Class ;
+                                                                  rdfs:subClassOf <http://fairmat-nfdi.eu/taxonomy/PiezoelectricProperty> ;
+                                                                  rdfs:comment "Measure of the fraction of electric energy that can be converted into mechanical energy and vice versa."@en ;
+                                                                  skos:prefLabel "ElectromechanicalCouplingFactor"@en .
 
 
 ###  http://fairmat-nfdi.eu/taxonomy/ElectronMobility
-:ElectronMobility rdf:type owl:Class ;
-                  rdfs:subClassOf :ElectricalProperty ;
-                  rdfs:comment "a value that represents how quickly a single electron can move through a metal or semiconductor, when pulled by an electric field"@en .
+<http://fairmat-nfdi.eu/taxonomy/ElectronMobility> rdf:type owl:Class ;
+                                                   rdfs:subClassOf <http://fairmat-nfdi.eu/taxonomy/ElectronicTransportProperty> ;
+                                                   rdfs:comment "Speed of the electron motion when subjected to an electric field."@en ;
+                                                   skos:prefLabel "ElectronMobility"@en .
+
+
+###  http://fairmat-nfdi.eu/taxonomy/ElectronicBandGap
+<http://fairmat-nfdi.eu/taxonomy/ElectronicBandGap> rdf:type owl:Class ;
+                                                    rdfs:subClassOf <http://fairmat-nfdi.eu/taxonomy/ElectronicProperty> ;
+                                                    rdfs:comment "Energy difference between the highest occupied electronic state and the lowest unoccupied electronic state."@en ;
+                                                    skos:prefLabel "ElectronicBandGap"@en .
+
+
+###  http://fairmat-nfdi.eu/taxonomy/ElectronicBandStructure
+<http://fairmat-nfdi.eu/taxonomy/ElectronicBandStructure> rdf:type owl:Class ;
+                                                          rdfs:subClassOf <http://fairmat-nfdi.eu/taxonomy/ElectronicProperty> ;
+                                                          rdfs:comment "Accessible energies by the charges (electrons and holes) in the reciprocal space."@en ;
+                                                          skos:prefLabel "ElectronicBandStructure"@en .
+
+
+###  http://fairmat-nfdi.eu/taxonomy/ElectronicCompressibility
+<http://fairmat-nfdi.eu/taxonomy/ElectronicCompressibility> rdf:type owl:Class ;
+                                                            rdfs:subClassOf <http://fairmat-nfdi.eu/taxonomy/ElectronicProperty> ;
+                                                            rdfs:comment "Response of the material to changes in the electronic density after adding or removing charges."@en ;
+                                                            skos:prefLabel "ElectronicCompressibility"@en .
+
+
+###  http://fairmat-nfdi.eu/taxonomy/ElectronicDensityOfStates
+<http://fairmat-nfdi.eu/taxonomy/ElectronicDensityOfStates> rdf:type owl:Class ;
+                                                            rdfs:subClassOf <http://fairmat-nfdi.eu/taxonomy/ElectronicProperty> ;
+                                                            rdfs:comment "Number of electronic states accessible for the charges per energy and per volume."@en ;
+                                                            skos:altLabel "ElectronicDOS"@en ;
+                                                            skos:prefLabel "ElectronicDensityOfStates"@en .
+
+
+###  http://fairmat-nfdi.eu/taxonomy/ElectronicGreensFunction
+<http://fairmat-nfdi.eu/taxonomy/ElectronicGreensFunction> rdf:type owl:Class ;
+                                                           rdfs:subClassOf <http://fairmat-nfdi.eu/taxonomy/ElectronicProperty> ;
+                                                           rdfs:comment "Charge-charge correlation functions."@en ;
+                                                           skos:prefLabel "ElectronicGreensFunction"@en .
 
 
 ###  http://fairmat-nfdi.eu/taxonomy/ElectronicProperty
-:ElectronicProperty rdf:type owl:Class ;
-                    rdfs:subClassOf :MaterialProperty .
+<http://fairmat-nfdi.eu/taxonomy/ElectronicProperty> rdf:type owl:Class ;
+                                                     rdfs:subClassOf <http://fairmat-nfdi.eu/taxonomy/MaterialProperty> ;
+                                                     rdfs:comment "Property that describes the behaviour of charges (electrons or holes) in a given material."@en ;
+                                                     skos:prefLabel "ElectronicProperty"@en .
 
 
-###  http://fairmat-nfdi.eu/taxonomy/EnergyFreeHelmholtz
-:EnergyFreeHelmholtz rdf:type owl:Class ;
-                     rdfs:subClassOf :VibrationalProperty .
+###  http://fairmat-nfdi.eu/taxonomy/ElectronicSusceptibility
+<http://fairmat-nfdi.eu/taxonomy/ElectronicSusceptibility> rdf:type owl:Class ;
+                                                           rdfs:subClassOf <http://fairmat-nfdi.eu/taxonomy/ElectronicProperty> ;
+                                                           rdfs:comment "Degree of polarization of a material in the presence of an electric field."@en ;
+                                                           skos:prefLabel "ElectronicSusceptibility"@en .
+
+
+###  http://fairmat-nfdi.eu/taxonomy/ElectronicTransportProperty
+<http://fairmat-nfdi.eu/taxonomy/ElectronicTransportProperty> rdf:type owl:Class ;
+                                                              rdfs:subClassOf <http://fairmat-nfdi.eu/taxonomy/TransportProperty> ;
+                                                              rdfs:comment "Property that describes the movement of charges (electrons or holes) in a given material."@en ;
+                                                              skos:prefLabel "ElectronicTransportProperty"@en .
+
+
+###  http://fairmat-nfdi.eu/taxonomy/ElementalComposition
+<http://fairmat-nfdi.eu/taxonomy/ElementalComposition> rdf:type owl:Class ;
+                                                       rdfs:subClassOf <http://fairmat-nfdi.eu/taxonomy/StructuralProperty> ;
+                                                       rdfs:comment "List of elemental components of the material."@en ;
+                                                       skos:altLabel "Composition"@en ;
+                                                       skos:prefLabel "ElementalComposition"@en .
+
+
+###  http://fairmat-nfdi.eu/taxonomy/EliashbergFunction
+<http://fairmat-nfdi.eu/taxonomy/EliashbergFunction> rdf:type owl:Class ;
+                                                     rdfs:subClassOf <http://fairmat-nfdi.eu/taxonomy/SuperconductingProperty> ;
+                                                     rdfs:comment "Spectral function describing the coupling of electrons and phonons in superconductors."@en ;
+                                                     skos:prefLabel "EliashbergFunction"@en .
 
 
 ###  http://fairmat-nfdi.eu/taxonomy/EnergyVolumeCurve
-:EnergyVolumeCurve rdf:type owl:Class ;
-                   rdfs:subClassOf :MechanicalProperty .
-
-
-###  http://fairmat-nfdi.eu/taxonomy/EnthalpyOfFormation
-:EnthalpyOfFormation rdf:type owl:Class ;
-                     rdfs:subClassOf :ThermophysicalProperty ;
-                     rdfs:comment "a measure of the energy released or consumed when one mole of a substance is created from its pure elements"@en .
-
-
-###  http://fairmat-nfdi.eu/taxonomy/ExcitonBindingEnergy
-:ExcitonBindingEnergy rdf:type owl:Class ;
-                      rdfs:subClassOf :ElectricalProperty ;
-                      rdfs:comment "a binding energy of an exciton (an electrically neutral quasiparticle that exists in insulators or semiconductors)"@en .
-
-
-###  http://fairmat-nfdi.eu/taxonomy/Facet
-:Facet rdf:type owl:Class ;
-       rdfs:subClassOf :Particle ;
-       rdfs:comment "facet orientation of the particle"@en .
+<http://fairmat-nfdi.eu/taxonomy/EnergyVolumeCurve> rdf:type owl:Class ;
+                                                    rdfs:subClassOf <http://fairmat-nfdi.eu/taxonomy/ThermodynamicProperty> ;
+                                                    rdfs:comment "Total energy at constant pressure of a material at different volumes."@en ;
+                                                    skos:prefLabel "EnergyVolumeCurve"@en .
 
 
 ###  http://fairmat-nfdi.eu/taxonomy/FatigueCrackGrowthRate
-:FatigueCrackGrowthRate rdf:type owl:Class ;
-                        rdfs:subClassOf :MechanicalProperty ;
-                        rdfs:comment "rate of crack extension under fatigue loading, expressed in terms of crack extension per cycle, da/dN"@en .
+<http://fairmat-nfdi.eu/taxonomy/FatigueCrackGrowthRate> rdf:type owl:Class ;
+                                                         rdfs:subClassOf <http://fairmat-nfdi.eu/taxonomy/FatigueProperty> ;
+                                                         rdfs:comment "Rate of crack extension under fatigue loading, expressed in terms of crack extension per cycle."@en ;
+                                                         skos:prefLabel "FatigueCrackGrowthRate"@en .
 
 
 ###  http://fairmat-nfdi.eu/taxonomy/FatigueCrackGrowthThreshold
-:FatigueCrackGrowthThreshold rdf:type owl:Class ;
-                             rdfs:subClassOf :MechanicalProperty ;
-                             rdfs:comment "asymptotic value of stress intensity factor range at which crack growth rate approaches zero"@en .
+<http://fairmat-nfdi.eu/taxonomy/FatigueCrackGrowthThreshold> rdf:type owl:Class ;
+                                                              rdfs:subClassOf <http://fairmat-nfdi.eu/taxonomy/FatigueProperty> ;
+                                                              rdfs:comment "Asymptotic value of the stress intensity factor range at which crack growth rate approaches zero."@en ;
+                                                              skos:prefLabel "FatigueCrackGrowthThreshold"@en .
 
 
 ###  http://fairmat-nfdi.eu/taxonomy/FatigueLife
-:FatigueLife rdf:type owl:Class ;
-             rdfs:subClassOf :MechanicalProperty ;
-             rdfs:comment "number of stress (strain) cyclcles required to cause failure"@en .
+<http://fairmat-nfdi.eu/taxonomy/FatigueLife> rdf:type owl:Class ;
+                                              rdfs:subClassOf <http://fairmat-nfdi.eu/taxonomy/FatigueProperty> ;
+                                              rdfs:comment "Number of stress (strain) cycles required to cause failure."@en ;
+                                              skos:prefLabel "FatigueLife"@en .
 
 
 ###  http://fairmat-nfdi.eu/taxonomy/FatigueLimit
-:FatigueLimit rdf:type owl:Class ;
-              rdfs:subClassOf :MechanicalProperty ;
-              rdfs:comment "the highest stress that materials can withstand for an infinite number of cycles without breaking"@en .
+<http://fairmat-nfdi.eu/taxonomy/FatigueLimit> rdf:type owl:Class ;
+                                               rdfs:subClassOf <http://fairmat-nfdi.eu/taxonomy/FatigueProperty> ;
+                                               rdfs:comment "Highest stress that materials can withstand for an infinite number of cycles without fatigue failure."@en ;
+                                               skos:prefLabel "FatigueLimit"@en .
 
 
 ###  http://fairmat-nfdi.eu/taxonomy/FatigueProperty
-:FatigueProperty rdf:type owl:Class ;
-                 rdfs:subClassOf :MechanicalProperty ;
-                 rdfs:comment "materials response when subjected to cyclic load and/or strain"@en .
-
-
-###  http://fairmat-nfdi.eu/taxonomy/FatiguePropertyType
-:FatiguePropertyType rdf:type owl:Class ;
-                     rdfs:subClassOf :MechanicalProperty ;
-                     rdfs:comment "type of fatigue properties depending on number of cycles, applied stress and/or strain level and environment"@en .
+<http://fairmat-nfdi.eu/taxonomy/FatigueProperty> rdf:type owl:Class ;
+                                                  rdfs:subClassOf <http://fairmat-nfdi.eu/taxonomy/MechanicalProperty> ;
+                                                  rdfs:comment "Property that describes the initiation and propagation of cracks in a material due to cycle loading."@en ;
+                                                  skos:prefLabel "FatigueProperty"@en .
 
 
 ###  http://fairmat-nfdi.eu/taxonomy/FermiLevel
-:FermiLevel rdf:type owl:Class ;
-            rdfs:subClassOf :ElectricalProperty ;
-            rdfs:comment "the thermodynamic work required to add one electron to the body"@en .
+<http://fairmat-nfdi.eu/taxonomy/FermiLevel> rdf:type owl:Class ;
+                                             rdfs:subClassOf <http://fairmat-nfdi.eu/taxonomy/ElectronicProperty> ;
+                                             rdfs:comment "Energy required to add or extract a charge from a material at zero temperature. It can be also defined as the chemical potential at zero temperature."@en ;
+                                             skos:altLabel "ChemicalPotentialElectronic"@en ;
+                                             skos:prefLabel "FermiLevel"@en .
+
+
+###  http://fairmat-nfdi.eu/taxonomy/FermiSurface
+<http://fairmat-nfdi.eu/taxonomy/FermiSurface> rdf:type owl:Class ;
+                                               rdfs:subClassOf <http://fairmat-nfdi.eu/taxonomy/ElectronicProperty> ;
+                                               rdfs:comment "Energy boundary in reciprocal space that separates the filled and empty electronic states in a metal. It is related with the crossing points in reciprocal space by the chemical potential or, equivalently at zero temperature, the Fermi level."@en ;
+                                               skos:prefLabel "FermiSurface"@en .
 
 
 ###  http://fairmat-nfdi.eu/taxonomy/FerroelectricProperty
-:FerroelectricProperty rdf:type owl:Class ;
-                       rdfs:subClassOf :MaterialProperty ;
-                       rdfs:comment "property of certain materials to have a spontaneous polarization which can be reversed by the application of an external electric field"@en .
-
-
-###  http://fairmat-nfdi.eu/taxonomy/FormationEnergy
-:FormationEnergy rdf:type owl:Class ;
-                 rdfs:subClassOf :ZeroDDefect ;
-                 rdfs:comment "defect formation energy, i.e. lattice cohesive energy in the case of vacancy"@en .
-
-
-###  http://fairmat-nfdi.eu/taxonomy/Fraction
-:Fraction rdf:type owl:Class ;
-          rdfs:subClassOf :StructuralProperty ;
-          rdfs:comment "relative amounts of phase_n in the microstructure"@en .
+<http://fairmat-nfdi.eu/taxonomy/FerroelectricProperty> rdf:type owl:Class ;
+                                                        rdfs:subClassOf <http://fairmat-nfdi.eu/taxonomy/ElectronicProperty> ;
+                                                        rdfs:comment "Property that describes the ability of a given material to exhibit spontaneous and reversible electric polarization in response to an external electric field."@en ;
+                                                        skos:prefLabel "FerroelectricProperty"@en .
 
 
 ###  http://fairmat-nfdi.eu/taxonomy/FractureToughness
-:FractureToughness rdf:type owl:Class ;
-                   rdfs:subClassOf :MechanicalProperty ;
-                   rdfs:comment "generic term for measures of resistance to extension of a crack"@en .
+<http://fairmat-nfdi.eu/taxonomy/FractureToughness> rdf:type owl:Class ;
+                                                    rdfs:subClassOf <http://fairmat-nfdi.eu/taxonomy/FracturesProperty> ;
+                                                    rdfs:comment "Critical stress intensity factor of a sharp crack where propagation of the crack suddenly becomes rapid and unlimited."@en ;
+                                                    skos:prefLabel "FractureToughness"@en .
+
+
+###  http://fairmat-nfdi.eu/taxonomy/FracturesProperty
+<http://fairmat-nfdi.eu/taxonomy/FracturesProperty> rdf:type owl:Class ;
+                                                    rdfs:subClassOf <http://fairmat-nfdi.eu/taxonomy/MechanicalProperty> ;
+                                                    rdfs:comment "Property that describes the propagation of cracks in a material."@en ;
+                                                    skos:prefLabel "FractureProperty"@en .
 
 
 ###  http://fairmat-nfdi.eu/taxonomy/FreeCorrosionCurrent
-:FreeCorrosionCurrent rdf:type owl:Class ;
-                      rdfs:subClassOf :CorrosionProperty ;
-                      rdfs:comment "corrosion current at the free corrosion potential"@en .
+<http://fairmat-nfdi.eu/taxonomy/FreeCorrosionCurrent> rdf:type owl:Class ;
+                                                       rdfs:subClassOf <http://fairmat-nfdi.eu/taxonomy/CorrosionProperty> ;
+                                                       rdfs:comment "Flow of electrons in a corrosion reaction occurring without external influences. It indicates the intrinsic corrosion activity of a material."@en ;
+                                                       skos:prefLabel "FreeCorrosionCurrent"@en .
 
 
 ###  http://fairmat-nfdi.eu/taxonomy/FreeCorrosionPotential
-:FreeCorrosionPotential rdf:type owl:Class ;
-                        rdfs:subClassOf :CorrosionProperty ;
-                        rdfs:comment "corrosion potential in the absence of net (external) electrical current flowing to or from the metal surface"@en .
+<http://fairmat-nfdi.eu/taxonomy/FreeCorrosionPotential> rdf:type owl:Class ;
+                                                         rdfs:subClassOf <http://fairmat-nfdi.eu/taxonomy/CorrosionProperty> ;
+                                                         rdfs:comment "Electrode potential of a material in its natural state without corrosive environment."@en ;
+                                                         skos:prefLabel "FreeCorrosionPotential"@en .
 
 
 ###  http://fairmat-nfdi.eu/taxonomy/Fugacity
-:Fugacity rdf:type owl:Class ;
-          rdfs:subClassOf :ThermophysicalProperty ;
-          rdfs:comment "a measure of the effective pressure of a species in a real gas"@en .
+<http://fairmat-nfdi.eu/taxonomy/Fugacity> rdf:type owl:Class ;
+                                           rdfs:subClassOf <http://fairmat-nfdi.eu/taxonomy/ThermodynamicProperty> ,
+                                                           [ rdf:type owl:Restriction ;
+                                                             owl:onProperty qudt:hasQuantityKind ;
+                                                             owl:hasValue qk:Fugacity
+                                                           ] ;
+                                           rdfs:comment "Effective pressure of a species in a real gas."@en ;
+                                           skos:prefLabel "Fugacity"@en .
 
 
-###  http://fairmat-nfdi.eu/taxonomy/GeometryOptimization
-:GeometryOptimization rdf:type owl:Class ;
-                      rdfs:subClassOf :MaterialProperty .
-
-
-###  http://fairmat-nfdi.eu/taxonomy/GibbsFreeEnergy
-:GibbsFreeEnergy rdf:type owl:Class ;
-                 rdfs:subClassOf :ThermophysicalProperty ;
-                 rdfs:comment "a measure of the potential for reversible or maximum work that may be done by a system at constant temperature and pressure"@en .
+###  http://fairmat-nfdi.eu/taxonomy/GibbsEnergy
+<http://fairmat-nfdi.eu/taxonomy/GibbsEnergy> rdf:type owl:Class ;
+                                              rdfs:subClassOf <http://fairmat-nfdi.eu/taxonomy/ThermodynamicProperty> ,
+                                                              [ rdf:type owl:Restriction ;
+                                                                owl:onProperty qudt:hasQuantityKind ;
+                                                                owl:hasValue qk:Energy
+                                                              ] ;
+                                              rdfs:comment "Thermodynamic potential that measures the maximum amount of work that may be performed by a thermodynamic closed system at constant temperature and pressure. It also provides a necessary condition for processes such as chemical reactions to occur under these conditions."@en ;
+                                              skos:prefLabel "GibbsEnergy"@en .
 
 
 ###  http://fairmat-nfdi.eu/taxonomy/Grain
-:Grain rdf:type owl:Class ;
-       rdfs:subClassOf :StructuralProperty ;
-       rdfs:comment "inner structure of material made of individual crystalline areas"@en .
+<http://fairmat-nfdi.eu/taxonomy/Grain> rdf:type owl:Class ;
+                                        rdfs:subClassOf <http://fairmat-nfdi.eu/taxonomy/StructuralProperty> ;
+                                        rdfs:comment "Inner structure of material made of individual crystalline areas."@en ;
+                                        skos:prefLabel "Grain"@en .
 
 
 ###  http://fairmat-nfdi.eu/taxonomy/GrainAspectRatio
-:GrainAspectRatio rdf:type owl:Class ;
-                  rdfs:subClassOf :StructuralProperty ;
-                  rdfs:comment "length ratio between longest distance and shortest distance of grain"@en .
+<http://fairmat-nfdi.eu/taxonomy/GrainAspectRatio> rdf:type owl:Class ;
+                                                   rdfs:subClassOf <http://fairmat-nfdi.eu/taxonomy/StructuralProperty> ;
+                                                   rdfs:comment "Length ratio between longest distance and shortest distance of a grain."@en ;
+                                                   skos:prefLabel "GrainAspectRatio"@en .
 
 
 ###  http://fairmat-nfdi.eu/taxonomy/GrainSize
-:GrainSize rdf:type owl:Class ;
-           rdfs:subClassOf :StructuralProperty ;
-           rdfs:comment "estimate of the average grain diameter"@en .
+<http://fairmat-nfdi.eu/taxonomy/GrainSize> rdf:type owl:Class ;
+                                            rdfs:subClassOf <http://fairmat-nfdi.eu/taxonomy/StructuralProperty> ;
+                                            rdfs:comment "Estimate of the average grain diameter."@en ;
+                                            skos:prefLabel "GrainSize"@en .
 
 
-###  http://fairmat-nfdi.eu/taxonomy/GreensFunctionsElectronic
-:GreensFunctionsElectronic rdf:type owl:Class ;
-                           rdfs:subClassOf :ElectronicProperty .
+###  http://fairmat-nfdi.eu/taxonomy/GreensFunctionsPropagator
+<http://fairmat-nfdi.eu/taxonomy/GreensFunctionsPropagator> rdf:type owl:Class ;
+                                                            rdfs:subClassOf <http://fairmat-nfdi.eu/taxonomy/ElectronicTransportProperty> ;
+                                                            rdfs:comment "Probability amplitude for charges to move from one place to another in a given time."@en ;
+                                                            skos:prefLabel "GreensFunctionsPropagator"@en .
 
 
 ###  http://fairmat-nfdi.eu/taxonomy/HallCoefficient
-:HallCoefficient rdf:type owl:Class ;
-                 rdfs:subClassOf :ElectricalProperty ;
-                 rdfs:comment "the ratio of the induced electric field to the product of the current density and the applied magnetic field"@en .
+<http://fairmat-nfdi.eu/taxonomy/HallCoefficient> rdf:type owl:Class ;
+                                                  rdfs:subClassOf <http://fairmat-nfdi.eu/taxonomy/ElectronicTransportProperty> ;
+                                                  rdfs:comment "Ratio of the induced electric field to the product of the applied current and magnetic field. It can be also defined as the inverse of the carrier density and electric charge."@en ;
+                                                  skos:prefLabel "HallCoefficient"@en .
 
 
 ###  http://fairmat-nfdi.eu/taxonomy/HallVoltage
-:HallVoltage rdf:type owl:Class ;
-             rdfs:subClassOf :ElectricalProperty ;
-             rdfs:comment "Voltage difference across an electrical conductor that is transverse to an electric current in the conductor and to an applied magnetic field perpendicular to the current"@en .
+<http://fairmat-nfdi.eu/taxonomy/HallVoltage> rdf:type owl:Class ;
+                                              rdfs:subClassOf <http://fairmat-nfdi.eu/taxonomy/ElectronicTransportProperty> ,
+                                                              [ rdf:type owl:Restriction ;
+                                                                owl:onProperty qudt:hasQuantityKind ;
+                                                                owl:hasValue qk:Voltage
+                                                              ] ;
+                                              rdfs:comment "Voltage difference that arises in a metal when an electric current flows transversally and an applied magnetic field is applied perpendicularly to the plane."@en ;
+                                              skos:prefLabel "HallVoltage"@en .
 
 
 ###  http://fairmat-nfdi.eu/taxonomy/Hardness
-:Hardness rdf:type owl:Class ;
-          rdfs:subClassOf :MechanicalProperty ;
-          rdfs:comment "measure of the resistance to localized plastic deformation induced by either mechanical indentation or abrasion"@en .
+<http://fairmat-nfdi.eu/taxonomy/Hardness> rdf:type owl:Class ;
+                                           rdfs:subClassOf <http://fairmat-nfdi.eu/taxonomy/MechanicalProperty> ;
+                                           rdfs:comment "Measure of the resistance to localized plastic deformation induced by either mechanical indentation or abrasion."@en ;
+                                           skos:prefLabel "Hardness"@en .
 
 
 ###  http://fairmat-nfdi.eu/taxonomy/HeatCapacity
-:HeatCapacity rdf:type owl:Class ;
-              rdfs:subClassOf :ThermophysicalProperty ;
-              rdfs:comment "quantity of heat necessary to change the temperature of an entity, substance or system by one Kelvin of temperature"@en .
+<http://fairmat-nfdi.eu/taxonomy/HeatCapacity> rdf:type owl:Class ;
+                                               rdfs:subClassOf <http://fairmat-nfdi.eu/taxonomy/ThermodynamicProperty> ,
+                                                               [ rdf:type owl:Restriction ;
+                                                                 owl:onProperty qudt:hasQuantityKind ;
+                                                                 owl:hasValue qk:HeatCapacity
+                                                               ] ;
+                                               rdfs:comment "Amount of heat to be supplied to a material to produce a unit change in its temperature."@en ;
+                                               skos:prefLabel "HeatCapacity"@en .
 
 
-###  http://fairmat-nfdi.eu/taxonomy/HeatCapacityConstantVolume
-:HeatCapacityConstantVolume rdf:type owl:Class ;
-                            rdfs:subClassOf :VibrationalProperty .
+###  http://fairmat-nfdi.eu/taxonomy/HeatOfFormation
+<http://fairmat-nfdi.eu/taxonomy/HeatOfFormation> rdf:type owl:Class ;
+                                                  rdfs:subClassOf <http://fairmat-nfdi.eu/taxonomy/ThermodynamicProperty> ;
+                                                  rdfs:comment "Energy released or consumed when one mole of a substance is created from its pure elements."@en ;
+                                                  skos:altLabel "EnthalpyOfFormation"@en ;
+                                                  skos:prefLabel "HeatOfFormation"@en .
 
 
 ###  http://fairmat-nfdi.eu/taxonomy/HeatOfFusion
-:HeatOfFusion rdf:type owl:Class ;
-              rdfs:subClassOf :ThermophysicalProperty ;
-              rdfs:comment "heat absorbed by a unit mass of a solid at its melting point"@en .
+<http://fairmat-nfdi.eu/taxonomy/HeatOfFusion> rdf:type owl:Class ;
+                                               rdfs:subClassOf <http://fairmat-nfdi.eu/taxonomy/ThermodynamicProperty> ;
+                                               rdfs:comment "Enthalpy change by unit mass resulting from providing energy (typically heat) to a specific quantity of the substance to change its state from solid to liquid at constant pressure."@en ;
+                                               skos:altLabel "SpecificHeatOfFusion"@en ;
+                                               skos:prefLabel "HeatOfFusion"@en .
 
 
-###  http://fairmat-nfdi.eu/taxonomy/Height
-:Height rdf:type owl:Class ;
-        rdfs:subClassOf :Particle ;
-        rdfs:comment "average height of particles"@en .
-
-
-###  http://fairmat-nfdi.eu/taxonomy/HoleEffectiveMass
-:HoleEffectiveMass rdf:type owl:Class ;
-                   rdfs:subClassOf :ElectricalProperty ;
-                   rdfs:comment "a mass that a particle seems to have when responding to forces or interacting with other identical particles in a thermal distribution"@en .
+###  http://fairmat-nfdi.eu/taxonomy/HelmholtzEnergy
+<http://fairmat-nfdi.eu/taxonomy/HelmholtzEnergy> rdf:type owl:Class ;
+                                                  rdfs:subClassOf <http://fairmat-nfdi.eu/taxonomy/ThermodynamicProperty> ,
+                                                                  [ rdf:type owl:Restriction ;
+                                                                    owl:onProperty qudt:hasQuantityKind ;
+                                                                    owl:hasValue qk:Energy
+                                                                  ] ;
+                                                  rdfs:comment "Thermodynamic potential that measures the useful work obtainable from a closed thermodynamic system at a constant temperature."@en ;
+                                                  skos:prefLabel "HelmholtzEnergy"@en .
 
 
 ###  http://fairmat-nfdi.eu/taxonomy/HoleMobility
-:HoleMobility rdf:type owl:Class ;
-              rdfs:subClassOf :ElectricalProperty ;
-              rdfs:comment "a value that represents how quickly a single hole can move through a metal or semiconductor, when pulled by an electric field"@en .
+<http://fairmat-nfdi.eu/taxonomy/HoleMobility> rdf:type owl:Class ;
+                                               rdfs:subClassOf <http://fairmat-nfdi.eu/taxonomy/ElectronicTransportProperty> ;
+                                               rdfs:comment "Speed of the hole motion when subjected to an electric field."@en ;
+                                               skos:prefLabel "HoleMobility"@en .
 
 
 ###  http://fairmat-nfdi.eu/taxonomy/ImpactToughness
-:ImpactToughness rdf:type owl:Class ;
-                 rdfs:subClassOf :MechanicalProperty ;
-                 rdfs:comment "toughness of a material using the value of impact energy absorbed by the maerial during fracturing under impact"@en .
+<http://fairmat-nfdi.eu/taxonomy/ImpactToughness> rdf:type owl:Class ;
+                                                  rdfs:subClassOf <http://fairmat-nfdi.eu/taxonomy/MechanicalProperty> ;
+                                                  rdfs:comment "Toughness of a material using the value of the energy absorbed by the material during fracturing under impact."@en ;
+                                                  skos:prefLabel "ImpactToughness"@en .
 
 
 ###  http://fairmat-nfdi.eu/taxonomy/Impurity
-:Impurity rdf:type owl:Class ;
-          rdfs:subClassOf :StructuralProperty ;
-          rdfs:comment "impurities in the materials"@en .
-
-
-###  http://fairmat-nfdi.eu/taxonomy/InitialVolume
-:InitialVolume rdf:type owl:Class ;
-               rdfs:subClassOf :StructuralProperty ;
-               rdfs:comment "initial volume of the specimen"@en .
-
-
-###  http://fairmat-nfdi.eu/taxonomy/InstantaneousStrain
-:InstantaneousStrain rdf:type owl:Class ;
-                     rdfs:subClassOf :MechanicalProperty ;
-                     rdfs:comment "immediate deformation of materials upon initial application of a stress"@en .
-
-
-###  http://fairmat-nfdi.eu/taxonomy/InterfacialEnergy
-:InterfacialEnergy rdf:type owl:Class ;
-                   rdfs:subClassOf :TwoDDefect ;
-                   rdfs:comment "energy required to form a unit area of new interface"@en .
+<http://fairmat-nfdi.eu/taxonomy/Impurity> rdf:type owl:Class ;
+                                           rdfs:subClassOf <http://fairmat-nfdi.eu/taxonomy/StructuralProperty> ;
+                                           rdfs:comment "Chemical substances inside a material which differ from the chemical composition of the material or compound."@en ;
+                                           skos:prefLabel "Impurity"@en .
 
 
 ###  http://fairmat-nfdi.eu/taxonomy/IonicConductivity
-:IonicConductivity rdf:type owl:Class ;
-                   rdfs:subClassOf :ElectricalProperty ;
-                   rdfs:comment "quantity how strongly it conducts ionic charge"@en .
+<http://fairmat-nfdi.eu/taxonomy/IonicConductivity> rdf:type owl:Class ;
+                                                    rdfs:subClassOf <http://fairmat-nfdi.eu/taxonomy/ElectronicTransportProperty> ;
+                                                    rdfs:comment "Ability of the ions to move in the presence of an electric current."@en ;
+                                                    skos:prefLabel "IonicConductivity"@en .
 
 
 ###  http://fairmat-nfdi.eu/taxonomy/IonicMobility
-:IonicMobility rdf:type owl:Class ;
-               rdfs:subClassOf :ElectricalProperty ;
-               rdfs:comment "The proportionality factor between an ion's drift velocity in an electric field in a specified medium"@en .
-
-
-###  http://fairmat-nfdi.eu/taxonomy/JIC
-:JIC rdf:type owl:Class ;
-     rdfs:subClassOf :MechanicalProperty ;
-     rdfs:comment "crack-extension resistance under conditions of crack-tip plane strain in mode I and substantial plastic deformation"@en .
-
-
-###  http://fairmat-nfdi.eu/taxonomy/KIC
-:KIC rdf:type owl:Class ;
-     rdfs:subClassOf :MechanicalProperty ;
-     rdfs:comment "crack-extension resistance under conditions of crack-tip plane strain in mode I and predominantly linear-elastic conditions"@en .
+<http://fairmat-nfdi.eu/taxonomy/IonicMobility> rdf:type owl:Class ;
+                                                rdfs:subClassOf <http://fairmat-nfdi.eu/taxonomy/ElectronicTransportProperty> ;
+                                                rdfs:comment "Speed of the ion motion when subjected to an electric field."@en ;
+                                                skos:prefLabel "IonicMobility"@en .
 
 
 ###  http://fairmat-nfdi.eu/taxonomy/LangmuirSurfaceArea
-:LangmuirSurfaceArea rdf:type owl:Class ;
-                     rdfs:subClassOf :StructuralProperty ;
-                     rdfs:comment "Langmuir surface area of material_n"@en .
+<http://fairmat-nfdi.eu/taxonomy/LangmuirSurfaceArea> rdf:type owl:Class ;
+                                                      rdfs:subClassOf <http://fairmat-nfdi.eu/taxonomy/StructuralProperty> ;
+                                                      rdfs:comment "Langmuir surface area of a material."@en ;
+                                                      skos:prefLabel "LangmuirSurfaceArea"@en .
+
+
+###  http://fairmat-nfdi.eu/taxonomy/LatentHeatOfFusion
+<http://fairmat-nfdi.eu/taxonomy/LatentHeatOfFusion> rdf:type owl:Class ;
+                                                     rdfs:subClassOf <http://fairmat-nfdi.eu/taxonomy/ThermodynamicProperty> ;
+                                                     rdfs:comment "Enthalpy change resulting from providing energy (typically heat) to a specific quantity of the substance to change its state from solid to liquid at constant pressure."@en ;
+                                                     skos:altLabel "EnthalpyOfFusion"@en ;
+                                                     skos:prefLabel "LatentHeatOfFusion"@en .
 
 
 ###  http://fairmat-nfdi.eu/taxonomy/LayerThickness
-:LayerThickness rdf:type owl:Class ;
-                rdfs:subClassOf :StructuralProperty ;
-                rdfs:comment "layer thickness of the top contact layer material(n)"@en .
-
-
-###  http://fairmat-nfdi.eu/taxonomy/Length
-:Length rdf:type owl:Class ;
-        rdfs:subClassOf :Particle ;
-        rdfs:comment "length of the encapsulation layer"@en .
-
-
-###  http://fairmat-nfdi.eu/taxonomy/LossModulus
-:LossModulus rdf:type owl:Class ;
-             rdfs:subClassOf :VariableViscosity .
-
-
-###  http://fairmat-nfdi.eu/taxonomy/LowerShelfEnergy
-:LowerShelfEnergy rdf:type owl:Class ;
-                  rdfs:subClassOf :MechanicalProperty ;
-                  rdfs:comment "low fracture energy associated with brittle behavior"@en .
+<http://fairmat-nfdi.eu/taxonomy/LayerThickness> rdf:type owl:Class ;
+                                                 rdfs:subClassOf <http://fairmat-nfdi.eu/taxonomy/StructuralProperty> ;
+                                                 rdfs:comment "Layer thickness of a quasi-2D material."@en ;
+                                                 skos:prefLabel "LayerThickness"@en .
 
 
 ###  http://fairmat-nfdi.eu/taxonomy/MagneticAnisotropyConstant
-:MagneticAnisotropyConstant rdf:type owl:Class ;
-                            rdfs:subClassOf :MagneticProperty ;
-                            rdfs:comment "A measure of the energy density difference in magnetization depending on the direction when a magnetic material is magnetized by applying a magnetic field having an arbitrary direciton"@en .
+<http://fairmat-nfdi.eu/taxonomy/MagneticAnisotropyConstant> rdf:type owl:Class ;
+                                                             rdfs:subClassOf <http://fairmat-nfdi.eu/taxonomy/MagneticProperty> ;
+                                                             rdfs:comment "Measure of the energy density difference in direction-dependent magnetization when the applied magnetic field has an arbitrary direction."@en ;
+                                                             skos:prefLabel "MagneticAnisotropyConstant"@en .
 
 
 ###  http://fairmat-nfdi.eu/taxonomy/MagneticAnisotropyField
-:MagneticAnisotropyField rdf:type owl:Class ;
-                         rdfs:subClassOf :MagneticProperty ;
-                         rdfs:comment "Magnetic field required for complete magnetization in the direction in which the largest magnetic field is required for magnetization in a magnetic material having magentic anisotropy"@en .
+<http://fairmat-nfdi.eu/taxonomy/MagneticAnisotropyField> rdf:type owl:Class ;
+                                                          rdfs:subClassOf <http://fairmat-nfdi.eu/taxonomy/MagneticProperty> ;
+                                                          rdfs:comment "Required magnetic field for complete magnetization in the direction of the largest magnetic field needed for saturation."@en ;
+                                                          skos:prefLabel "MagneticAnisotropyField"@en .
+
+
+###  http://fairmat-nfdi.eu/taxonomy/MagneticCoercitivity
+<http://fairmat-nfdi.eu/taxonomy/MagneticCoercitivity> rdf:type owl:Class ;
+                                                       rdfs:subClassOf <http://fairmat-nfdi.eu/taxonomy/MagneticProperty> ;
+                                                       rdfs:comment "Ability of the material to withstand the external magnetic field without demagnetizing."@en ;
+                                                       skos:altLabel "MagneticCoerciveField"@en ;
+                                                       skos:prefLabel "MagneticCoercitivity"@en .
+
+
+###  http://fairmat-nfdi.eu/taxonomy/MagneticCurieTemperature
+<http://fairmat-nfdi.eu/taxonomy/MagneticCurieTemperature> rdf:type owl:Class ;
+                                                           rdfs:subClassOf <http://fairmat-nfdi.eu/taxonomy/MagneticProperty> ;
+                                                           rdfs:comment "Critical temperature at which the magnetic dipoles order forming ferromagnetic or antiferromagnetic ordered states."@en ;
+                                                           skos:prefLabel "MagneticCurieTemperature"@en .
 
 
 ###  http://fairmat-nfdi.eu/taxonomy/MagneticHysteresis
-:MagneticHysteresis rdf:type owl:Class ;
-                    rdfs:subClassOf :MagneticProperty ;
-                    rdfs:comment "When an external magnetic field is applied to a ferromagnetic material to continuously change its strength and direction, a graph representing the relationship between magnetic field and magnetization draws a closed magnetization curve"@en .
+<http://fairmat-nfdi.eu/taxonomy/MagneticHysteresis> rdf:type owl:Class ;
+                                                     rdfs:subClassOf <http://fairmat-nfdi.eu/taxonomy/MagneticProperty> ;
+                                                     rdfs:comment "Magnetization history of a material in terms of the applied magnetic field."@en ;
+                                                     skos:prefLabel "MagneticHysteresis"@en .
 
 
 ###  http://fairmat-nfdi.eu/taxonomy/MagneticProperty
-:MagneticProperty rdf:type owl:Class ;
-                  rdfs:subClassOf :MaterialProperty ;
-                  rdfs:comment "physical properties that a material exhibits upon the application of magnetic forces"@en .
+<http://fairmat-nfdi.eu/taxonomy/MagneticProperty> rdf:type owl:Class ;
+                                                   rdfs:subClassOf <http://fairmat-nfdi.eu/taxonomy/MaterialProperty> ;
+                                                   rdfs:comment "Property that describes the response of a material to the application of magnetic fields."@en ;
+                                                   skos:prefLabel "MagneticProperty"@en .
+
+
+###  http://fairmat-nfdi.eu/taxonomy/MagneticSquareness
+<http://fairmat-nfdi.eu/taxonomy/MagneticSquareness> rdf:type owl:Class ;
+                                                     rdfs:subClassOf <http://fairmat-nfdi.eu/taxonomy/MagneticProperty> ;
+                                                     rdfs:comment "Parameter indicating the similarity of the shape of the ferromagnetic hysteresis curve to a square."@en ;
+                                                     skos:prefLabel "MagneticSquareness"@en .
+
+
+###  http://fairmat-nfdi.eu/taxonomy/MagneticSusceptibility
+<http://fairmat-nfdi.eu/taxonomy/MagneticSusceptibility> rdf:type owl:Class ;
+                                                         rdfs:subClassOf <http://fairmat-nfdi.eu/taxonomy/MagneticProperty> ;
+                                                         rdfs:comment "Degree of magnetization of a material in the presence of a magnetic field."@en ;
+                                                         skos:prefLabel "MagneticSusceptibility"@en .
+
+
+###  http://fairmat-nfdi.eu/taxonomy/MassTransportProperty
+<http://fairmat-nfdi.eu/taxonomy/MassTransportProperty> rdf:type owl:Class ;
+                                                        rdfs:subClassOf <http://fairmat-nfdi.eu/taxonomy/TransportProperty> ;
+                                                        rdfs:comment "Property that describes the movement of particles with mass in a given material."@en ;
+                                                        skos:prefLabel "MassTransportProperty"@en .
 
 
 ###  http://fairmat-nfdi.eu/taxonomy/Material
-:Material rdf:type owl:Class ;
-          rdfs:comment "description of material to be milled"@en .
+<http://fairmat-nfdi.eu/taxonomy/Material> rdf:type owl:Class ;
+                                           rdfs:comment "Description of material to be milled."@en ;
+                                           skos:prefLabel "Material"@en .
 
 
 ###  http://fairmat-nfdi.eu/taxonomy/MaterialProperty
-:MaterialProperty rdf:type owl:Class .
-
-
-###  http://fairmat-nfdi.eu/taxonomy/MaxCompressiveStrength
-:MaxCompressiveStrength rdf:type owl:Class ;
-                        rdfs:subClassOf :MechanicalProperty ;
-                        rdfs:comment "maximum compressive strength of material during compressive test"@en .
+<http://fairmat-nfdi.eu/taxonomy/MaterialProperty> rdf:type owl:Class ;
+                                                   skos:prefLabel "MaterialProperty"@en .
 
 
 ###  http://fairmat-nfdi.eu/taxonomy/MaximumEnergyProduct
-:MaximumEnergyProduct rdf:type owl:Class ;
-                      rdfs:subClassOf :MagneticProperty ;
-                      rdfs:comment "The maximum energy product is defined based on the magnetic hysteresis saturation loop (B-H curve), in the demagnetizing portion where the B and H fields are in opposition. It is defined as the maximal value of the product of B and H along this curve"@en .
+<http://fairmat-nfdi.eu/taxonomy/MaximumEnergyProduct> rdf:type owl:Class ;
+                                                       rdfs:subClassOf <http://fairmat-nfdi.eu/taxonomy/MagneticProperty> ;
+                                                       rdfs:comment "Figure of merit for the strength of a permanent magnet. It is defined as the maximal value of the broduct of the applied magnetic field and the magnetization in the demagnetization portion of the hysteresis loop where the two quantities are in opposite directions."@en ;
+                                                       skos:prefLabel "MaximumEnergyProduct"@en .
 
 
 ###  http://fairmat-nfdi.eu/taxonomy/MeanSquaredDisplacement
-:MeanSquaredDisplacement rdf:type owl:Class ;
-                         rdfs:subClassOf :DynamicalProperty .
+<http://fairmat-nfdi.eu/taxonomy/MeanSquaredDisplacement> rdf:type owl:Class ;
+                                                          rdfs:subClassOf <http://fairmat-nfdi.eu/taxonomy/MassTransportProperty> ;
+                                                          rdfs:comment "Measure of the deviation of the position of a particle or molecule with respect to a reference position over time."@en ;
+                                                          skos:prefLabel "MeanSquaredDisplacement"@en .
 
 
 ###  http://fairmat-nfdi.eu/taxonomy/MechanicalProperty
-:MechanicalProperty rdf:type owl:Class ;
-                    rdfs:subClassOf :MaterialProperty ;
-                    rdfs:comment "physical properties that a material exhibits upon the application of forces"@en .
+<http://fairmat-nfdi.eu/taxonomy/MechanicalProperty> rdf:type owl:Class ;
+                                                     rdfs:subClassOf <http://fairmat-nfdi.eu/taxonomy/MaterialProperty> ;
+                                                     rdfs:comment "Property that describes the response of a material to the application of forces."@en ;
+                                                     skos:prefLabel "MechanicalProperty"@en .
 
 
 ###  http://fairmat-nfdi.eu/taxonomy/MechanicalQualityFactor
-:MechanicalQualityFactor rdf:type owl:Class ;
-                         rdfs:subClassOf :PiezoelectricProperty ;
-                         rdfs:comment "Variables that indicate how little loss is in piezoelectric deformation (It is the inverse of the mechanical loss tan ϕ)"@en .
+<http://fairmat-nfdi.eu/taxonomy/MechanicalQualityFactor> rdf:type owl:Class ;
+                                                          rdfs:subClassOf <http://fairmat-nfdi.eu/taxonomy/PiezoelectricProperty> ;
+                                                          rdfs:comment "Figure of merit indicating the efficiency of transforming between mechanical and electrical energies."@en ;
+                                                          skos:prefLabel "MechanicalQualityFactor"@en .
 
 
 ###  http://fairmat-nfdi.eu/taxonomy/MeltingRange
-:MeltingRange rdf:type owl:Class ;
-              rdfs:subClassOf :ThermophysicalProperty ;
-              rdfs:comment "temperature defference between liquidus and solidus at a given composition"@en .
+<http://fairmat-nfdi.eu/taxonomy/MeltingRange> rdf:type owl:Class ;
+                                               rdfs:subClassOf <http://fairmat-nfdi.eu/taxonomy/ThermodynamicProperty> ;
+                                               rdfs:comment "Temperature range at which the solid phase is in equilibrium with its liquid state."@en ;
+                                               skos:prefLabel "MeltingRange"@en .
 
 
 ###  http://fairmat-nfdi.eu/taxonomy/MeltingTemperature
-:MeltingTemperature rdf:type owl:Class ;
-                    rdfs:subClassOf :ThermophysicalProperty ;
-                    rdfs:comment "temperature at the materials melt"@en .
+<http://fairmat-nfdi.eu/taxonomy/MeltingTemperature> rdf:type owl:Class ;
+                                                     rdfs:subClassOf <http://fairmat-nfdi.eu/taxonomy/ThermodynamicProperty> ,
+                                                                     [ rdf:type owl:Restriction ;
+                                                                       owl:onProperty qudt:hasQuantityKind ;
+                                                                       owl:hasValue qk:Temperature
+                                                                     ] ;
+                                                     rdfs:comment "Temperature at which a substance changes from solid to liquid."@en ;
+                                                     skos:altLabel "MeltingPoint"@en ;
+                                                     skos:prefLabel "MeltingTemperature"@en .
 
 
-###  http://fairmat-nfdi.eu/taxonomy/MinimumCreepRate
-:MinimumCreepRate rdf:type owl:Class ;
-                  rdfs:subClassOf :MechanicalProperty ;
-                  rdfs:comment "slope of the portion of the creep vs. time diagram corresponding to secondary creep"@en .
-
-
-###  http://fairmat-nfdi.eu/taxonomy/Misorientation
-:Misorientation rdf:type owl:Class ;
-                rdfs:subClassOf :TwoDDefect ;
-                rdfs:comment "difference in crystallographic orientation between two crystallites in a polycrystalline material"@en .
+###  http://fairmat-nfdi.eu/taxonomy/ModulusOfResilience
+<http://fairmat-nfdi.eu/taxonomy/ModulusOfResilience> rdf:type owl:Class ;
+                                                      rdfs:subClassOf <http://fairmat-nfdi.eu/taxonomy/MechanicalProperty> ;
+                                                      rdfs:comment "Ability of a material to absorb energy when it is deformed elastically, and release that energy upon unloading."@en ;
+                                                      skos:altLabel "ResilienceModulus"@en ;
+                                                      skos:prefLabel "ModulusOfResilience"@en .
 
 
 ###  http://fairmat-nfdi.eu/taxonomy/Morphology
-:Morphology rdf:type owl:Class ;
-            rdfs:subClassOf :StructuralProperty ;
-            rdfs:comment "morphological data of materials of various shapes"@en .
-
-
-###  http://fairmat-nfdi.eu/taxonomy/Name
-:Name rdf:type owl:Class ;
-      rdfs:subClassOf :StructuralProperty ;
-      rdfs:comment "precursor name"@en .
-
-
-###  http://fairmat-nfdi.eu/taxonomy/OneDDefect
-:OneDDefect rdf:type owl:Class ;
-            rdfs:subClassOf :StructuralProperty ;
-            rdfs:comment "linear crystallographic defect or irregularity within a crystal structure which contains an abrupt change in the arrangement of atoms"@en .
-
-
-###  http://fairmat-nfdi.eu/taxonomy/OneDDefectDensity
-:OneDDefectDensity rdf:type owl:Class ;
-                   rdfs:subClassOf :OneDDefect ;
-                   rdfs:comment "measure of the number of dislocations in a unit volume of a crystalline material"@en .
+<http://fairmat-nfdi.eu/taxonomy/Morphology> rdf:type owl:Class ;
+                                             rdfs:subClassOf <http://fairmat-nfdi.eu/taxonomy/StructuralProperty> ;
+                                             rdfs:comment "Morphological data of materials of various shapes."@en ;
+                                             skos:prefLabel "Morphology"@en .
 
 
 ###  http://fairmat-nfdi.eu/taxonomy/OpticalBandGap
-:OpticalBandGap rdf:type owl:Class ;
-                rdfs:subClassOf :OpticalProperty ;
-                rdfs:comment "optical band gap obtained from the absorption spectrum"@en .
+<http://fairmat-nfdi.eu/taxonomy/OpticalBandGap> rdf:type owl:Class ;
+                                                 rdfs:subClassOf <http://fairmat-nfdi.eu/taxonomy/OpticalProperty> ;
+                                                 rdfs:comment "Energy range in which a material does not absorb light. Does not necessarily coincides with the electronic band gap if excitonic behavior is present."@en ;
+                                                 skos:prefLabel "OpticalBandGap"@en .
 
 
 ###  http://fairmat-nfdi.eu/taxonomy/OpticalProperty
-:OpticalProperty rdf:type owl:Class ;
-                 rdfs:subClassOf :MaterialProperty ;
-                 rdfs:comment "opical properties of the materials"@en .
+<http://fairmat-nfdi.eu/taxonomy/OpticalProperty> rdf:type owl:Class ;
+                                                  rdfs:subClassOf <http://fairmat-nfdi.eu/taxonomy/MaterialProperty> ;
+                                                  rdfs:comment "Property that describes the behaviour of light when traveling through a given material."@en ;
+                                                  skos:prefLabel "OpticalProperty"@en .
 
 
-###  http://fairmat-nfdi.eu/taxonomy/OptoelectronicProperty
-:OptoelectronicProperty rdf:type owl:Class ;
-                        rdfs:subClassOf :MaterialProperty .
+###  http://fairmat-nfdi.eu/taxonomy/OpticalReflectance
+<http://fairmat-nfdi.eu/taxonomy/OpticalReflectance> rdf:type owl:Class ;
+                                                     rdfs:subClassOf <http://fairmat-nfdi.eu/taxonomy/OpticalProperty> ;
+                                                     rdfs:comment "Fraction of the incident light which is reflected back at the surface of the material."@en ;
+                                                     skos:prefLabel "OpticalReflectance"@en .
 
 
-###  http://fairmat-nfdi.eu/taxonomy/OriginalStructure
-:OriginalStructure rdf:type owl:Class ;
-                   rdfs:subClassOf :Structures .
+###  http://fairmat-nfdi.eu/taxonomy/OpticalTransmittance
+<http://fairmat-nfdi.eu/taxonomy/OpticalTransmittance> rdf:type owl:Class ;
+                                                       rdfs:subClassOf <http://fairmat-nfdi.eu/taxonomy/OpticalProperty> ;
+                                                       rdfs:comment "Fraction of the incident light which is transmitted into the material at its surface."@en ;
+                                                       skos:prefLabel "OpticalTransmittance"@en .
 
 
-###  http://fairmat-nfdi.eu/taxonomy/OxidationPotential
-:OxidationPotential rdf:type owl:Class ;
-                    rdfs:subClassOf :ElectrochemPhaseStability ;
-                    rdfs:comment "the oxidation potential (voltage vs. Li/Li+)"@en .
+###  http://fairmat-nfdi.eu/taxonomy/ParticleDiameter
+<http://fairmat-nfdi.eu/taxonomy/ParticleDiameter> rdf:type owl:Class ;
+                                                   rdfs:subClassOf <http://fairmat-nfdi.eu/taxonomy/StructuralProperty> ;
+                                                   rdfs:comment "Average diameter of spherical or rod shaped particles."@en ;
+                                                   skos:altLabel "Diameter"@en ;
+                                                   skos:prefLabel "ParticleDiameter"@en .
 
 
-###  http://fairmat-nfdi.eu/taxonomy/Particle
-:Particle rdf:type owl:Class ;
-          rdfs:subClassOf :StructuralProperty ;
-          rdfs:comment "Information of particulate materials_n"@en .
+###  http://fairmat-nfdi.eu/taxonomy/ParticleFacet
+<http://fairmat-nfdi.eu/taxonomy/ParticleFacet> rdf:type owl:Class ;
+                                                rdfs:subClassOf <http://fairmat-nfdi.eu/taxonomy/StructuralProperty> ;
+                                                rdfs:comment "Facet orientation of the particles."@en ;
+                                                skos:altLabel "Facet"@en ;
+                                                skos:prefLabel "ParticleFacet"@en .
+
+
+###  http://fairmat-nfdi.eu/taxonomy/ParticleHeight
+<http://fairmat-nfdi.eu/taxonomy/ParticleHeight> rdf:type owl:Class ;
+                                                 rdfs:subClassOf <http://fairmat-nfdi.eu/taxonomy/StructuralProperty> ;
+                                                 rdfs:comment "Average height of the particles."@en ;
+                                                 skos:altLabel "Height"@en ;
+                                                 skos:prefLabel "ParticleHeight"@en .
+
+
+###  http://fairmat-nfdi.eu/taxonomy/ParticleLength
+<http://fairmat-nfdi.eu/taxonomy/ParticleLength> rdf:type owl:Class ;
+                                                 rdfs:subClassOf <http://fairmat-nfdi.eu/taxonomy/StructuralProperty> ;
+                                                 rdfs:comment "Average length of the particles."@en ;
+                                                 skos:altLabel "Length"@en ;
+                                                 skos:prefLabel "ParticleLength"@en .
+
+
+###  http://fairmat-nfdi.eu/taxonomy/ParticleShape
+<http://fairmat-nfdi.eu/taxonomy/ParticleShape> rdf:type owl:Class ;
+                                                rdfs:subClassOf <http://fairmat-nfdi.eu/taxonomy/StructuralProperty> ;
+                                                rdfs:comment "Shape of a set of particles."@en ;
+                                                skos:altLabel "Shape"@en ;
+                                                skos:prefLabel "ParticleShape"@en .
+
+
+###  http://fairmat-nfdi.eu/taxonomy/ParticleSize
+<http://fairmat-nfdi.eu/taxonomy/ParticleSize> rdf:type owl:Class ;
+                                               rdfs:subClassOf <http://fairmat-nfdi.eu/taxonomy/StructuralProperty> ;
+                                               rdfs:comment "Estimated size of the particles."@en ;
+                                               skos:altLabel "Size"@en ;
+                                               skos:prefLabel "ParticleSize"@en .
+
+
+###  http://fairmat-nfdi.eu/taxonomy/ParticleWidth
+<http://fairmat-nfdi.eu/taxonomy/ParticleWidth> rdf:type owl:Class ;
+                                                rdfs:subClassOf <http://fairmat-nfdi.eu/taxonomy/StructuralProperty> ;
+                                                rdfs:comment "Average width of the particles."@en ;
+                                                skos:altLabel "Width"@en ;
+                                                skos:prefLabel "ParticleWidth"@en .
 
 
 ###  http://fairmat-nfdi.eu/taxonomy/PassivationCurrent
-:PassivationCurrent rdf:type owl:Class ;
-                    rdfs:subClassOf :CorrosionProperty ;
-                    rdfs:comment "corrosion current at the passivation potential"@en .
+<http://fairmat-nfdi.eu/taxonomy/PassivationCurrent> rdf:type owl:Class ;
+                                                     rdfs:subClassOf <http://fairmat-nfdi.eu/taxonomy/CorrosionProperty> ;
+                                                     rdfs:comment "Flow of electrons during the formation of an oxide layer on the material surface."@en ;
+                                                     skos:prefLabel "PassivationCurrent"@en .
 
 
 ###  http://fairmat-nfdi.eu/taxonomy/PassivationPotential
-:PassivationPotential rdf:type owl:Class ;
-                      rdfs:subClassOf :CorrosionProperty ;
-                      rdfs:comment "corrosion potential, at which the corrosion current has a peak value, and above which there is a range of potentials, where the metal is in a passive state"@en .
+<http://fairmat-nfdi.eu/taxonomy/PassivationPotential> rdf:type owl:Class ;
+                                                       rdfs:subClassOf <http://fairmat-nfdi.eu/taxonomy/CorrosionProperty> ;
+                                                       rdfs:comment "Electrode potential at which the material undergoes a transition to a passive state, forming an oxide layer on its surface."@en ;
+                                                       skos:prefLabel "PassivationPotential"@en .
 
 
 ###  http://fairmat-nfdi.eu/taxonomy/Permeability
-:Permeability rdf:type owl:Class ;
-              rdfs:subClassOf :MagneticProperty ;
-              rdfs:comment "measure of magnetization that a material obtains in response to an applied magnetic field"@en .
+<http://fairmat-nfdi.eu/taxonomy/Permeability> rdf:type owl:Class ;
+                                               rdfs:subClassOf <http://fairmat-nfdi.eu/taxonomy/MagneticProperty> ;
+                                               rdfs:comment "Response of the material to magnetize in the presence of a magnetic field."@en ;
+                                               skos:prefLabel "Permeability"@en .
 
 
 ###  http://fairmat-nfdi.eu/taxonomy/Permittivity
-:Permittivity rdf:type owl:Class ;
-              rdfs:subClassOf :ElectricalProperty ;
-              rdfs:comment "measure of the electric polarizability of a material"@en .
+<http://fairmat-nfdi.eu/taxonomy/Permittivity> rdf:type owl:Class ;
+                                               rdfs:subClassOf <http://fairmat-nfdi.eu/taxonomy/ElectronicProperty> ;
+                                               rdfs:comment "Response of the material to polarize in the presence of an electric field."@en ;
+                                               skos:altLabel "DielectricFunction"@en ;
+                                               skos:prefLabel "Permittivity"@en .
+
+
+###  http://fairmat-nfdi.eu/taxonomy/PhaseComposition
+<http://fairmat-nfdi.eu/taxonomy/PhaseComposition> rdf:type owl:Class ;
+                                                   rdfs:subClassOf <http://fairmat-nfdi.eu/taxonomy/StructuralProperty> ;
+                                                   rdfs:comment "Relative amounts of each phase in the material."@en ;
+                                                   skos:altLabel "Fraction"@en ;
+                                                   skos:prefLabel "PhaseComposition"@en .
 
 
 ###  http://fairmat-nfdi.eu/taxonomy/PhaseCrystalStructure
-:PhaseCrystalStructure rdf:type owl:Class ;
-                       rdfs:subClassOf :StructuralProperty ;
-                       rdfs:comment "crystal structure of a phase_(n)"@en .
+<http://fairmat-nfdi.eu/taxonomy/PhaseCrystalStructure> rdf:type owl:Class ;
+                                                        rdfs:subClassOf <http://fairmat-nfdi.eu/taxonomy/StructuralProperty> ;
+                                                        rdfs:comment "Crystal structure of a given phase in the material."@en ;
+                                                        skos:prefLabel "PhaseCrystalStructure"@en .
+
+
+###  http://fairmat-nfdi.eu/taxonomy/PhononicBandStructure
+<http://fairmat-nfdi.eu/taxonomy/PhononicBandStructure> rdf:type owl:Class ;
+                                                        rdfs:subClassOf <http://fairmat-nfdi.eu/taxonomy/VibrationalProperty> ;
+                                                        rdfs:comment "Accessible energies by the phonons in the reciprocal space."@en ;
+                                                        skos:prefLabel "PhononicBandStructure"@en .
+
+
+###  http://fairmat-nfdi.eu/taxonomy/PhononicDensityOfStates
+<http://fairmat-nfdi.eu/taxonomy/PhononicDensityOfStates> rdf:type owl:Class ;
+                                                          rdfs:subClassOf <http://fairmat-nfdi.eu/taxonomy/VibrationalProperty> ;
+                                                          rdfs:comment "Number of phonoic states accessible for the phonons per energy and per volume."@en ;
+                                                          skos:altLabel "PhononicDOS"@en ;
+                                                          skos:prefLabel "PhononicDensityOfStates"@en .
+
+
+###  http://fairmat-nfdi.eu/taxonomy/PhononicSpecificHeatCapacity
+<http://fairmat-nfdi.eu/taxonomy/PhononicSpecificHeatCapacity> rdf:type owl:Class ;
+                                                               rdfs:subClassOf <http://fairmat-nfdi.eu/taxonomy/VibrationalProperty> ;
+                                                               rdfs:comment "Contribution of the phononic degrees of freedom to the specific heat. This is the amount of heat needed to raise the temperature, and it is typically derived at constant volume (preventing the material expansion)."@en ;
+                                                               skos:prefLabel "PhononicSpecificHeatCapacity"@en .
+
+
+###  http://fairmat-nfdi.eu/taxonomy/PhononicThermalConductivity
+<http://fairmat-nfdi.eu/taxonomy/PhononicThermalConductivity> rdf:type owl:Class ;
+                                                              rdfs:subClassOf <http://fairmat-nfdi.eu/taxonomy/VibrationalProperty> ;
+                                                              rdfs:comment "Contribution of the phononic degrees of freedom to the thermal conductivity."@en ;
+                                                              skos:prefLabel "PhononicThermalConductivity"@en .
 
 
 ###  http://fairmat-nfdi.eu/taxonomy/Photoluminescence
-:Photoluminescence rdf:type owl:Class ;
-                   rdfs:subClassOf :OpticalProperty ;
-                   rdfs:comment "light emission from any form of matter after the absorption of photons"@en .
+<http://fairmat-nfdi.eu/taxonomy/Photoluminescence> rdf:type owl:Class ;
+                                                    rdfs:subClassOf <http://fairmat-nfdi.eu/taxonomy/OpticalProperty> ;
+                                                    rdfs:comment "Light emission produced by a material after absorbing any incoming electromagnetic radiation."@en ;
+                                                    skos:prefLabel "Photoluminescence"@en .
 
 
 ###  http://fairmat-nfdi.eu/taxonomy/PiezoelectricChargeCoefficient
-:PiezoelectricChargeCoefficient rdf:type owl:Class ;
-                                rdfs:subClassOf :PiezoelectricProperty ;
-                                rdfs:comment "electrical charge induced when polarized when stress is applied, presented by values assigned to symbols d_{ij}, i.e d_{11}, d_{22}, d_{33} etc."@en .
+<http://fairmat-nfdi.eu/taxonomy/PiezoelectricChargeCoefficient> rdf:type owl:Class ;
+                                                                 rdfs:subClassOf <http://fairmat-nfdi.eu/taxonomy/PiezoelectricProperty> ;
+                                                                 rdfs:comment "Amount of electric charge generated in response to an applied stress or deformation."@en ;
+                                                                 skos:prefLabel "PiezoelectricChargeCoefficient"@en .
 
 
 ###  http://fairmat-nfdi.eu/taxonomy/PiezoelectricProperty
-:PiezoelectricProperty rdf:type owl:Class ;
-                       rdfs:subClassOf :MaterialProperty ;
-                       rdfs:comment "property of certain materials which induces an electric field when mechanical stress is applied OR VICE VERSA"@en .
+<http://fairmat-nfdi.eu/taxonomy/PiezoelectricProperty> rdf:type owl:Class ;
+                                                        rdfs:subClassOf <http://fairmat-nfdi.eu/taxonomy/ElectronicProperty> ,
+                                                                        <http://fairmat-nfdi.eu/taxonomy/MechanicalProperty> ;
+                                                        rdfs:comment "Property that describes the ability of a given material to generate an electric field in response to mechanical stress or, conversely, to deform when subjected to an electric field."@en ;
+                                                        skos:prefLabel "PiezoelectricProperty"@en .
 
 
 ###  http://fairmat-nfdi.eu/taxonomy/PiezoelectricStrainCoefficient
-:PiezoelectricStrainCoefficient rdf:type owl:Class ;
-                                rdfs:subClassOf :PiezoelectricProperty ;
-                                rdfs:comment "strain induced when polarized when electric field applied, presented by values assigned to symbols d*_{ij}, i.e d*_{11}, d*_{22}, d*_{33} etc."@en .
+<http://fairmat-nfdi.eu/taxonomy/PiezoelectricStrainCoefficient> rdf:type owl:Class ;
+                                                                 rdfs:subClassOf <http://fairmat-nfdi.eu/taxonomy/PiezoelectricProperty> ;
+                                                                 rdfs:comment "Amount of stress or deformation exhibited in response to an applied electric field."@en ;
+                                                                 skos:prefLabel "PiezoelectricStrainCoefficient"@en .
 
 
 ###  http://fairmat-nfdi.eu/taxonomy/PiezoelectricVoltageCoefficient
-:PiezoelectricVoltageCoefficient rdf:type owl:Class ;
-                                 rdfs:subClassOf :PiezoelectricProperty ;
-                                 rdfs:comment "voltage induced when polarized when stress applied, presented by values assigned to symbols g_{ij}, i.e g_{11}, g_{22}, g_{33} etc."@en .
+<http://fairmat-nfdi.eu/taxonomy/PiezoelectricVoltageCoefficient> rdf:type owl:Class ;
+                                                                  rdfs:subClassOf <http://fairmat-nfdi.eu/taxonomy/PiezoelectricProperty> ;
+                                                                  rdfs:comment "Voltage produced across a piezoelectric material when subjected to stress or deformation."@en ;
+                                                                  skos:prefLabel "PiezoelectricVoltageCoefficient"@en .
 
 
 ###  http://fairmat-nfdi.eu/taxonomy/PittingInitiationPotential
-:PittingInitiationPotential rdf:type owl:Class ;
-                            rdfs:subClassOf :CorrosionProperty ;
-                            rdfs:comment "the lowest value of the corrosion potential at which pit initiation is possible on a passive surface in a given corrosive environment"@en .
-
-
-###  http://fairmat-nfdi.eu/taxonomy/PlasticStrainRatio
-:PlasticStrainRatio rdf:type owl:Class ;
-                    rdfs:subClassOf :MechanicalProperty ;
-                    rdfs:comment "ratio of true strain in the width direction over true strain in the thickness direction"@en .
+<http://fairmat-nfdi.eu/taxonomy/PittingInitiationPotential> rdf:type owl:Class ;
+                                                             rdfs:subClassOf <http://fairmat-nfdi.eu/taxonomy/CorrosionProperty> ;
+                                                             rdfs:comment "Lowest value of the corrosion potential at which pitting starts on a passive surface in a given corrosive environment."@en ;
+                                                             skos:prefLabel "PittingInitiationPotential"@en .
 
 
 ###  http://fairmat-nfdi.eu/taxonomy/PoissonRatio
-:PoissonRatio rdf:type owl:Class ;
-              rdfs:subClassOf :MechanicalProperty ;
-              rdfs:comment "ratio of transverse strain to corresponding axial strain on a material stressed along one axis"@en .
+<http://fairmat-nfdi.eu/taxonomy/PoissonRatio> rdf:type owl:Class ;
+                                               rdfs:subClassOf <http://fairmat-nfdi.eu/taxonomy/MechanicalProperty> ;
+                                               rdfs:comment "Deformation (expansion or contraction) of a material in directions perpendicular to the applied stress."@en ;
+                                               skos:prefLabel "PoissonRatio"@en .
 
 
 ###  http://fairmat-nfdi.eu/taxonomy/PoralizedPotential
-:PoralizedPotential rdf:type owl:Class ;
-                    rdfs:subClassOf :CorrosionProperty ;
-                    rdfs:comment "potential across the electrode/electrolyte interface that is the sum of the corrosion potential and the applied polarization"@en .
+<http://fairmat-nfdi.eu/taxonomy/PoralizedPotential> rdf:type owl:Class ;
+                                                     rdfs:subClassOf <http://fairmat-nfdi.eu/taxonomy/CorrosionProperty> ;
+                                                     rdfs:comment "Potential across the electrode-electrolyte interface which results as the sum of the corrosion potential and the applied electrical polarization."@en ;
+                                                     skos:prefLabel "PoralizedPotential"@en .
 
 
 ###  http://fairmat-nfdi.eu/taxonomy/PoreDiameter
-:PoreDiameter rdf:type owl:Class ;
-              rdfs:subClassOf :StructuralProperty ;
-              rdfs:comment "pore diameters of materials"@en .
+<http://fairmat-nfdi.eu/taxonomy/PoreDiameter> rdf:type owl:Class ;
+                                               rdfs:subClassOf <http://fairmat-nfdi.eu/taxonomy/StructuralProperty> ;
+                                               rdfs:comment "Effective diameter of the pores in a material."@en ;
+                                               skos:prefLabel "PoreDiameter"@en .
 
 
 ###  http://fairmat-nfdi.eu/taxonomy/PoreLimitingDiameter
-:PoreLimitingDiameter rdf:type owl:Class ;
-                      rdfs:subClassOf :StructuralProperty ;
-                      rdfs:comment "diameter of the largest probe that can traverse through pore channels"@en .
+<http://fairmat-nfdi.eu/taxonomy/PoreLimitingDiameter> rdf:type owl:Class ;
+                                                       rdfs:subClassOf <http://fairmat-nfdi.eu/taxonomy/StructuralProperty> ;
+                                                       rdfs:comment "Diameter of the largest pore that can traverse through the material."@en ;
+                                                       skos:prefLabel "PoreLimitingDiameter"@en .
+
+
+###  http://fairmat-nfdi.eu/taxonomy/PoreTotalVolume
+<http://fairmat-nfdi.eu/taxonomy/PoreTotalVolume> rdf:type owl:Class ;
+                                                  rdfs:subClassOf <http://fairmat-nfdi.eu/taxonomy/StructuralProperty> ;
+                                                  rdfs:comment "Total pore volume in a given material."@en ;
+                                                  skos:prefLabel "PoreTotalVolume"@en .
 
 
 ###  http://fairmat-nfdi.eu/taxonomy/Porosity
-:Porosity rdf:type owl:Class ;
-          rdfs:subClassOf :StructuralProperty ;
-          rdfs:comment "pore density of materials"@en .
-
-
-###  http://fairmat-nfdi.eu/taxonomy/PrimitiveStructure
-:PrimitiveStructure rdf:type owl:Class ;
-                    rdfs:subClassOf :Structures .
+<http://fairmat-nfdi.eu/taxonomy/Porosity> rdf:type owl:Class ;
+                                           rdfs:subClassOf <http://fairmat-nfdi.eu/taxonomy/StructuralProperty> ;
+                                           rdfs:comment "Ratio of the pore volume with respect to the total volume of the material."@en ;
+                                           skos:altLabel "PoreDensity"@en ;
+                                           skos:prefLabel "Porosity"@en .
 
 
 ###  http://fairmat-nfdi.eu/taxonomy/RadialDistributionFunction
-:RadialDistributionFunction rdf:type owl:Class ;
-                            rdfs:subClassOf :StructuralProperty .
+<http://fairmat-nfdi.eu/taxonomy/RadialDistributionFunction> rdf:type owl:Class ;
+                                                             rdfs:subClassOf <http://fairmat-nfdi.eu/taxonomy/StructuralProperty> ;
+                                                             rdfs:comment "Density variation as a function of distance from a reference particle."@en ;
+                                                             skos:prefLabel "RadialDistributionFunction"@en .
 
 
 ###  http://fairmat-nfdi.eu/taxonomy/RadiusOfGyration
-:RadiusOfGyration rdf:type owl:Class ;
-                  rdfs:subClassOf :StructuralProperty .
+<http://fairmat-nfdi.eu/taxonomy/RadiusOfGyration> rdf:type owl:Class ;
+                                                   rdfs:subClassOf <http://fairmat-nfdi.eu/taxonomy/StructuralProperty> ;
+                                                   rdfs:comment "Radial distance to a point which would have a moment of inertia the same as the body's actual distribution of mass, if the total mass of the body were concentrated there."@en ;
+                                                   skos:prefLabel "RadiusOfGyration"@en .
 
 
 ###  http://fairmat-nfdi.eu/taxonomy/ReactivationPotential
-:ReactivationPotential rdf:type owl:Class ;
-                       rdfs:subClassOf :CorrosionProperty ;
-                       rdfs:comment "corrosion potential below which reactivation takes place"@en .
-
-
-###  http://fairmat-nfdi.eu/taxonomy/RealVolume
-:RealVolume rdf:type owl:Class ;
-            rdfs:subClassOf :StructuralProperty ;
-            rdfs:comment "ratio of the two volumes = effetice volume / initial volume"@en .
+<http://fairmat-nfdi.eu/taxonomy/ReactivationPotential> rdf:type owl:Class ;
+                                                        rdfs:subClassOf <http://fairmat-nfdi.eu/taxonomy/CorrosionProperty> ;
+                                                        rdfs:comment "Electrode potential at which a passivated material transitions from a passive to an active state."@en ;
+                                                        skos:prefLabel "ReactivationPotential"@en .
 
 
 ###  http://fairmat-nfdi.eu/taxonomy/RedoxPotential
-:RedoxPotential rdf:type owl:Class ;
-                rdfs:subClassOf :CorrosionProperty ;
-                rdfs:comment "potential of a reversible oxidation-reduction reaction in a given electrolyte recorded on a S.H.E. scale"@en .
+<http://fairmat-nfdi.eu/taxonomy/RedoxPotential> rdf:type owl:Class ;
+                                                 rdfs:subClassOf <http://fairmat-nfdi.eu/taxonomy/ChemicalProperty> ;
+                                                 rdfs:comment "Potential needed for chemical species to gain electrons from or lose electrons to an electrode. The sign of the potential determines if the electrons are gained or lost."@en ;
+                                                 skos:prefLabel "RedoxPotential"@en .
 
 
 ###  http://fairmat-nfdi.eu/taxonomy/ReductionArea
-:ReductionArea rdf:type owl:Class ;
-               rdfs:subClassOf :MechanicalProperty ;
-               rdfs:comment "proportional reduction of the cross-sectional area of a tensile test piece at the plane of fracture measured after fracture"@en .
-
-
-###  http://fairmat-nfdi.eu/taxonomy/ReductionPotential
-:ReductionPotential rdf:type owl:Class ;
-                    rdfs:subClassOf :ElectrochemPhaseStability ;
-                    rdfs:comment "the reduction potential (voltage vs. Li/Li+)"@en .
-
-
-###  http://fairmat-nfdi.eu/taxonomy/Reflectance
-:Reflectance rdf:type owl:Class ;
-             rdfs:subClassOf :OpticalProperty ;
-             rdfs:comment "ratio of the radiation flux reflected by a sample surface to the incident radiation flux"@en .
+<http://fairmat-nfdi.eu/taxonomy/ReductionArea> rdf:type owl:Class ;
+                                                rdfs:subClassOf <http://fairmat-nfdi.eu/taxonomy/FracturesProperty> ;
+                                                rdfs:comment "Ratio between the original cross-sectional area of a sample and the minimum cross-sectional area of the same sample after complete fracture failure."@en ;
+                                                skos:prefLabel "ReductionArea"@en .
 
 
 ###  http://fairmat-nfdi.eu/taxonomy/RefractiveIndex
-:RefractiveIndex rdf:type owl:Class ;
-                 rdfs:subClassOf :OpticalProperty ;
-                 rdfs:comment "ratio of the speed of the light in the vacuum to that in a material"@en .
+<http://fairmat-nfdi.eu/taxonomy/RefractiveIndex> rdf:type owl:Class ;
+                                                  rdfs:subClassOf <http://fairmat-nfdi.eu/taxonomy/OpticalProperty> ;
+                                                  rdfs:comment "Measure of the bending (or refractive) ability of light. It also gives the measure on the change in the speed light in a medium different from vacuum."@en ;
+                                                  skos:prefLabel "RefractiveIndex"@en .
+
+
+###  http://fairmat-nfdi.eu/taxonomy/RelativePermittivity
+<http://fairmat-nfdi.eu/taxonomy/RelativePermittivity> rdf:type owl:Class ;
+                                                       rdfs:subClassOf <http://fairmat-nfdi.eu/taxonomy/ElectronicProperty> ;
+                                                       rdfs:comment "Ratio of the permittivity with respect to the vacuum permittivity."@en ;
+                                                       skos:altLabel "DielectricConstant"@en ;
+                                                       skos:prefLabel "RelativePermittivity"@en .
 
 
 ###  http://fairmat-nfdi.eu/taxonomy/RemanentMagnetization
-:RemanentMagnetization rdf:type owl:Class ;
-                       rdfs:subClassOf :MagneticProperty ;
-                       rdfs:comment "The magnetization that remains after magnetizing a ferromagnetic substance in a magnetic field and then removing the magnetic field"@en .
+<http://fairmat-nfdi.eu/taxonomy/RemanentMagnetization> rdf:type owl:Class ;
+                                                        rdfs:subClassOf <http://fairmat-nfdi.eu/taxonomy/MagneticProperty> ;
+                                                        rdfs:comment "Magnetization that remains after the applied magnetic field is removed."@en ;
+                                                        skos:altLabel "ResidualMagnetization"@en ;
+                                                        skos:prefLabel "RemanentMagnetization"@en .
 
 
 ###  http://fairmat-nfdi.eu/taxonomy/RemanentPolarization
-:RemanentPolarization rdf:type owl:Class ;
-                      rdfs:subClassOf :FerroelectricProperty ;
-                      rdfs:comment "polarization that remains after removing the electric field applied to an object, presented by values assigned to symbols P_{r}"@en .
-
-
-###  http://fairmat-nfdi.eu/taxonomy/ResilienceModulus
-:ResilienceModulus rdf:type owl:Class ;
-                   rdfs:subClassOf :MechanicalProperty ;
-                   rdfs:comment "measure of resilience modulus defined as the maximum energy that can be absorbed per unit volume without creating permanent distortion"@en .
-
-
-###  http://fairmat-nfdi.eu/taxonomy/Resistivity
-:Resistivity rdf:type owl:Class ;
-             rdfs:subClassOf :ElectricalProperty ;
-             rdfs:comment "quantity how strongly it resists electric current"@en .
-
-
-###  http://fairmat-nfdi.eu/taxonomy/RheologicalProperty
-:RheologicalProperty rdf:type owl:Class ;
-                     rdfs:subClassOf :MaterialProperty ;
-                     rdfs:comment "The material properties that govern the specific way in which materials deform or flowin response to applied forces or stresses"@en .
-
-
-###  http://fairmat-nfdi.eu/taxonomy/RuptureTime
-:RuptureTime rdf:type owl:Class ;
-             rdfs:subClassOf :MechanicalProperty ;
-             rdfs:comment "time necessary produce failure while materials is subjected to constant load at a constant temperature"@en .
+<http://fairmat-nfdi.eu/taxonomy/RemanentPolarization> rdf:type owl:Class ;
+                                                       rdfs:subClassOf <http://fairmat-nfdi.eu/taxonomy/FerroelectricProperty> ;
+                                                       rdfs:comment "Polarization that remains after the applied electric field is removed."@en ;
+                                                       skos:altLabel "ResidualPolarization"@en ;
+                                                       skos:prefLabel "RemanentPolarization"@en .
 
 
 ###  http://fairmat-nfdi.eu/taxonomy/SaturationMagentization
-:SaturationMagentization rdf:type owl:Class ;
-                         rdfs:subClassOf :MagneticProperty ;
-                         rdfs:comment "a state in which the magnetization inside a magnetic substance does noe increase any more even when the strength of the magnetic filed is increased or the magnetization strength of this state. Defined as the magnitude of magnetization moment per unit volume and per unit weight."@en .
+<http://fairmat-nfdi.eu/taxonomy/SaturationMagentization> rdf:type owl:Class ;
+                                                          rdfs:subClassOf <http://fairmat-nfdi.eu/taxonomy/MagneticProperty> ;
+                                                          rdfs:comment "Maximum magnetization that a material can achieve when all the magnetic moments are aligned and increasing the applied magnetic field does not further change the magnetization."@en ;
+                                                          skos:prefLabel "SaturationMagentization"@en .
 
 
 ###  http://fairmat-nfdi.eu/taxonomy/SaturationPolarization
-:SaturationPolarization rdf:type owl:Class ;
-                        rdfs:subClassOf :FerroelectricProperty ;
-                        rdfs:comment "Maximum polarization when an electric field is applied to an object, presented by values assigned to symbols P_{s}"@en .
-
-
-###  http://fairmat-nfdi.eu/taxonomy/Shape
-:Shape rdf:type owl:Class ;
-       rdfs:subClassOf :Particle ;
-       rdfs:comment "Particle shape of material_n if it is particulate materials"@en .
+<http://fairmat-nfdi.eu/taxonomy/SaturationPolarization> rdf:type owl:Class ;
+                                                         rdfs:subClassOf <http://fairmat-nfdi.eu/taxonomy/FerroelectricProperty> ;
+                                                         rdfs:comment "Maximum polarization that a material can achieve when all the charge dipole moments are aligned and increasing the applied electric field does not further change the polarization."@en ;
+                                                         skos:prefLabel "SaturationPolarization"@en .
 
 
 ###  http://fairmat-nfdi.eu/taxonomy/ShearModulus
-:ShearModulus rdf:type owl:Class ;
-              rdfs:subClassOf :MechanicalProperty ;
-              rdfs:comment "measure of the elastic shear stiffness of a material and is defined as the ratio of shear stress to the shear strain"@en .
+<http://fairmat-nfdi.eu/taxonomy/ShearModulus> rdf:type owl:Class ;
+                                               rdfs:subClassOf <http://fairmat-nfdi.eu/taxonomy/MechanicalProperty> ;
+                                               rdfs:comment "Response of a material to shear stress and defined as the ratio of shear stress to the shear strain."@en ;
+                                               skos:prefLabel "ShearModulus"@en .
 
 
-###  http://fairmat-nfdi.eu/taxonomy/Size
-:Size rdf:type owl:Class ;
-      rdfs:subClassOf :Particle ;
-      rdfs:comment "Particle size of materials_n if it is particulate materials"@en .
-
-
-###  http://fairmat-nfdi.eu/taxonomy/Soc
-:Soc rdf:type owl:Class ;
-     rdfs:subClassOf :ElectricalProperty ;
-     rdfs:comment "spin-orbit coupling"@en .
-
-
-###  http://fairmat-nfdi.eu/taxonomy/SolarCell
-:SolarCell rdf:type owl:Class ;
-           rdfs:subClassOf :OptoelectronicProperty .
-
-
-###  http://fairmat-nfdi.eu/taxonomy/SpecificHeat
-:SpecificHeat rdf:type owl:Class ;
-              rdfs:subClassOf :ThermophysicalProperty ;
-              rdfs:comment "heat capacity of a substance divided by mass"@en .
+###  http://fairmat-nfdi.eu/taxonomy/SpecificHeatCapacity
+<http://fairmat-nfdi.eu/taxonomy/SpecificHeatCapacity> rdf:type owl:Class ;
+                                                       rdfs:subClassOf <http://fairmat-nfdi.eu/taxonomy/ThermodynamicProperty> ;
+                                                       rdfs:comment "Amount of heat to be supplied to one unit of mass of a material to produce a unit change in its temperature. It is the heat capacity divided by the mass of the system."@en ;
+                                                       skos:altLabel "SpecificHeat"@en ;
+                                                       skos:prefLabel "SpecificHeatCapacity"@en .
 
 
 ###  http://fairmat-nfdi.eu/taxonomy/Spectra
-:Spectra rdf:type owl:Class ;
-         rdfs:subClassOf :Spectroscopy .
+<http://fairmat-nfdi.eu/taxonomy/Spectra> rdf:type owl:Class ;
+                                          rdfs:subClassOf <http://fairmat-nfdi.eu/taxonomy/SpectroscopicProperty> ;
+                                          rdfs:comment "Intensity of a signal with respect to a continuous variable (typically energies or wavelengths) that describes the interaction of the material with an incoming electromagnetic wave."@en ;
+                                          skos:prefLabel "Spectra"@en .
 
 
-###  http://fairmat-nfdi.eu/taxonomy/Spectroscopy
-:Spectroscopy rdf:type owl:Class ;
-              rdfs:subClassOf :MaterialProperty .
+###  http://fairmat-nfdi.eu/taxonomy/SpectroscopicProperty
+<http://fairmat-nfdi.eu/taxonomy/SpectroscopicProperty> rdf:type owl:Class ;
+                                                        rdfs:subClassOf <http://fairmat-nfdi.eu/taxonomy/MaterialProperty> ;
+                                                        rdfs:comment "Property that describes the interaction between light and a given material."@en ;
+                                                        skos:prefLabel "SpectroscopicProperty"@en .
+
+
+###  http://fairmat-nfdi.eu/taxonomy/SpinExchangeInteractions
+<http://fairmat-nfdi.eu/taxonomy/SpinExchangeInteractions> rdf:type owl:Class ;
+                                                           rdfs:subClassOf <http://fairmat-nfdi.eu/taxonomy/MagneticProperty> ;
+                                                           rdfs:comment "Interactions arising when the spin direction of fermions is exchanged."@en ;
+                                                           skos:prefLabel "SpinExchangeInteractions"@en .
 
 
 ###  http://fairmat-nfdi.eu/taxonomy/SpinHallAngle
-:SpinHallAngle rdf:type owl:Class ;
-               rdfs:subClassOf :ElectricalProperty ;
-               rdfs:comment "When a current is applied to a material with a very large spin-orbit interaction, the current does not go straight due to the strong spin-orbit interaction, and different spins diverge in the width direction on both sodes of the sample, resulting in spin accumumation and spin current. The ratio of the generated spin current to the flowed current."@en .
+<http://fairmat-nfdi.eu/taxonomy/SpinHallAngle> rdf:type owl:Class ;
+                                                rdfs:subClassOf <http://fairmat-nfdi.eu/taxonomy/ElectronicTransportProperty> ;
+                                                rdfs:comment "Measure of the efficiency with which a material can convert charge current into a transverse spin current due to the spin-orbit coupling effects. It is typically expressed as the ratio of the generated spin current to the applied charge current in a material."@en ;
+                                                skos:prefLabel "SpinHallAngle"@en .
 
 
-###  http://fairmat-nfdi.eu/taxonomy/SpinOrbitSplittingEnergy
-:SpinOrbitSplittingEnergy rdf:type owl:Class ;
-                          rdfs:subClassOf :ElectricalProperty ;
-                          rdfs:comment "energy level splitting energy produced by the spin–orbit interaction of a particle's spin with its motion inside a potential"@en .
-
-
-###  http://fairmat-nfdi.eu/taxonomy/Squareness
-:Squareness rdf:type owl:Class ;
-            rdfs:subClassOf :MagneticProperty ;
-            rdfs:comment "A parameter indicating how close the shape of the hysteresis curve is to a square"@en .
-
-
-###  http://fairmat-nfdi.eu/taxonomy/StackingFaultEnergy
-:StackingFaultEnergy rdf:type owl:Class ;
-                     rdfs:subClassOf :TwoDDefect ;
-                     rdfs:comment "energy required to form irregularities in the sequence of crystlline planes"@en .
+###  http://fairmat-nfdi.eu/taxonomy/SpinOrbitCouplingConstant
+<http://fairmat-nfdi.eu/taxonomy/SpinOrbitCouplingConstant> rdf:type owl:Class ;
+                                                            rdfs:subClassOf <http://fairmat-nfdi.eu/taxonomy/ElectronicProperty> ;
+                                                            rdfs:comment "Relativistic coupling between the charge and the spin degrees of freedom of charges."@en ;
+                                                            skos:altLabel "SOCConstant"@en ,
+                                                                          "SpinOrbitCoupling"@en ;
+                                                            skos:prefLabel "SpinOrbitCouplingConstant"@en .
 
 
 ###  http://fairmat-nfdi.eu/taxonomy/StandardElectrodePotential
-:StandardElectrodePotential rdf:type owl:Class ;
-                            rdfs:subClassOf :CorrosionProperty ;
-                            rdfs:comment "reversible potential for an electrode process when all products and reactants are at unit activity"@en .
+<http://fairmat-nfdi.eu/taxonomy/StandardElectrodePotential> rdf:type owl:Class ;
+                                                             rdfs:subClassOf <http://fairmat-nfdi.eu/taxonomy/ChemicalProperty> ;
+                                                             rdfs:comment "Reversible potential difference between a standard electrode and the surrounding solution. It measures the tendency of a half-reaction to undergo reduction or oxidation under standard conditions."@en ;
+                                                             skos:prefLabel "StandardElectrodePotential"@en .
 
 
 ###  http://fairmat-nfdi.eu/taxonomy/StandardState
-:StandardState rdf:type owl:Class ;
-               rdfs:subClassOf :ThermophysicalProperty ;
-               rdfs:comment "reference state of a material(pure substance, mixture or solution) defined to calculate its properties under different conditions"@en .
-
-
-###  http://fairmat-nfdi.eu/taxonomy/StandardStatePressure
-:StandardStatePressure rdf:type owl:Class ;
-                       rdfs:subClassOf :ThermophysicalProperty ;
-                       rdfs:comment "pressure at which standard state of a material is defined"@en .
-
-
-###  http://fairmat-nfdi.eu/taxonomy/StandardStateTemperature
-:StandardStateTemperature rdf:type owl:Class ;
-                          rdfs:subClassOf :ThermophysicalProperty ;
-                          rdfs:comment "temperature at which standard state of a material is defined"@en .
-
-
-###  http://fairmat-nfdi.eu/taxonomy/StorageModulus
-:StorageModulus rdf:type owl:Class ;
-                rdfs:subClassOf :VariableViscosity .
+<http://fairmat-nfdi.eu/taxonomy/StandardState> rdf:type owl:Class ;
+                                                rdfs:subClassOf <http://fairmat-nfdi.eu/taxonomy/ThermodynamicProperty> ;
+                                                rdfs:comment "Reference state of a material defined to calculate its properties under different conditions."@en ;
+                                                skos:prefLabel "StandardState"@en .
 
 
 ###  http://fairmat-nfdi.eu/taxonomy/StrainHardeningExponent
-:StrainHardeningExponent rdf:type owl:Class ;
-                         rdfs:subClassOf :MechanicalProperty ;
-                         rdfs:comment "constant used in calculations relating to stress-strain bahavior in work hardening"@en .
+<http://fairmat-nfdi.eu/taxonomy/StrainHardeningExponent> rdf:type owl:Class ;
+                                                          rdfs:subClassOf <http://fairmat-nfdi.eu/taxonomy/MechanicalProperty> ;
+                                                          rdfs:comment "Exponent defined between 0 and 1 which defines how plastic or elastic a material is."@en ;
+                                                          skos:altLabel "StrainHardeningIndex"@en ;
+                                                          skos:prefLabel "StrainHardeningExponent"@en .
 
 
 ###  http://fairmat-nfdi.eu/taxonomy/StressIntensityFactor
-:StressIntensityFactor rdf:type owl:Class ;
-                       rdfs:subClassOf :MechanicalProperty ;
-                       rdfs:comment "magnitude of the mathematically ideal, crack-tip stress field for a particular mode in a homogeneous, linear-elastic body"@en .
+<http://fairmat-nfdi.eu/taxonomy/StressIntensityFactor> rdf:type owl:Class ;
+                                                        rdfs:subClassOf <http://fairmat-nfdi.eu/taxonomy/FracturesProperty> ;
+                                                        rdfs:comment "Stress state near the tip of a crack or notch caused by a remote load or residual stresses."@en ;
+                                                        skos:altLabel "KIC"@en ;
+                                                        skos:prefLabel "StressIntensityFactor"@en .
 
 
-###  http://fairmat-nfdi.eu/taxonomy/StressIntensityFactorRange
-:StressIntensityFactorRange rdf:type owl:Class ;
-                            rdfs:subClassOf :MechanicalProperty ;
-                            rdfs:comment "variation in the stress intensity factor in a cycle in fatigue"@en .
+###  http://fairmat-nfdi.eu/taxonomy/StressStrainCurve
+<http://fairmat-nfdi.eu/taxonomy/StressStrainCurve> rdf:type owl:Class ;
+                                                    rdfs:subClassOf <http://fairmat-nfdi.eu/taxonomy/MechanicalProperty> ;
+                                                    rdfs:comment "Relationship between stress and strain for a material. This curve gives the values of the Young's modulus, the yield strength, etc."@en ;
+                                                    skos:prefLabel "StressStrainCurve"@en .
 
 
 ###  http://fairmat-nfdi.eu/taxonomy/StructuralProperty
-:StructuralProperty rdf:type owl:Class ;
-                    rdfs:subClassOf :MaterialProperty ;
-                    rdfs:comment "microscopic structure related properties"@en .
+<http://fairmat-nfdi.eu/taxonomy/StructuralProperty> rdf:type owl:Class ;
+                                                     rdfs:subClassOf <http://fairmat-nfdi.eu/taxonomy/MaterialProperty> ;
+                                                     rdfs:comment "Property that describes the microstructural details of a given material."@en ;
+                                                     skos:prefLabel "StructuralProperty"@en .
 
 
-###  http://fairmat-nfdi.eu/taxonomy/Structures
-:Structures rdf:type owl:Class ;
-            rdfs:subClassOf :MaterialProperty .
+###  http://fairmat-nfdi.eu/taxonomy/SuperconductingCoherenceLength
+<http://fairmat-nfdi.eu/taxonomy/SuperconductingCoherenceLength> rdf:type owl:Class ;
+                                                                 rdfs:subClassOf <http://fairmat-nfdi.eu/taxonomy/SuperconductingProperty> ;
+                                                                 rdfs:comment "Length scale at which the superconducting behaviour is maintained. It also represents the real space size of the Cooper pairs."@en ;
+                                                                 skos:prefLabel "SuperconductingCoherenceLength"@en .
+
+
+###  http://fairmat-nfdi.eu/taxonomy/SuperconductingCriticalTemperature
+<http://fairmat-nfdi.eu/taxonomy/SuperconductingCriticalTemperature> rdf:type owl:Class ;
+                                                                     rdfs:subClassOf <http://fairmat-nfdi.eu/taxonomy/SuperconductingProperty> ;
+                                                                     rdfs:comment "Critical temperature at which a material conducts electricity without resistance."@en ;
+                                                                     skos:prefLabel "SuperconductingCriticalTemperature"@en .
+
+
+###  http://fairmat-nfdi.eu/taxonomy/SuperconductingGap
+<http://fairmat-nfdi.eu/taxonomy/SuperconductingGap> rdf:type owl:Class ;
+                                                     rdfs:subClassOf <http://fairmat-nfdi.eu/taxonomy/SuperconductingProperty> ;
+                                                     rdfs:comment "Minimum energy ncessary to break the Cooper pairs and destroy superconductivity."@en ;
+                                                     skos:prefLabel "SuperconductingGap"@en .
+
+
+###  http://fairmat-nfdi.eu/taxonomy/SuperconductingProperty
+<http://fairmat-nfdi.eu/taxonomy/SuperconductingProperty> rdf:type owl:Class ;
+                                                          rdfs:subClassOf <http://fairmat-nfdi.eu/taxonomy/ElectronicProperty> ,
+                                                                          <http://fairmat-nfdi.eu/taxonomy/VibrationalProperty> ;
+                                                          rdfs:comment "Property that describes the movement of charges without resistance in a given material."@en ;
+                                                          skos:prefLabel "SuperconductingProperty"@en .
 
 
 ###  http://fairmat-nfdi.eu/taxonomy/SurfaceArea
-:SurfaceArea rdf:type owl:Class ;
-             rdfs:subClassOf :StructuralProperty ;
-             rdfs:comment "Surface area of material_n"@en .
-
-
-###  http://fairmat-nfdi.eu/taxonomy/Susceptibility
-:Susceptibility rdf:type owl:Class ;
-                rdfs:subClassOf :MagneticProperty ;
-                rdfs:comment "a dimensionless proportionality constant that indicates the degree of magentic polarization of a material"@en .
+<http://fairmat-nfdi.eu/taxonomy/SurfaceArea> rdf:type owl:Class ;
+                                              rdfs:subClassOf <http://fairmat-nfdi.eu/taxonomy/StructuralProperty> ;
+                                              rdfs:comment "3D effective surface area of a material."@en ;
+                                              skos:prefLabel "SurfaceArea"@en .
 
 
 ###  http://fairmat-nfdi.eu/taxonomy/TemperatureCoefficientOfResistance
-:TemperatureCoefficientOfResistance rdf:type owl:Class ;
-                                    rdfs:subClassOf :ElectricalProperty ;
-                                    rdfs:comment "a change in resistance per unit resistance per degree rise in temperature based upon the resistance of 0 degree celcius"@en .
-
-
-###  http://fairmat-nfdi.eu/taxonomy/TensileProperty
-:TensileProperty rdf:type owl:Class ;
-                 rdfs:subClassOf :MechanicalProperty ;
-                 rdfs:comment "properties indicate how the material will react to forces being applied in tension"@en .
+<http://fairmat-nfdi.eu/taxonomy/TemperatureCoefficientOfResistance> rdf:type owl:Class ;
+                                                                     rdfs:subClassOf <http://fairmat-nfdi.eu/taxonomy/ElectronicTransportProperty> ;
+                                                                     rdfs:comment "Linear change of the resistance associated with a change in temperature."@en ;
+                                                                     skos:prefLabel "TemperatureCoefficientOfResistance"@en .
 
 
 ###  http://fairmat-nfdi.eu/taxonomy/TensileStrength
-:TensileStrength rdf:type owl:Class ;
-                 rdfs:subClassOf :MechanicalProperty ;
-                 rdfs:comment "maximum stress that can be applied to the material before it breaks"@en .
+<http://fairmat-nfdi.eu/taxonomy/TensileStrength> rdf:type owl:Class ;
+                                                  rdfs:subClassOf <http://fairmat-nfdi.eu/taxonomy/MechanicalProperty> ;
+                                                  rdfs:comment "Maximum stress that can be applied to the material before breaking."@en ;
+                                                  skos:altLabel "UltimateTensileStrength"@en ;
+                                                  skos:prefLabel "TensileStrength"@en .
 
 
 ###  http://fairmat-nfdi.eu/taxonomy/ThermalConductivity
-:ThermalConductivity rdf:type owl:Class ;
-                     rdfs:subClassOf :ThermophysicalProperty ;
-                     rdfs:comment "quantity of heat that passes in unit time through unit area of a substance"@en .
+<http://fairmat-nfdi.eu/taxonomy/ThermalConductivity> rdf:type owl:Class ;
+                                                      rdfs:subClassOf <http://fairmat-nfdi.eu/taxonomy/ThermalTransportProperty> ;
+                                                      rdfs:comment "Measure of the ability of the material to conduct heat in the presence of a temperature gradient."@en ;
+                                                      skos:prefLabel "ThermalConductivity"@en .
 
 
 ###  http://fairmat-nfdi.eu/taxonomy/ThermalDiffusivity
-:ThermalDiffusivity rdf:type owl:Class ;
-                    rdfs:subClassOf :ThermophysicalProperty ;
-                    rdfs:comment "thermal conductivity divided by density and specific heat capacity at constant pressure"@en .
+<http://fairmat-nfdi.eu/taxonomy/ThermalDiffusivity> rdf:type owl:Class ;
+                                                     rdfs:subClassOf <http://fairmat-nfdi.eu/taxonomy/ThermalTransportProperty> ;
+                                                     rdfs:comment "Measure of the rate of heat transfer inside a material."@en ;
+                                                     skos:prefLabel "ThermalDiffusivity"@en .
 
 
 ###  http://fairmat-nfdi.eu/taxonomy/ThermalExpansionCoefficient
-:ThermalExpansionCoefficient rdf:type owl:Class ;
-                             rdfs:subClassOf :ThermophysicalProperty ;
-                             rdfs:comment "fractional change in size of a material in response to a change in temperature"@en .
+<http://fairmat-nfdi.eu/taxonomy/ThermalExpansionCoefficient> rdf:type owl:Class ;
+                                                              rdfs:subClassOf <http://fairmat-nfdi.eu/taxonomy/ThermodynamicProperty> ,
+                                                                              [ rdf:type owl:Restriction ;
+                                                                                owl:onProperty qudt:hasQuantityKind ;
+                                                                                owl:hasValue qk:ThermalExpansionCoefficient
+                                                                              ] ;
+                                                              rdfs:comment "Measure of the change in volume with changing temperature at a constant pressure."@en ;
+                                                              skos:prefLabel "ThermalExpansionCoefficient"@en .
+
+
+###  http://fairmat-nfdi.eu/taxonomy/ThermalTransportProperty
+<http://fairmat-nfdi.eu/taxonomy/ThermalTransportProperty> rdf:type owl:Class ;
+                                                           rdfs:subClassOf <http://fairmat-nfdi.eu/taxonomy/TransportProperty> ;
+                                                           rdfs:comment "Property that describes the movement of heat in a given material."@en ;
+                                                           skos:prefLabel "ThermalTransportProperty"@en .
+
+
+###  http://fairmat-nfdi.eu/taxonomy/ThermodynamicActivity
+<http://fairmat-nfdi.eu/taxonomy/ThermodynamicActivity> rdf:type owl:Class ;
+                                                        rdfs:subClassOf <http://fairmat-nfdi.eu/taxonomy/ThermodynamicProperty> ;
+                                                        rdfs:comment "Effective concentration of a species in a mixture. Here, it means that the species chemical potential depends on the activity of a real solution in the same way that it would depend on concentration for an ideal solution."@en ;
+                                                        skos:prefLabel "ThermodynamicActivity"@en .
 
 
 ###  http://fairmat-nfdi.eu/taxonomy/ThermodynamicProperty
-:ThermodynamicProperty rdf:type owl:Class ;
-                       rdfs:subClassOf :MaterialProperty .
-
-
-###  http://fairmat-nfdi.eu/taxonomy/ThermophysicalProperty
-:ThermophysicalProperty rdf:type owl:Class ;
-                        rdfs:subClassOf :MaterialProperty ;
-                        rdfs:comment "physical properties of materials affected by temperature, related to the structure and dynamics of atoms"@en .
-
-
-###  http://fairmat-nfdi.eu/taxonomy/TimeTertiaryCreep
-:TimeTertiaryCreep rdf:type owl:Class ;
-                   rdfs:subClassOf :MechanicalProperty ;
-                   rdfs:comment "time necessary to reach tertiary creep stage"@en .
+<http://fairmat-nfdi.eu/taxonomy/ThermodynamicProperty> rdf:type owl:Class ;
+                                                        rdfs:subClassOf <http://fairmat-nfdi.eu/taxonomy/MaterialProperty> ;
+                                                        rdfs:comment "Property that describes the fundamental features which describe the state of a given material."@en ;
+                                                        skos:prefLabel "ThermodynamicProperty"@en .
 
 
 ###  http://fairmat-nfdi.eu/taxonomy/TotalElongation
-:TotalElongation rdf:type owl:Class ;
-                 rdfs:subClassOf :MechanicalProperty ;
-                 rdfs:comment "percentage by which the material can be stretched before it breaks"@en .
-
-
-###  http://fairmat-nfdi.eu/taxonomy/TotalPoreVolume
-:TotalPoreVolume rdf:type owl:Class ;
-                 rdfs:subClassOf :StructuralProperty ;
-                 rdfs:comment "Total Pore volume of materials"@en .
+<http://fairmat-nfdi.eu/taxonomy/TotalElongation> rdf:type owl:Class ;
+                                                  rdfs:subClassOf <http://fairmat-nfdi.eu/taxonomy/MechanicalProperty> ;
+                                                  rdfs:comment "Percentage by which the material can be stretched before it breaks."@en ;
+                                                  skos:prefLabel "TotalElongation"@en .
 
 
 ###  http://fairmat-nfdi.eu/taxonomy/Toughness
-:Toughness rdf:type owl:Class ;
-           rdfs:subClassOf :MechanicalProperty ;
-           rdfs:comment "The amount of energy a material can absorb before it fractures"@en .
+<http://fairmat-nfdi.eu/taxonomy/Toughness> rdf:type owl:Class ;
+                                            rdfs:subClassOf <http://fairmat-nfdi.eu/taxonomy/MechanicalProperty> ;
+                                            rdfs:comment "Strength with which the material opposes rupture. It can also be defined as the amount of energy per unit volume that a material can absorb before rupturing."@en ;
+                                            skos:prefLabel "Toughness"@en .
 
 
 ###  http://fairmat-nfdi.eu/taxonomy/Trajectory
-:Trajectory rdf:type owl:Class ;
-            rdfs:subClassOf :ThermodynamicProperty .
+<http://fairmat-nfdi.eu/taxonomy/Trajectory> rdf:type owl:Class ;
+                                             rdfs:subClassOf <http://fairmat-nfdi.eu/taxonomy/MassTransportProperty> ;
+                                             rdfs:comment "Evolution of a system of particles or molecules with time."@en ;
+                                             skos:prefLabel "Trajectory"@en .
 
 
-###  http://fairmat-nfdi.eu/taxonomy/TransPassivationPotential
-:TransPassivationPotential rdf:type owl:Class ;
-                           rdfs:subClassOf :CorrosionProperty ;
-                           rdfs:comment "corrosion potential above which the metal is in the transpassive state"@en .
+###  http://fairmat-nfdi.eu/taxonomy/TranspassivationPotential
+<http://fairmat-nfdi.eu/taxonomy/TranspassivationPotential> rdf:type owl:Class ;
+                                                            rdfs:subClassOf <http://fairmat-nfdi.eu/taxonomy/CorrosionProperty> ;
+                                                            rdfs:comment "Electrode potential describing the change from a passive to an active state in a material which was initially passivated."@en ;
+                                                            skos:prefLabel "TranspassivationPotential"@en .
 
 
-###  http://fairmat-nfdi.eu/taxonomy/Transmittance
-:Transmittance rdf:type owl:Class ;
-               rdfs:subClassOf :OpticalProperty ;
-               rdfs:comment "fraction of incident light which is transmitted"@en .
-
-
-###  http://fairmat-nfdi.eu/taxonomy/TwoDDefect
-:TwoDDefect rdf:type owl:Class ;
-            rdfs:subClassOf :StructuralProperty ;
-            rdfs:comment "planar defect separating two phases or crystal lattices, each of which may be solid, liquid, or gaseous"@en .
+###  http://fairmat-nfdi.eu/taxonomy/TransportProperty
+<http://fairmat-nfdi.eu/taxonomy/TransportProperty> rdf:type owl:Class ;
+                                                    rdfs:subClassOf <http://fairmat-nfdi.eu/taxonomy/MaterialProperty> ;
+                                                    rdfs:comment "Property that describes the movement of particles in a given material."@en ;
+                                                    skos:prefLabel "TransportProperty"@en .
 
 
 ###  http://fairmat-nfdi.eu/taxonomy/UniformElongation
-:UniformElongation rdf:type owl:Class ;
-                   rdfs:subClassOf :MechanicalProperty ;
-                   rdfs:comment "elongation at maximum load and immediately preceding the onset of necking in a tensile test"@en .
-
-
-###  http://fairmat-nfdi.eu/taxonomy/UpperShelfEnergy
-:UpperShelfEnergy rdf:type owl:Class ;
-                  rdfs:subClassOf :MechanicalProperty ;
-                  rdfs:comment "high fracture energy associated with ductile behavior"@en .
-
-
-###  http://fairmat-nfdi.eu/taxonomy/VariableViscosity
-:VariableViscosity rdf:type owl:Class ;
-                   rdfs:subClassOf :RheologicalProperty ;
-                   rdfs:comment "responce of fluid (slurry or liquid) resistance to a change in shape, or movement of neighbouring portions relative to one another by shear rate"@en .
-
-
-###  http://fairmat-nfdi.eu/taxonomy/Velocity
-:Velocity rdf:type owl:Class ;
-          rdfs:subClassOf :OneDDefect ;
-          rdfs:comment "Scan speed used for line scanning"@en .
+<http://fairmat-nfdi.eu/taxonomy/UniformElongation> rdf:type owl:Class ;
+                                                    rdfs:subClassOf <http://fairmat-nfdi.eu/taxonomy/MechanicalProperty> ;
+                                                    rdfs:comment "Elongation at maximum load and immediately preceding the onset of necking."@en ;
+                                                    skos:prefLabel "UniformElongation"@en .
 
 
 ###  http://fairmat-nfdi.eu/taxonomy/VibrationalProperty
-:VibrationalProperty rdf:type owl:Class ;
-                     rdfs:subClassOf :MaterialProperty .
+<http://fairmat-nfdi.eu/taxonomy/VibrationalProperty> rdf:type owl:Class ;
+                                                      rdfs:subClassOf <http://fairmat-nfdi.eu/taxonomy/MaterialProperty> ;
+                                                      rdfs:comment "Property that describes the behaviour of atom vibrations (phonons) in a given material."@en ;
+                                                      skos:altLabel "PhononicProperty"@en ;
+                                                      skos:prefLabel "VibrationalProperty"@en .
 
 
 ###  http://fairmat-nfdi.eu/taxonomy/Viscosity
-:Viscosity rdf:type owl:Class ;
-           rdfs:subClassOf :RheologicalProperty ;
-           rdfs:comment "How easily a liquid flows and is a measure of the fluid’s resistance to gradual deformation by shear forces."@en .
+<http://fairmat-nfdi.eu/taxonomy/Viscosity> rdf:type owl:Class ;
+                                            rdfs:subClassOf <http://fairmat-nfdi.eu/taxonomy/MechanicalProperty> ;
+                                            rdfs:comment "Measure of the resistance of a liquid to deformation at a given rate due to shear forces."@en ;
+                                            skos:prefLabel "Viscosity"@en .
 
 
-###  http://fairmat-nfdi.eu/taxonomy/Width
-:Width rdf:type owl:Class ;
-       rdfs:subClassOf :Particle ;
-       rdfs:comment "width of the encapsulation layer"@en .
-
-
-###  http://fairmat-nfdi.eu/taxonomy/YieldStengthCompressive
-:YieldStengthCompressive rdf:type owl:Class ;
-                         rdfs:subClassOf :MechanicalProperty ;
-                         rdfs:comment "yield strength of material during compressive test"@en .
+###  http://fairmat-nfdi.eu/taxonomy/Volume
+<http://fairmat-nfdi.eu/taxonomy/Volume> rdf:type owl:Class ;
+                                         rdfs:subClassOf <http://fairmat-nfdi.eu/taxonomy/StructuralProperty> ,
+                                                         [ rdf:type owl:Restriction ;
+                                                           owl:onProperty qudt:hasQuantityKind ;
+                                                           owl:hasValue qk:Volume
+                                                         ] ;
+                                         rdfs:comment "Volume of the material."@en ;
+                                         skos:altLabel "EffectiveVolume"@en ;
+                                         skos:prefLabel "Volume"@en .
 
 
 ###  http://fairmat-nfdi.eu/taxonomy/YieldStrength
-:YieldStrength rdf:type owl:Class ;
-               rdfs:subClassOf :MechanicalProperty ;
-               rdfs:comment "The stress value at which the plastic deformation of a material begins to occur"@en .
+<http://fairmat-nfdi.eu/taxonomy/YieldStrength> rdf:type owl:Class ;
+                                                rdfs:subClassOf <http://fairmat-nfdi.eu/taxonomy/MechanicalProperty> ;
+                                                rdfs:comment "The stress value at which the plastic deformation of a material begins to occur."@en ;
+                                                skos:prefLabel "YieldStrength"@en .
 
 
-###  http://fairmat-nfdi.eu/taxonomy/YoungsModulus
-:YoungsModulus rdf:type owl:Class ;
-               rdfs:subClassOf :MechanicalProperty ;
-               rdfs:comment "elastic properties of materials undergoing tension or compression in one direction"@en .
+###  http://fairmat-nfdi.eu/taxonomy/YoungModulus
+<http://fairmat-nfdi.eu/taxonomy/YoungModulus> rdf:type owl:Class ;
+                                               rdfs:subClassOf <http://fairmat-nfdi.eu/taxonomy/MechanicalProperty> ;
+                                               rdfs:comment "Measure of the tensile or compressive stiffness when the force is applied in one direction."@en ;
+                                               skos:altLabel "YoungsModulus"@en ;
+                                               skos:prefLabel "YoungModulus"@en .
 
 
-###  http://fairmat-nfdi.eu/taxonomy/ZeroDDefect
-:ZeroDDefect rdf:type owl:Class ;
-             rdfs:subClassOf :StructuralProperty ;
-             rdfs:comment "defects that occur only at or around a single lattice point"@en .
+###  http://fairmat-nfdi.eu/taxonomy/0DDefectDensity
+<http://fairmat-nfdi.eu/taxonomy/0DDefectDensity> rdf:type owl:Class ;
+                                                  rdfs:subClassOf <http://fairmat-nfdi.eu/taxonomy/StructuralProperty> ;
+                                                  rdfs:comment "Number of defects per unit volume in a material."@en ;
+                                                  skos:prefLabel "0DDefectDensity"@en .
 
 
-###  http://fairmat-nfdi.eu/taxonomy/ZeroDDefectDensity
-:ZeroDDefectDensity rdf:type owl:Class ;
-                    rdfs:subClassOf :ZeroDDefect ;
-                    rdfs:comment "ratio of defected lattice sites to those containig atoms"@en .
+###  http://fairmat-nfdi.eu/taxonomy/0DDefectElectricCharge
+<http://fairmat-nfdi.eu/taxonomy/0DDefectElectricCharge> rdf:type owl:Class ;
+                                                         rdfs:subClassOf <http://fairmat-nfdi.eu/taxonomy/StructuralProperty> ;
+                                                         rdfs:comment "Charge state of point defects in electron charge units (+1, +2, -1, -2, etc.)."@en ;
+                                                         skos:altLabel "ElectricCharge"@en ;
+                                                         skos:prefLabel "0DDefectElectricCharge"@en .
 
 
-###  http://fairmat-nfdi.eu/taxonomy/Phase_(n)
-<http://fairmat-nfdi.eu/taxonomy/Phase_(n)> rdf:type owl:Class ;
-                                            rdfs:subClassOf :StructuralProperty ;
-                                            rdfs:comment "information of phase_n"@en .
+###  http://fairmat-nfdi.eu/taxonomy/0DDefectFormationEnergy
+<http://fairmat-nfdi.eu/taxonomy/0DDefectFormationEnergy> rdf:type owl:Class ;
+                                                          rdfs:subClassOf <http://fairmat-nfdi.eu/taxonomy/StructuralProperty> ;
+                                                          rdfs:comment "Defect formation energy, also defined as the lattice cohesive energy in the case of 0D defect."@en ;
+                                                          skos:altLabel "FormationEnergy"@en ;
+                                                          skos:prefLabel "0DDefectFormationEnergy"@en .
+
+
+###  http://fairmat-nfdi.eu/taxonomy/1DDefectBurgersVector
+<http://fairmat-nfdi.eu/taxonomy/1DDefectBurgersVector> rdf:type owl:Class ;
+                                                        rdfs:subClassOf <http://fairmat-nfdi.eu/taxonomy/StructuralProperty> ;
+                                                        rdfs:comment "Magnitude and direction of the lattice distortion resulting from a dislocation."@en ;
+                                                        skos:altLabel "BurgersVector"@en ;
+                                                        skos:prefLabel "1DDefectBurgersVector"@en .
+
+
+###  http://fairmat-nfdi.eu/taxonomy/1DDefectDensity
+<http://fairmat-nfdi.eu/taxonomy/1DDefectDensity> rdf:type owl:Class ;
+                                                  rdfs:subClassOf <http://fairmat-nfdi.eu/taxonomy/StructuralProperty> ;
+                                                  rdfs:comment "Number of dislocations in a unit volume of a material."@en ;
+                                                  skos:prefLabel "1DDefectDensity"@en .
+
+
+###  http://fairmat-nfdi.eu/taxonomy/2DDefectInterfacialEnergy
+<http://fairmat-nfdi.eu/taxonomy/2DDefectInterfacialEnergy> rdf:type owl:Class ;
+                                                            rdfs:subClassOf <http://fairmat-nfdi.eu/taxonomy/StructuralProperty> ;
+                                                            rdfs:comment "Energy required to form a unit area of new interface in a material."@en ;
+                                                            skos:altLabel "InterfacialEnergy"@en ;
+                                                            skos:prefLabel "2DDefectInterfacialEnergy"@en .
+
+
+###  http://fairmat-nfdi.eu/taxonomy/2DDefectMisorientation
+<http://fairmat-nfdi.eu/taxonomy/2DDefectMisorientation> rdf:type owl:Class ;
+                                                         rdfs:subClassOf <http://fairmat-nfdi.eu/taxonomy/StructuralProperty> ;
+                                                         rdfs:comment "Difference in crystallographic orientation between two crystal phases in a polycrystalline material."@en ;
+                                                         skos:altLabel "Misorientation"@en ;
+                                                         skos:prefLabel "2DDefectMisorientation"@en .
+
+
+###  http://fairmat-nfdi.eu/taxonomy/2DDefectStackingFaultEnergy
+<http://fairmat-nfdi.eu/taxonomy/2DDefectStackingFaultEnergy> rdf:type owl:Class ;
+                                                              rdfs:subClassOf <http://fairmat-nfdi.eu/taxonomy/StructuralProperty> ;
+                                                              rdfs:comment "Energy required to form irregularities in a sequence of crystalline materials."@en ;
+                                                              skos:altLabel "StackingFaultEnergy"@en ;
+                                                              skos:prefLabel "2DDefectStackingFaultEnergy"@en .
+
+
+###  http://qudt.org/2.1/schema/qudt/QuantityKind
+qudt:QuantityKind rdf:type owl:Class ;
+                  rdfs:label "QuantityKind"@en .
+
+
+#################################################################
+#    Individuals
+#################################################################
+
+###  http://qudt.org/vocab/quantitykind/ChemicalPotential
+qk:ChemicalPotential rdf:type owl:NamedIndividual ;
+                     rdfs:label "ChemicalPotential"@en .
+
+
+###  http://qudt.org/vocab/quantitykind/Energy
+qk:Energy rdf:type owl:NamedIndividual ;
+          rdfs:label "Energy"@en .
+
+
+###  http://qudt.org/vocab/quantitykind/Fugacity
+qk:Fugacity rdf:type owl:NamedIndividual ;
+            rdfs:label "Fugacity"@en .
+
+
+###  http://qudt.org/vocab/quantitykind/HeatCapacity
+qk:HeatCapacity rdf:type owl:NamedIndividual ;
+                rdfs:label "HeatCapacity"@en .
+
+
+###  http://qudt.org/vocab/quantitykind/Temperature
+qk:Temperature rdf:type owl:NamedIndividual ;
+               rdfs:label "Temperature"@en .
+
+
+###  http://qudt.org/vocab/quantitykind/ThermalExpansionCoefficient
+qk:ThermalExpansionCoefficient rdf:type owl:NamedIndividual ;
+                               rdfs:label "ThermalExpansionCoefficient"@en .
+
+
+###  http://qudt.org/vocab/quantitykind/Voltage
+qk:Voltage rdf:type owl:NamedIndividual ;
+           rdfs:label "Voltage"@en .
+
+
+###  http://qudt.org/vocab/quantitykind/Volume
+qk:Volume rdf:type owl:NamedIndividual ;
+          rdfs:label "Volume"@en .
 
 
 ###  Generated by the OWL API (version 4.5.25.2023-02-15T19:15:49Z) https://github.com/owlcs/owlapi
