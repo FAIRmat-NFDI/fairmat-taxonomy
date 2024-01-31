@@ -3,6 +3,8 @@ name: Build GitHub Pages
 on:
   push:
     branches: main
+    paths: 
+      - 'draft.ttl'
   workflow_dispatch:
 
 permissions:
